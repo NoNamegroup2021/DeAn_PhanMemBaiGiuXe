@@ -7,4 +7,8 @@
 # 22:00 - 22:10 Nhóm làm về giao diện 
 # 22:20 - 22:30 Nhóm làm về xử lý 
 # 22:40 - 22:50 Nhóm làm về dữ liệu
-# Khi submit lưu ý nhớ kèm theo word 
+# Luu ý : 
+# Khi submit nhớ kèm theo word 
+# Nhóm về giao diện phải có code giao diện và mô tả chứuc năng về giao diện
+# Nhóm về dữ liệu phải có Cơ Sở Dữ Liệu ( SQL ) 
+# Nhóm xử lý phải có code xử lý
