@@ -12,3 +12,4 @@
 # Nhóm về giao diện phải có code giao diện và mô tả chứuc năng về giao diện
 # Nhóm về dữ liệu phải có Cơ Sở Dữ Liệu ( SQL ) 
 # Nhóm xử lý phải có code xử lý
+# Phần nào khó khăn hoặc không xử lý, giải quyết được thì ib vùng kín nhá các bạn trỏe, ae làm việc tốt <3
