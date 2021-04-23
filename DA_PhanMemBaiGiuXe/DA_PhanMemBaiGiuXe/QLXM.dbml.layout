@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="QLXM">
+  <DataContextMoniker Name="/QLXMDataContext" />
+  <nestedChildShapes>
+    <classShape Id="6aaed233-6a92-444a-8e66-9503c27e8343" absoluteBounds="0.75, 1.125, 2, 1.1939925130208338">
+      <DataClassMoniker Name="/QLXMDataContext/LoaiTK" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d6082fb3-c535-45e6-9de8-50830810ee79" absoluteBounds="0.765, 1.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bd553860-c0f8-4cf0-9d00-b5e397e31cca" absoluteBounds="3.5, 0.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/QLXMDataContext/Login" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5e5929b4-19b9-4b7c-830e-79fbffffa871" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e6b72fd9-c2e8-4742-aa59-b25b2435fc4d" absoluteBounds="0.75, 3.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/QLXMDataContext/NhanVien" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4feea3ed-080f-4299-91a2-c71ad8744e2b" absoluteBounds="0.765, 4.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.72199625651042); (3.5 : 1.72199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QLXMDataContext/LoaiTK/LoaiTK_Login" />
+      <nodes>
+        <classShapeMoniker Id="6aaed233-6a92-444a-8e66-9503c27e8343" />
+        <classShapeMoniker Id="bd553860-c0f8-4cf0-9d00-b5e397e31cca" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.63544840494792); (4.5 : 4.63544840494792); (4.5 : 2.45359537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QLXMDataContext/NhanVien/NhanVien_Login" />
+      <nodes>
+        <classShapeMoniker Id="e6b72fd9-c2e8-4742-aa59-b25b2435fc4d" />
+        <classShapeMoniker Id="bd553860-c0f8-4cf0-9d00-b5e397e31cca" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,1 +1,11 @@
 D:\Nhan_Folder\DA_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\DA_PhanMemBaiGiuXe.exe.config
+C:\Users\Admin\Desktop\Do_An\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\DA_PhanMemBaiGiuXe.exe.config
+C:\Users\Admin\Desktop\Do_An\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\obj\Debug\DA_PhanMemBaiGiuXe.FrLogin.resources
+C:\Users\Admin\Desktop\Do_An\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\obj\Debug\DA_PhanMemBaiGiuXe.FrMain.resources
+C:\Users\Admin\Desktop\Do_An\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\obj\Debug\DA_PhanMemBaiGiuXe.Properties.Resources.resources
+C:\Users\Admin\Desktop\Do_An\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\obj\Debug\DA_PhanMemBaiGiuXe.csproj.GenerateResource.Cache
+C:\Users\Admin\Desktop\Do_An\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\DA_PhanMemBaiGiuXe.exe
+C:\Users\Admin\Desktop\Do_An\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\DA_PhanMemBaiGiuXe.pdb
+C:\Users\Admin\Desktop\Do_An\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\obj\Debug\DA_PhanMemBaiGiuXe.exe
+C:\Users\Admin\Desktop\Do_An\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\obj\Debug\DA_PhanMemBaiGiuXe.pdb
+C:\Users\Admin\Desktop\Do_An\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\obj\Debug\DA_PhanMemBaiGiuXe.Form1.resources

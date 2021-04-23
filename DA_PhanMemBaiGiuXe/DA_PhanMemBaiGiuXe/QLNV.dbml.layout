@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="QLNV">
+  <DataContextMoniker Name="/QLNVDataContext" />
+  <nestedChildShapes>
+    <classShape Id="351f2f42-a1eb-49d5-8367-9f2569e772bc" absoluteBounds="3.875, 1.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/QLNVDataContext/NhanVien" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1a851853-3936-43ca-97dd-57b13fc0c7e6" absoluteBounds="3.89, 2.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
