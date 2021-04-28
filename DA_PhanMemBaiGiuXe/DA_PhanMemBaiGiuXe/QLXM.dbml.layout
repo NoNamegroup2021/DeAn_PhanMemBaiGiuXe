@@ -20,14 +20,14 @@
         <elementListCompartment Id="4feea3ed-080f-4299-91a2-c71ad8744e2b" absoluteBounds="0.765, 4.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.75 : 1.72199625651042); (3.5 : 1.72199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 1.72199625651042); (3.5 : 1.72199625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/QLXMDataContext/LoaiTK/LoaiTK_Login" />
       <nodes>
         <classShapeMoniker Id="6aaed233-6a92-444a-8e66-9503c27e8343" />
         <classShapeMoniker Id="bd553860-c0f8-4cf0-9d00-b5e397e31cca" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 4.63544840494792); (4.5 : 4.63544840494792); (4.5 : 2.45359537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 4.63544840494792); (4.5 : 4.63544840494792); (4.5 : 2.45359537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/QLXMDataContext/NhanVien/NhanVien_Login" />
       <nodes>
         <classShapeMoniker Id="e6b72fd9-c2e8-4742-aa59-b25b2435fc4d" />
