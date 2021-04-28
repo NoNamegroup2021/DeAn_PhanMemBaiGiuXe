@@ -29,17 +29,19 @@ namespace DA_PhanMemBaiGiuXe
         {
             if (chucvu == "Nhân Viên")
             {
-                this.tabPage3.Enabled = true;
+                this.tp_NV.Enabled = true;
                 this.tp_XeVao.Enabled = false;
-                this.tabPage2.Enabled = false;
+                this.tp_XeRa.Enabled = false;
             }
             else
             {
                 this.tp_XeVao.Enabled = true;
-                this.tabPage2.Enabled = true;
-                this.tabPage3.Enabled = false;
+                this.tp_XeRa.Enabled = true;
+                this.tp_NV.Enabled = false;
             }
         }
+
+
         
 
     }
