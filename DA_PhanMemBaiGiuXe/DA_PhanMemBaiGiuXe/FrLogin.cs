@@ -50,7 +50,7 @@ namespace DA_PhanMemBaiGiuXe
                     if (ctr.GetType() == typeof(TabControl))
                     {
                         TabControl tab = ctr as TabControl;
-                        tab.SelectedTab = tab.TabPages["tabPage1"];
+                        tab.SelectedTab = tab.TabPages["tp_XeVao"];
                         break;
                     }
                 }
@@ -152,6 +152,7 @@ namespace DA_PhanMemBaiGiuXe
                 }
             }
         }
+
 
         //private void txt_Login_Click(object sender, EventArgs e)
         //{
