@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrMain));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tp_XeVao = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -111,9 +112,10 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.pictureBox2, 2);
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Location = new System.Drawing.Point(452, 11);
+            this.pictureBox2.Location = new System.Drawing.Point(459, 11);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(433, 394);
+            this.pictureBox2.Size = new System.Drawing.Size(426, 394);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
@@ -122,8 +124,9 @@
             this.tableLayoutPanel1.SetColumnSpan(this.pictureBox1, 2);
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(11, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(435, 394);
+            this.pictureBox1.Size = new System.Drawing.Size(428, 394);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -192,7 +195,7 @@
             this.tableLayoutPanel2.RowCount = 4;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.63241F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.36759F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 61F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(898, 562);
             this.tableLayoutPanel2.TabIndex = 8;
@@ -201,9 +204,10 @@
             // 
             this.tableLayoutPanel2.SetColumnSpan(this.pictureBox4, 2);
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox4.Location = new System.Drawing.Point(451, 3);
+            this.pictureBox4.Location = new System.Drawing.Point(458, 3);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(434, 404);
+            this.pictureBox4.Size = new System.Drawing.Size(427, 391);
             this.pictureBox4.TabIndex = 1;
             this.pictureBox4.TabStop = false;
             // 
@@ -212,14 +216,15 @@
             this.tableLayoutPanel2.SetColumnSpan(this.pictureBox3, 2);
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox3.Location = new System.Drawing.Point(5, 3);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(440, 404);
+            this.pictureBox3.Size = new System.Drawing.Size(433, 391);
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(222, 511);
+            this.textBox4.Location = new System.Drawing.Point(222, 495);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(223, 20);
@@ -229,9 +234,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Location = new System.Drawing.Point(5, 508);
+            this.label6.Location = new System.Drawing.Point(5, 492);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(211, 45);
+            this.label6.Size = new System.Drawing.Size(211, 61);
             this.label6.TabIndex = 6;
             this.label6.Text = "Biển số xe";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -240,9 +245,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(5, 410);
+            this.label3.Location = new System.Drawing.Point(5, 397);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(211, 98);
+            this.label3.Size = new System.Drawing.Size(211, 95);
             this.label3.TabIndex = 3;
             this.label3.Text = "Thời gian ra";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -252,9 +257,9 @@
             this.label4.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.label4, 2);
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Location = new System.Drawing.Point(451, 410);
+            this.label4.Location = new System.Drawing.Point(451, 397);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(434, 98);
+            this.label4.Size = new System.Drawing.Size(434, 95);
             this.label4.TabIndex = 4;
             this.label4.Text = "Tên nhân viên";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -263,9 +268,9 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Location = new System.Drawing.Point(222, 410);
+            this.label8.Location = new System.Drawing.Point(222, 397);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(223, 98);
+            this.label8.Size = new System.Drawing.Size(223, 95);
             this.label8.TabIndex = 8;
             this.label8.Text = "Thời gian";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -307,8 +312,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(942, 616);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrMain";
-            this.Text = "Form1";
+            this.Text = "Hệ thống bãi giữ xe thông minh";
             this.Load += new System.EventHandler(this.FrMain_Load);
             this.tabControl1.ResumeLayout(false);
             this.tp_XeVao.ResumeLayout(false);

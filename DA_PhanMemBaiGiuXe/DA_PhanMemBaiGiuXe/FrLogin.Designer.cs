@@ -78,9 +78,11 @@
             this.txt_Password.Location = new System.Drawing.Point(354, 124);
             this.txt_Password.Multiline = true;
             this.txt_Password.Name = "txt_Password";
+            this.txt_Password.PasswordChar = '*';
             this.txt_Password.Size = new System.Drawing.Size(376, 32);
             this.txt_Password.TabIndex = 1;
             this.txt_Password.Text = "Password";
+            this.txt_Password.UseSystemPasswordChar = true;
             this.txt_Password.Enter += new System.EventHandler(this.txt_Password_Enter);
             this.txt_Password.Leave += new System.EventHandler(this.txt_Password_Leave);
             // 
@@ -118,6 +120,7 @@
             this.btn_Thoat.TabIndex = 4;
             this.btn_Thoat.Text = "Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
+            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
             // 
             // btn_Login
             // 

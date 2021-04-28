@@ -41,9 +41,8 @@ namespace DA_PhanMemBaiGiuXe
                 }
             }
 
-            if (!ktKhoaChinh(txt_Login.Text))
+            if (!ktKhoaChinh(txt_Login.Text,txt_Password.Text))
             {
-
                 Program.main = new FrMain();
                 foreach (Control ctr in Program.main.Controls)
                 {
@@ -54,6 +53,7 @@ namespace DA_PhanMemBaiGiuXe
                         break;
                     }
                 }
+
                 Program.main.Show();
                 this.Hide();
             }
@@ -63,9 +63,10 @@ namespace DA_PhanMemBaiGiuXe
                 return;
             }
         }
-        public bool ktKhoaChinh(string ma)
+        public bool ktKhoaChinh(string ma, string mk)
         {
-            Login tk = data.Logins.Where(t => t.Username == ma).SingleOrDefault();
+            Login tk = data.Logins.Where(t => t.Username == ma && t.Password == mk).SingleOrDefault();
+          
             // LinQ 
             if (tk != null)
             {

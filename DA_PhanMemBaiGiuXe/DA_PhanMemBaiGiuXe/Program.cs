@@ -19,7 +19,7 @@ namespace DA_PhanMemBaiGiuXe
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(main = new FrMain());
+            Application.Run(login = new FrLogin());
         }
     }
 }
