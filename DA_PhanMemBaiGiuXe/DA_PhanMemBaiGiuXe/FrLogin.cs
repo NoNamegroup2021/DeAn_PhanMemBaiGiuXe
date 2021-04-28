@@ -55,9 +55,7 @@ namespace DA_PhanMemBaiGiuXe
                     }
                 }
                 Program.main.Show();
-
                 this.Hide();
-
             }
             else
             {
