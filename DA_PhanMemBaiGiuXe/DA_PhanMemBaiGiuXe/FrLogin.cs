@@ -25,8 +25,8 @@ namespace DA_PhanMemBaiGiuXe
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            string id = txt_TK.Text;
-            string pw = txt_TK.Text;
+            string id = txt_Login.Text;
+            string pw = txt_Password.Text;
             string chucvu = null;
             foreach (Control ctr in tableLayoutPanel1.Controls)
             {
@@ -41,9 +41,9 @@ namespace DA_PhanMemBaiGiuXe
                 }
             }
 
-            if (!ktKhoaChinh(txt_TK.Text))
+            if (!ktKhoaChinh(txt_Login.Text))
             {
-                MessageBox.Show("Đăng nhập thành công");
+
                 Program.main = new FrMain();
                 foreach (Control ctr in Program.main.Controls)
                 {
@@ -55,7 +55,7 @@ namespace DA_PhanMemBaiGiuXe
                     }
                 }
                 Program.main.Show();
-               
+
                 this.Hide();
 
             }
@@ -108,7 +108,63 @@ namespace DA_PhanMemBaiGiuXe
             checkEmptyText(sender, e);
         }
 
+        private void txt_Login_Enter(object sender, EventArgs e)
+        {
+            {
+                if (txt_Login.Text == "Username")
+                {
+                    txt_Login.Text = "";
+                    txt_Login.ForeColor = Color.Black;
+                }
+            }
 
+        }
+
+        private void txt_Login_Leave(object sender, EventArgs e)
+        {
+            {
+                if (txt_Login.Text == "")
+                {
+                    txt_Login.Text = "Username";
+                    txt_Login.ForeColor = Color.DarkOrange;
+                }
+            }
+        }
+
+        private void txt_Password_Enter(object sender, EventArgs e)
+        {
+            {
+                if (txt_Password.Text == "Password")
+                {
+                    txt_Password.Text = "";
+                    txt_Password.ForeColor = Color.Black;
+                }
+            }
+        }
+
+        private void txt_Password_Leave(object sender, EventArgs e)
+        {
+            {
+                if (txt_Password.Text == "")
+                {
+                    txt_Password.Text = "Password";
+                    txt_Password.ForeColor = Color.DarkOrange;
+                }
+            }
+        }
+
+        //private void txt_Login_Click(object sender, EventArgs e)
+        //{
+        //    //txt_Login.Text = "";
+        //}
 
     }
 }
+
+
+
+
+
+
+
+
