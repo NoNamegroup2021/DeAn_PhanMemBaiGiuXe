@@ -32,6 +32,7 @@ namespace DA_PhanMemBaiGiuXe
 
         private void FrMain_Load(object sender, EventArgs e)
         {
+            
             if (chucvu == "Nhân Viên")
             {
                 this.tp_NV.Enabled = true;
