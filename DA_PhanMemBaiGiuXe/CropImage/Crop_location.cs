@@ -73,6 +73,9 @@ namespace CropImage
         {
 
             getParam();
+            Bitmap source = ori_img.Image as Bitmap;
+            Bitmap cropped_img = source.Clone(rect, source.PixelFormat);
+            crop_img.Image = cropped_img;
             started_draw = false;
         }
 
