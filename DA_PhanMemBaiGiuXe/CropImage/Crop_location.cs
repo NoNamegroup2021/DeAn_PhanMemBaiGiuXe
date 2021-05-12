@@ -62,6 +62,8 @@ namespace CropImage
 
         private void ori_img_MouseDown(object sender, MouseEventArgs e)
         {
+            if (rect != null || rect.Height > 0 || rect.Width > 0)
+                rect = new Rectangle();
             xCordinate = e.X;
             yCordinate = e.Y;
             if (rect != null)
@@ -71,12 +73,17 @@ namespace CropImage
 
         private void ori_img_MouseUp(object sender, MouseEventArgs e)
         {
-
-            getParam();
-            Bitmap source = ori_img.Image as Bitmap;
-            Bitmap cropped_img = source.Clone(rect, source.PixelFormat);
-            crop_img.Image = cropped_img;
-            started_draw = false;
+            try
+            {
+                getParam();
+                Bitmap source = ori_img.Image as Bitmap;
+                Bitmap cropped_img = source.Clone(rect, source.PixelFormat);
+                crop_img.Image = cropped_img;
+                started_draw = false;
+            }
+            catch
+            {
+            }
         }
 
         private void ori_img_Paint(object sender, PaintEventArgs e)
