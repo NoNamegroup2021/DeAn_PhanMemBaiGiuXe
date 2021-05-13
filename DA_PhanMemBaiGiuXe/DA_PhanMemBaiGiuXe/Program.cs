@@ -14,6 +14,7 @@ namespace DA_PhanMemBaiGiuXe
         public static FrMain main = null;
         public static FrLogin login = null;
         public static Form1 nhanvien = null;
+        public static testCascade test = null;
         [STAThread]
         static void Main()
         {

@@ -66,8 +66,6 @@ namespace CropImage
                 rect = new Rectangle();
             xCordinate = e.X;
             yCordinate = e.Y;
-            if (rect != null)
-                rect = new Rectangle();
             started_draw = true;
         }
 
@@ -143,7 +141,7 @@ namespace CropImage
                     {
                         string[] array = listBox1.Items.OfType<string>().ToArray();
                         int index = listBox1.SelectedIndex;
-                        string info = listBox1.SelectedItem.ToString();
+                        string info = direct_img[index];
                         string getLocation_info = string.Format("{0} {1} {2} {3}",txtX.Text,txtY.Text,txtW.Text,txtH.Text);
                         string info_loca = info + " 1 "+ getLocation_info;
                         array[index] = info_loca;
@@ -211,6 +209,7 @@ namespace CropImage
             
             }
         }
+
         private bool checkData_isValid()
         {
             if (listBox1.Items.Count <= 0)
