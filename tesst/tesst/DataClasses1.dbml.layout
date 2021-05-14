@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses1">
+  <DataContextMoniker Name="/DataClasses1DataContext" />
+  <nestedChildShapes>
+    <classShape Id="00ceee4e-0bb1-4afa-844b-cfecbea0c93e" absoluteBounds="3.5, 0.875, 2, 1.3862939453124998">
+      <DataClassMoniker Name="/DataClasses1DataContext/QuetXe" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d5a3ffc7-db5c-4de8-8db6-8979792fc295" absoluteBounds="3.515, 1.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4ad8b476-817b-4832-9549-f1529c00815e" absoluteBounds="0.75, 1, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DataClasses1DataContext/BangThe" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6961782a-6ee3-4db7-b921-00731e571483" absoluteBounds="0.765, 1.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.59699625651042); (3.5 : 1.59699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/BangThe/BangThe_QuetXe" />
+      <nodes>
+        <classShapeMoniker Id="4ad8b476-817b-4832-9549-f1529c00815e" />
+        <classShapeMoniker Id="00ceee4e-0bb1-4afa-844b-cfecbea0c93e" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
