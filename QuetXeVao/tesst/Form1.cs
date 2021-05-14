@@ -85,8 +85,8 @@ namespace tesst
         {
             string kq = "";
             tb_QuetThe = new SqlDataAdapter("SELECT TinhTrang FROM BangThe WHERE MaThe='" + mathe + "'", cnn);
-            tb_QuetThe.Fill(QLBaiXe, "TT");
-            DataTable ds = QLBaiXe.Tables["TT"];
+            tb_QuetThe.Fill(QLBaiXe, "QUY");
+            DataTable ds = QLBaiXe.Tables["QUY"];
             foreach (DataRow row in ds.Rows)
             {
                 kq = row[0].ToString();

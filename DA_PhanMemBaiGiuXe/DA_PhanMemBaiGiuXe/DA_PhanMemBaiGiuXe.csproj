@@ -111,12 +111,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="testCascade.resx">
-      <DependentUpon>testCascade.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="QLXM.dbml.layout">
       <DependentUpon>QLXM.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="testCascade.resx">
+      <DependentUpon>testCascade.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
