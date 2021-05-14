@@ -22,6 +22,35 @@ create table NhanVien
 	SoCMND char(20),
 	DiaChi nvarchar(100),
 )
+go
+create table BangThe
+(
+	MaThe nvarchar(20) Primary key,
+	TinhTrang bit Not NULL Default 0
+)
+create table QuetXe
+(
+	IDThe nvarchar(20) not null,
+	BIENSO nvarchar(11) not null ,
+	AnhThe nvarchar(100),
+	Constraint FK_QX primary key (IDThe,BIENSO),
+	Constraint PK_QX_BT  FOREIGN KEY(IDthe) REFERENCES BangThe(MaThe),
+)
+go
+use QL_BaiGiuXe
+go
+create trigger tr_qet_the on QuetXe
+for insert
+as
+begin 
+	declare @idxe nvarchar(20);
+	set @idxe = (Select inserted.IDThe from inserted)
+	Update BangThe
+	SET TinhTrang = 1
+	From BangThe
+	Where BangThe.MaThe = @idxe
+end
+go
 alter table Login
 add constraint FK_MaNV foreign key (MaNV) references NhanVien(MaNV)
 alter table login
