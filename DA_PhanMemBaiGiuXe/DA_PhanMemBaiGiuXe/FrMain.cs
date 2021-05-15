@@ -52,7 +52,7 @@ namespace DA_PhanMemBaiGiuXe
                 this.tp_XeRa.Enabled = true;
                 this.tp_NV.Enabled = true;
             }
-            
+            this.timer1.Interval = 100;
         }
 
         private void Cam_NewFrame(object sender, NewFrameEventArgs eventArgs)
@@ -113,11 +113,12 @@ namespace DA_PhanMemBaiGiuXe
             Graphics g = e.Graphics;
             if (rects_area != null)
             {
-                for (int i = 0; i < rects_area.Count(); i++)
+                int count = rects_area.Count();
+                if (count > 0)
                 {
                     Rectangle rect = new Rectangle();
-                    rect.Location = rects_area[i].Location;
-                    rect.Size = rects_area[i].Size;
+                    rect.Location = rects_area[count - 1].Location;
+                    rect.Size = rects_area[count - 1].Size;
                     if (rect != null && rect.Height > 0 && rect.Width > 0)
                     {
                         e.Graphics.DrawRectangle(new Pen(Color.Red, 3), rect);
@@ -130,21 +131,26 @@ namespace DA_PhanMemBaiGiuXe
         {
             try
             {
-                string path = Application.StartupPath + "\\carLincense.xml";
-                carLicense_classifier = new CascadeClassifier(path);
-                
-                Bitmap transfr = pictureBox1.Image as Bitmap;
-                Image<Bgr,Byte> img_transfr_frame = new Image<Bgr,byte>(transfr);
-                Image<Gray,Byte> imgTransf_grayScale = img_transfr_frame.Convert<Gray,Byte>();
-                
-                Rectangle[] rects = carLicense_classifier.DetectMultiScale(imgTransf_grayScale, 1.1, 2, Size.Empty);
+                if (pictureBox1.Image != null)
+                {
+                    string path = Application.StartupPath + "\\cascade.xml";
+                    carLicense_classifier = new CascadeClassifier(path);
 
-                return rects;
+                    Bitmap transfr = pictureBox1.Image as Bitmap;
+                    Image<Bgr, Byte> img_transfr_frame = new Image<Bgr, byte>(transfr);
+                    Image<Gray, Byte> imgTransf_grayScale = img_transfr_frame.Convert<Gray, Byte>();
+
+                    Rectangle[] rects = carLicense_classifier.DetectMultiScale(imgTransf_grayScale, 1.2, 2, Size.Empty);
+                    return rects;
+
+                }
+                else
+                    return null;
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(ex.Message);
                 return null;
             }
         }
