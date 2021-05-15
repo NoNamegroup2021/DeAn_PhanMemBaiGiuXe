@@ -19,6 +19,7 @@ namespace DA_PhanMemBaiGiuXe
 {
     public partial class FrMain : Form
     {
+        QLXMDataContext data = new QLXMDataContext();
         private FilterInfoCollection dscam;
         private VideoCaptureDevice cam;
         private string chucvu;
@@ -49,7 +50,7 @@ namespace DA_PhanMemBaiGiuXe
             {
                 this.tp_XeVao.Enabled = true;
                 this.tp_XeRa.Enabled = true;
-                this.tp_NV.Enabled = false;
+                this.tp_NV.Enabled = true;
             }
             
         }
@@ -145,6 +146,99 @@ namespace DA_PhanMemBaiGiuXe
             {
                 MessageBox.Show(ex.ToString());
                 return null;
+            }
+        }
+        public void reLoad()
+        {
+            var monHoc = from mh in data.NhanViens select mh;
+            dataGridView1.DataSource = monHoc;
+        }
+        public bool ktKhoaChinh(string ma)
+        {
+            NhanVien nv = data.NhanViens.Where(t => t.MaNV == ma).SingleOrDefault();
+            if (nv != null)
+            {
+                return false;
+            }
+            return true;
+        }
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtMaNV.Text) || String.IsNullOrEmpty(txtTenNV.Text) || String.IsNullOrEmpty(txtDiaChi.Text) || String.IsNullOrEmpty(txtGT.Text) || String.IsNullOrEmpty(txtCMND.Text))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (!ktKhoaChinh(txtMaNV.Text))
+            {
+                MessageBox.Show("Mã nhân viên này đã tồn tại! Xin vui lòng thử lại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                NhanVien nv = new NhanVien();
+                nv.MaNV = txtMaNV.Text;
+                nv.HoTen = txtTenNV.Text;
+                nv.DiaChi = txtDiaChi.Text;
+                nv.GioiTinh = txtGT.Text;
+                nv.SoCMND = txtCMND.Text;
+                data.NhanViens.InsertOnSubmit(nv);
+                data.SubmitChanges();
+                reLoad();
+                MessageBox.Show("Thêm thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtMaNV.Text))
+            {
+                MessageBox.Show("Vui lòng nhập mã nhân viên  muốn xóa, hoặc chọn trên lưới", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                string maNV = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                NhanVien nv = data.NhanViens.Where(t => t.MaNV == maNV).SingleOrDefault();
+                data.NhanViens.DeleteOnSubmit(nv);
+                data.SubmitChanges();
+                reLoad();
+                MessageBox.Show("Xóa thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtMaNV.Text))
+            {
+                MessageBox.Show("Vui lòng nhập mã nhân viên muốn cập nhật, hoặc chọn trên lưới", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                string maNV = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                NhanVien nv = data.NhanViens.Where(t => t.MaNV == maNV).SingleOrDefault();
+                nv.HoTen = txtTenNV.Text;
+                nv.GioiTinh = txtGT.Text;
+                nv.SoCMND = txtCMND.Text;
+                nv.DiaChi = txtDiaChi.Text;
+                data.SubmitChanges();
+                reLoad();
+                MessageBox.Show("Cập nhật thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Xác nhận thoát chương trình ", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+            if (r == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.CurrentRow != null)
+            {
+                txtMaNV.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                txtTenNV.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             }
         }
     }
