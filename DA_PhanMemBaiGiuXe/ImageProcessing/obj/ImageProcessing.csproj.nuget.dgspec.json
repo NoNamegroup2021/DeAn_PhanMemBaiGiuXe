@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Nhan_Folder\\DA_CNPM\\DeAn_PhanMemBaiGiuXe\\DA_PhanMemBaiGiuXe\\ImageProcessing\\ImageProcessing.csproj": {}
+    "C:\\Users\\Nhan\\Desktop\\clone\\DA_PhanMemBaiGiuXe\\ImageProcessing\\ImageProcessing.csproj": {}
   },
   "projects": {
-    "D:\\Nhan_Folder\\DA_CNPM\\DeAn_PhanMemBaiGiuXe\\DA_PhanMemBaiGiuXe\\ImageProcessing\\ImageProcessing.csproj": {
+    "C:\\Users\\Nhan\\Desktop\\clone\\DA_PhanMemBaiGiuXe\\ImageProcessing\\ImageProcessing.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Nhan_Folder\\DA_CNPM\\DeAn_PhanMemBaiGiuXe\\DA_PhanMemBaiGiuXe\\ImageProcessing\\ImageProcessing.csproj",
+        "projectUniqueName": "C:\\Users\\Nhan\\Desktop\\clone\\DA_PhanMemBaiGiuXe\\ImageProcessing\\ImageProcessing.csproj",
         "projectName": "ImageProcessing",
-        "projectPath": "D:\\Nhan_Folder\\DA_CNPM\\DeAn_PhanMemBaiGiuXe\\DA_PhanMemBaiGiuXe\\ImageProcessing\\ImageProcessing.csproj",
+        "projectPath": "C:\\Users\\Nhan\\Desktop\\clone\\DA_PhanMemBaiGiuXe\\ImageProcessing\\ImageProcessing.csproj",
         "packagesPath": "C:\\Users\\Nhan\\.nuget\\packages\\",
-        "outputPath": "D:\\Nhan_Folder\\DA_CNPM\\DeAn_PhanMemBaiGiuXe\\DA_PhanMemBaiGiuXe\\ImageProcessing\\obj\\",
+        "outputPath": "C:\\Users\\Nhan\\Desktop\\clone\\DA_PhanMemBaiGiuXe\\ImageProcessing\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
