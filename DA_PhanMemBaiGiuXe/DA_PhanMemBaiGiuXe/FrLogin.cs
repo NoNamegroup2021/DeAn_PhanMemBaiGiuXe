@@ -132,18 +132,26 @@ namespace DA_PhanMemBaiGiuXe
 
         private void txt_Password_Enter(object sender, EventArgs e)
         {
-            {
+            {               
                 if (txt_Password.Text == "Password")
                 {
                     txt_Password.Text = "";
                     txt_Password.ForeColor = Color.Black;
+
                 }
             }
         }
 
         private void txt_Password_Leave(object sender, EventArgs e)
         {
+            TextBox txtB = sender as TextBox;
+            if (txtB.Text.Trim().Length < 0)
             {
+                errorProvider1.SetError((Control)sender, "Error");
+            }
+            else
+            {
+                errorProvider1.Clear();
                 if (txt_Password.Text == "")
                 {
                     txt_Password.Text = "Password";
