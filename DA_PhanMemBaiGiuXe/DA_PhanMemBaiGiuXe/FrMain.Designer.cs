@@ -81,6 +81,10 @@
             this.btnSua = new System.Windows.Forms.ToolStripButton();
             this.btnDong = new System.Windows.Forms.ToolStripButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tp_XeVao.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -119,11 +123,16 @@
             this.tp_XeVao.TabIndex = 0;
             this.tp_XeVao.Text = "Xe Vào";
             this.tp_XeVao.UseVisualStyleBackColor = true;
+<<<<<<< Updated upstream
+=======
+            //this.tp_XeVao.Enter += new System.EventHandler(this.tp_XeVao_Enter);
+>>>>>>> Stashed changes
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 6;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+<<<<<<< Updated upstream
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 288F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.86517F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.13483F));
@@ -152,9 +161,40 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(927, 563);
             this.tableLayoutPanel1.TabIndex = 0;
+=======
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.71202F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.28798F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 155F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 166F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 141F));
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.textBox1, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.userControl11, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label14, 3, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label15, 3, 4);
+            this.tableLayoutPanel1.Controls.Add(this.textBox5, 4, 3);
+            this.tableLayoutPanel1.Controls.Add(this.textBox6, 4, 4);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 6;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 84.13361F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.86639F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(904, 568);
+            this.tableLayoutPanel1.TabIndex = 9;
+>>>>>>> Stashed changes
             // 
             // label1
             // 
+<<<<<<< Updated upstream
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(629, 8);
             this.label1.Name = "label1";
@@ -178,18 +218,40 @@
             this.label2.Size = new System.Drawing.Size(72, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Thời gian vào";
+=======
+            this.tableLayoutPanel1.SetColumnSpan(this.pictureBox1, 2);
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(11, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(420, 364);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            //this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
+>>>>>>> Stashed changes
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+<<<<<<< Updated upstream
             this.label5.Location = new System.Drawing.Point(629, 93);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 13);
             this.label5.TabIndex = 6;
             this.label5.Text = "Link ảnh";
+=======
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.Location = new System.Drawing.Point(11, 447);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(196, 42);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Biển số xe";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+>>>>>>> Stashed changes
             // 
             // label14
             // 
+<<<<<<< Updated upstream
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(629, 127);
             this.label14.Name = "label14";
@@ -226,19 +288,48 @@
             this.pictureBox2.Name = "pictureBox2";
             this.tableLayoutPanel1.SetRowSpan(this.pictureBox2, 5);
             this.pictureBox2.Size = new System.Drawing.Size(324, 548);
+=======
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Location = new System.Drawing.Point(11, 378);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(196, 69);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Thời gian vào";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox2
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.pictureBox2, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(451, 11);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(308, 364);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+>>>>>>> Stashed changes
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox5
             // 
+<<<<<<< Updated upstream
             this.pictureBox5.Location = new System.Drawing.Point(785, 11);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(127, 18);
             this.pictureBox5.TabIndex = 11;
             this.pictureBox5.TabStop = false;
+=======
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Location = new System.Drawing.Point(213, 450);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(225, 20);
+            this.textBox1.TabIndex = 11;
+            //this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+>>>>>>> Stashed changes
             // 
             // label15
             // 
+<<<<<<< Updated upstream
             this.tableLayoutPanel1.SetColumnSpan(this.label15, 2);
             this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label15.Location = new System.Drawing.Point(629, 164);
@@ -247,6 +338,26 @@
             this.label15.TabIndex = 10;
             this.label15.Text = "Tên nhân viên";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+=======
+            this.label2.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.label2, 2);
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Location = new System.Drawing.Point(444, 378);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(315, 69);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Tên nhân viên";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // userControl11
+            // 
+            this.userControl11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControl11.Location = new System.Drawing.Point(212, 381);
+            this.userControl11.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(227, 63);
+            this.userControl11.TabIndex = 12;
+>>>>>>> Stashed changes
             // 
             // tp_XeRa
             // 
@@ -258,10 +369,15 @@
             this.tp_XeRa.TabIndex = 1;
             this.tp_XeRa.Text = "Xe Ra";
             this.tp_XeRa.UseVisualStyleBackColor = true;
+<<<<<<< Updated upstream
+=======
+            //this.tp_XeRa.Enter += new System.EventHandler(this.tp_XeVao_Enter);
+>>>>>>> Stashed changes
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 6;
+<<<<<<< Updated upstream
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.87898F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.12102F));
@@ -291,38 +407,117 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(924, 566);
             this.tableLayoutPanel2.TabIndex = 0;
+=======
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.225115F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 98.77489F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 229F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 222F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 218F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel2.Controls.Add(this.textBox4, 2, 2);
+            this.tableLayoutPanel2.Controls.Add(this.label6, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.label3, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.pictureBox3, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.pictureBox4, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label4, 3, 1);
+            this.tableLayoutPanel2.Controls.Add(this.userControl12, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label7, 3, 2);
+            this.tableLayoutPanel2.Controls.Add(this.label8, 3, 3);
+            this.tableLayoutPanel2.Controls.Add(this.textBox2, 4, 2);
+            this.tableLayoutPanel2.Controls.Add(this.textBox3, 4, 3);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 6);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 4;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.63241F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.36759F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(898, 562);
+            this.tableLayoutPanel2.TabIndex = 8;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(208, 495);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(223, 20);
+            this.textBox4.TabIndex = 7;
+            //this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label6.Location = new System.Drawing.Point(5, 492);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(197, 33);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Biển số xe";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+>>>>>>> Stashed changes
             // 
             // pictureBox4
             // 
+<<<<<<< Updated upstream
             this.pictureBox4.Location = new System.Drawing.Point(290, 11);
             this.pictureBox4.Name = "pictureBox4";
             this.tableLayoutPanel2.SetRowSpan(this.pictureBox4, 5);
             this.pictureBox4.Size = new System.Drawing.Size(382, 544);
             this.pictureBox4.TabIndex = 1;
             this.pictureBox4.TabStop = false;
+=======
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Location = new System.Drawing.Point(5, 397);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(197, 95);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Thời gian ra";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+>>>>>>> Stashed changes
             // 
             // pictureBox3
             // 
             this.pictureBox3.Location = new System.Drawing.Point(11, 11);
             this.pictureBox3.Name = "pictureBox3";
+<<<<<<< Updated upstream
             this.tableLayoutPanel2.SetRowSpan(this.pictureBox3, 5);
             this.pictureBox3.Size = new System.Drawing.Size(273, 544);
+=======
+            this.pictureBox3.Size = new System.Drawing.Size(419, 391);
+>>>>>>> Stashed changes
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
             // label3
             // 
+<<<<<<< Updated upstream
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(678, 8);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Biển số";
+=======
+            this.tableLayoutPanel2.SetColumnSpan(this.pictureBox4, 2);
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox4.Location = new System.Drawing.Point(444, 3);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(427, 391);
+            this.pictureBox4.TabIndex = 1;
+            this.pictureBox4.TabStop = false;
+>>>>>>> Stashed changes
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+<<<<<<< Updated upstream
             this.label4.Location = new System.Drawing.Point(678, 102);
+=======
+            this.tableLayoutPanel2.SetColumnSpan(this.label4, 2);
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Location = new System.Drawing.Point(437, 397);
+>>>>>>> Stashed changes
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 26);
             this.label4.TabIndex = 3;
@@ -330,17 +525,30 @@
             // 
             // label6
             // 
+<<<<<<< Updated upstream
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(678, 160);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 4;
             this.label6.Text = "Mã thẻ";
+=======
+            this.userControl12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControl12.Location = new System.Drawing.Point(207, 400);
+            this.userControl12.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.userControl12.Name = "userControl12";
+            this.userControl12.Size = new System.Drawing.Size(225, 89);
+            this.userControl12.TabIndex = 8;
+>>>>>>> Stashed changes
             // 
             // label7
             // 
             this.label7.AutoSize = true;
+<<<<<<< Updated upstream
             this.label7.Location = new System.Drawing.Point(678, 186);
+=======
+            this.label7.Location = new System.Drawing.Point(437, 492);
+>>>>>>> Stashed changes
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 13);
             this.label7.TabIndex = 5;
@@ -349,9 +557,13 @@
             // label8
             // 
             this.label8.AutoSize = true;
+<<<<<<< Updated upstream
             this.tableLayoutPanel2.SetColumnSpan(this.label8, 2);
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label8.Location = new System.Drawing.Point(678, 215);
+=======
+            this.label8.Location = new System.Drawing.Point(437, 525);
+>>>>>>> Stashed changes
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(233, 343);
             this.label8.TabIndex = 6;
@@ -383,10 +595,24 @@
             // 
             // textBox2
             // 
+<<<<<<< Updated upstream
             this.textBox2.Location = new System.Drawing.Point(754, 189);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 10;
+=======
+            this.textBox2.Location = new System.Drawing.Point(659, 495);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 11;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(659, 528);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 12;
+>>>>>>> Stashed changes
             // 
             // tp_NV
             // 
@@ -628,6 +854,42 @@
             // 
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
+<<<<<<< Updated upstream
+=======
+            //this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(444, 447);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(40, 13);
+            this.label14.TabIndex = 13;
+            this.label14.Text = "Mã thẻ";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(444, 489);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(48, 13);
+            this.label15.TabIndex = 14;
+            this.label15.Text = "Link ảnh";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(599, 450);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.TabIndex = 15;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(599, 492);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.TabIndex = 16;
+>>>>>>> Stashed changes
             // 
             // FrMain
             // 
@@ -716,6 +978,14 @@
         private WindowsFormsControlLibrary1.UserControl1 userControl12;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+<<<<<<< Updated upstream
+=======
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+>>>>>>> Stashed changes
     }
 }
 
