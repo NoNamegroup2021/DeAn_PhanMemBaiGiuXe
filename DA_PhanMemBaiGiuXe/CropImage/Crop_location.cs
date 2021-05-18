@@ -17,6 +17,7 @@ namespace CropImage
 {
     public partial class Crop_location : Form
     {
+        cropImageProcess.cropImage crop = new cropImageProcess.cropImage();
         FolderBrowserDialog folder_brower = new FolderBrowserDialog();
         DirectoryInfo dir;
         List<string> direct_img = new List<string>();
