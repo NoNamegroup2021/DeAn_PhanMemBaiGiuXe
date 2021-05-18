@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\DA_PhanMemBaiGiuXe",
+    "\\DA_PhanMemBaiGiuXe\\DA_PhanMemBaiGiuXe",
+    "\\DA_PhanMemBaiGiuXe\\DA_PhanMemBaiGiuXe\\Processing"
   ],
-  "SelectedNode": "\\tesst.sln",
+  "SelectedNode": "\\DA_PhanMemBaiGiuXe\\DA_PhanMemBaiGiuXe.sln",
   "PreviewInSolutionExplorer": false
 }

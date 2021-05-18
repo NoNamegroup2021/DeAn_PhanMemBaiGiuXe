@@ -22,7 +22,7 @@ namespace DA_PhanMemBaiGiuXe
         Rectangle rect = new Rectangle();
         Bitmap img;
         Bitmap crop_img;
-        string haarcascade_file = Application.StartupPath + "\\carLincense.xml";
+        string haarcascade_file = Application.StartupPath + "\\car_lp_cascade.xml";
         CascadeClassifier carLicense_class;
         public testCascade()
         {
@@ -45,29 +45,31 @@ namespace DA_PhanMemBaiGiuXe
                 pictureBox1.Image = (Image)img;
                 pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
             }
-            
+
         }
         bool success;
-        private void detect()
+        float scale = 0;
+        private void detect(ref Rectangle[] rects)
         {
             Bitmap bm = pictureBox1.Image as Bitmap;
-            if(bm != null)
+            if (bm != null)
             {
-                try{
+                try {
                     carLicense_class = new CascadeClassifier(haarcascade_file);
                     Bitmap bm2 = pictureBox1.Image as Bitmap;
-                    Image<Bgr,Byte> img = new Image<Bgr,byte>(bm2);
+                    Image<Bgr, Byte> img = new Image<Bgr, byte>(bm2);
                     Image<Gray, Byte> gray = img.Convert<Gray, Byte>();
-                    
-                    Rectangle[] carLicenses = carLicense_class.DetectMultiScale(gray, 1.2, 2, Size.Empty);
+
+                    Rectangle[] carLicenses = carLicense_class.DetectMultiScale(gray, scale, 4, new Size(40, 30));
                     foreach (var carLicense in carLicenses)
                     {
                         img.Draw(carLicense, new Bgr(Color.Green), 3);
                     }
                     pictureBox1.Image = img.ToBitmap();
+                    rects = carLicenses;
                     MessageBox.Show("Detected");
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     success = false;
                     MessageBox.Show(ex.ToString());
@@ -81,8 +83,108 @@ namespace DA_PhanMemBaiGiuXe
 
         private void button2_Click(object sender, EventArgs e)
         {
-            detect();
+            
+            Rectangle [] rects = null;
+            detect(ref rects);
+            if(rects != null && rects.Count() >0)
+            {
+                var boundingBox = rects[rects.Count() - 1];
+                Bitmap src = pictureBox1.Image as Bitmap;
+                Bitmap crop = new Bitmap(boundingBox.Width, boundingBox.Height);
+               
+                using(Graphics g = Graphics.FromImage(crop))
+                {
+                    g.DrawImage(src, new Rectangle(0, 0, crop.Width, crop.Height), boundingBox, GraphicsUnit.Pixel);
+                }
+                Image<Bgr, Byte> img_cropped = new Image<Bgr, byte>(crop);
+                img_cropped = resizeImage(img_cropped, pictureBox2.Width, pictureBox2.Height);
+                pictureBox2.Image = img_cropped.ToBitmap();
+            }
         }
 
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            scale = (float)trackBar1.Value / 10 + 1;
+            this.label1.Text = scale.ToString();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private Image<Bgr, Byte> resizeImage(Image<Bgr, Byte> original, int width, int height)
+        {
+            Image<Bgr, Byte> img_resized = original.Resize(width, height, Emgu.CV.CvEnum.Inter.Linear);
+            return img_resized;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Bitmap bm = pictureBox2.Image as Bitmap;
+                Image<Bgr, Byte> ori_img = new Image<Bgr, byte>(bm);
+                ori_img = resizeImage(ori_img, pictureBox3.Width, pictureBox3.Height);
+                Image<Gray, Byte> gray_scale = new Image<Gray, byte>(ori_img.ToBitmap());
+                Bitmap gray_bm = gray_scale.ToBitmap();
+                pictureBox3.Image = gray_bm;
+            }
+            catch
+            { }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Bitmap bm = pictureBox2.Image as Bitmap;
+                Image<Bgr, Byte> ori_img = new Image<Bgr, byte>(bm);
+                ori_img = resizeImage(ori_img, pictureBox2.Width, pictureBox2.Height);
+
+                Image<Gray, Byte> gray_scale = new Image<Gray, byte>(ori_img.ToBitmap());
+
+                Mat gaussian = Gaussianblur(gray_scale);
+
+                Image<Gray, Byte> gray_gua_scale = gaussian.ToImage<Gray, Byte>();
+
+                //gray_gua_scale = gray_gua_scale.ThresholdBinary(new Gray(150), new Gray(255));
+                CvInvoke.AdaptiveThreshold(gaussian, gray_gua_scale, 255, Emgu.CV.CvEnum.AdaptiveThresholdType.MeanC, Emgu.CV.CvEnum.ThresholdType.BinaryInv, 51, 2);
+
+
+                Bitmap gray_bm = gray_gua_scale.ToBitmap();
+
+                pictureBox4.Image = gray_bm;
+            }
+            catch
+            {
+
+            }
+        }
+
+        private Mat Gaussianblur(Image<Gray, Byte> img)
+        {
+            Mat src = img.Mat;
+            CvInvoke.GaussianBlur(src, src, new Size(5, 5), 0);
+            return src;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Bitmap src_bm = pictureBox4.Image as Bitmap;
+                Image<Gray, Byte> src_img = new Image<Gray, byte>(src_bm);
+                Emgu.CV.Util.VectorOfVectorOfPoint contours = new VectorOfVectorOfPoint();
+                Mat hier = new Mat();
+                CvInvoke.FindContours(src_img, contours, hier, Emgu.CV.CvEnum.RetrType.List, Emgu.CV.CvEnum.ChainApproxMethod.ChainApproxSimple);
+                CvInvoke.DrawContours(src_img, contours, -1, new MCvScalar(255, 0, 0));
+                pictureBox5.Image = src_img.ToBitmap();
+            }
+            catch
+            {
+
+            }
+        }
     }
 }

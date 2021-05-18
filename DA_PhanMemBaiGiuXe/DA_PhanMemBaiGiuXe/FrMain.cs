@@ -58,7 +58,7 @@ namespace DA_PhanMemBaiGiuXe
         private void Cam_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
             Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
-            bitmap.RotateFlip(RotateFlipType.Rotate180FlipY);
+            //bitmap.RotateFlip(RotateFlipType.Rotate180FlipY);
             pictureBox1.Image = bitmap;
             pictureBox3.Image = bitmap;
         }
@@ -104,7 +104,7 @@ namespace DA_PhanMemBaiGiuXe
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            rects_area = detect_object();
+                rects_area = detect_object();
             
         }
 
@@ -133,14 +133,14 @@ namespace DA_PhanMemBaiGiuXe
             {
                 if (pictureBox1.Image != null)
                 {
-                    string path = Application.StartupPath + "\\cascade.xml";
+                    string path = Application.StartupPath + "\\car_lp_cascade.xml";
                     carLicense_classifier = new CascadeClassifier(path);
 
                     Bitmap transfr = pictureBox1.Image as Bitmap;
                     Image<Bgr, Byte> img_transfr_frame = new Image<Bgr, byte>(transfr);
                     Image<Gray, Byte> imgTransf_grayScale = img_transfr_frame.Convert<Gray, Byte>();
 
-                    Rectangle[] rects = carLicense_classifier.DetectMultiScale(imgTransf_grayScale, 1.2, 2, Size.Empty);
+                    Rectangle[] rects = carLicense_classifier.DetectMultiScale(imgTransf_grayScale, 1.2, 3, Size.Empty);
                     return rects;
 
                 }
@@ -245,6 +245,34 @@ namespace DA_PhanMemBaiGiuXe
             {
                 txtMaNV.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
                 txtTenNV.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            }
+        }
+
+        private void FrMain_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void tabControl1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13 && pictureBox1.Image != null)
+            {
+                int count = rects_area.Count();
+                if (count > 0)
+                {
+                    var boundingBox = rects_area[count - 1];
+
+                    Bitmap src = pictureBox1.Image as Bitmap;
+                    Bitmap crop = new Bitmap(boundingBox.Width, boundingBox.Height);
+                    using(Graphics g = Graphics.FromImage(crop))
+                    {
+                        g.DrawImage(src, new Rectangle(0, 0, crop.Width, crop.Height), boundingBox, GraphicsUnit.Pixel);
+                    }
+                    
+
+                    pictureBox2.Image = crop;
+                    pictureBox2.Invalidate();
+                }
             }
         }
     }

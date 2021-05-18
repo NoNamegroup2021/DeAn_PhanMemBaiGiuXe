@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cropImageProcess\cropImage.cs" />
     <Compile Include="Crop_location.cs">
       <SubType>Form</SubType>
     </Compile>
