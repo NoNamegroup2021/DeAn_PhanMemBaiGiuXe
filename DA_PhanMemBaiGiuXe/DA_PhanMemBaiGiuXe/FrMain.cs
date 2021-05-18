@@ -55,105 +55,105 @@ namespace DA_PhanMemBaiGiuXe
             this.timer1.Interval = 100;
         }
 
-        //private void Cam_NewFrame(object sender, NewFrameEventArgs eventArgs)
-        //{
-        //    Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
-        //    //bitmap.RotateFlip(RotateFlipType.Rotate180FlipY);
-        //    pictureBox1.Image = bitmap;
-        //    pictureBox3.Image = bitmap;
-        //}
-        //protected override void OnClosed(EventArgs e)
-        //{
-        //    base.OnClosed(e);
-        //    if (cam != null && cam.IsRunning)
-        //    {
-        //        cam.Stop();
+        private void Cam_NewFrame(object sender, NewFrameEventArgs eventArgs)
+        {
+            Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
+            //bitmap.RotateFlip(RotateFlipType.Rotate180FlipY);
+            pictureBox1.Image = bitmap;
+            pictureBox3.Image = bitmap;
+        }
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+            if (cam != null && cam.IsRunning)
+            {
+                cam.Stop();
 
-        //    }
-        //}
+            }
+        }
 
-        //private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
-        //{
-        //    if (e.KeyChar == 13)
-        //    {
-        //        pictureBox2.Image = pictureBox1.Image;                
-        //    }
-        //}
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                pictureBox2.Image = pictureBox1.Image;                
+            }
+        }
 
         
 
-        //private void tp_XeVao_Enter(object sender, EventArgs e)
-        //{
-        //    if (cam != null && cam.IsRunning)
-        //    {
-        //        cam.Stop();
-        //    }
-        //    cam = new VideoCaptureDevice(dscam[0].MonikerString);
-        //    cam.NewFrame += Cam_NewFrame;
-        //    cam.Start();
-        //}
+        private void tp_XeVao_Enter(object sender, EventArgs e)
+        {
+            if (cam != null && cam.IsRunning)
+            {
+                cam.Stop();
+            }
+            cam = new VideoCaptureDevice(dscam[0].MonikerString);
+            cam.NewFrame += Cam_NewFrame;
+            cam.Start();
+        }
 
-        //private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
-        //{
-        //    if (e.KeyChar == 13)
-        //    {
-        //        pictureBox4.Image = pictureBox3.Image;
-        //    }
-        //}
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                pictureBox4.Image = pictureBox3.Image;
+            }
+        }
 
 
-        //private void timer1_Tick(object sender, EventArgs e)
-        //{
-        //        rects_area = detect_object();
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+                rects_area = detect_object();
             
-        //}
+        }
 
-        //private void pictureBox1_Paint(object sender, PaintEventArgs e)
-        //{
-        //    Graphics g = e.Graphics;
-        //    if (rects_area != null)
-        //    {
-        //        int count = rects_area.Count();
-        //        if (count > 0)
-        //        {
-        //            Rectangle rect = new Rectangle();
-        //            rect.Location = rects_area[count - 1].Location;
-        //            rect.Size = rects_area[count - 1].Size;
-        //            if (rect != null && rect.Height > 0 && rect.Width > 0)
-        //            {
-        //                e.Graphics.DrawRectangle(new Pen(Color.Red, 3), rect);
-        //            }
-        //        }
-        //    }
-        //}
+        private void pictureBox1_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            if (rects_area != null)
+            {
+                int count = rects_area.Count();
+                if (count > 0)
+                {
+                    Rectangle rect = new Rectangle();
+                    rect.Location = rects_area[count - 1].Location;
+                    rect.Size = rects_area[count - 1].Size;
+                    if (rect != null && rect.Height > 0 && rect.Width > 0)
+                    {
+                        e.Graphics.DrawRectangle(new Pen(Color.Red, 3), rect);
+                    }
+                }
+            }
+        }
 
-        //private Rectangle[] detect_object()
-        //{
-        //    try
-        //    {
-        //        if (pictureBox1.Image != null)
-        //        {
-        //            string path = Application.StartupPath + "\\car_lp_cascade.xml";
-        //            carLicense_classifier = new CascadeClassifier(path);
+        private Rectangle[] detect_object()
+        {
+            try
+            {
+                if (pictureBox1.Image != null)
+                {
+                    string path = Application.StartupPath + "\\car_lp_cascade.xml";
+                    carLicense_classifier = new CascadeClassifier(path);
 
-        //            Bitmap transfr = pictureBox1.Image as Bitmap;
-        //            Image<Bgr, Byte> img_transfr_frame = new Image<Bgr, byte>(transfr);
-        //            Image<Gray, Byte> imgTransf_grayScale = img_transfr_frame.Convert<Gray, Byte>();
+                    Bitmap transfr = pictureBox1.Image as Bitmap;
+                    Image<Bgr, Byte> img_transfr_frame = new Image<Bgr, byte>(transfr);
+                    Image<Gray, Byte> imgTransf_grayScale = img_transfr_frame.Convert<Gray, Byte>();
 
-        //            Rectangle[] rects = carLicense_classifier.DetectMultiScale(imgTransf_grayScale, 1.2, 3, Size.Empty);
-        //            return rects;
+                    Rectangle[] rects = carLicense_classifier.DetectMultiScale(imgTransf_grayScale, 1.2, 3, Size.Empty);
+                    return rects;
 
-        //        }
-        //        else
-        //            return null;
+                }
+                else
+                    return null;
 
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //        return null;
-        //    }
-        //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
         public void reLoad()
         {
             var monHoc = from mh in data.NhanViens select mh;
@@ -275,7 +275,5 @@ namespace DA_PhanMemBaiGiuXe
                 }
             }
         }
-
-
     }
 }
