@@ -19,7 +19,7 @@ namespace DA_PhanMemBaiGiuXe
 {
     public partial class FrMain : Form
     {
-        QLXMDataContext data = new QLXMDataContext();
+        DataClasses1DataContext data = new DataClasses1DataContext();
         private FilterInfoCollection dscam;
         private VideoCaptureDevice cam;
         private string chucvu;

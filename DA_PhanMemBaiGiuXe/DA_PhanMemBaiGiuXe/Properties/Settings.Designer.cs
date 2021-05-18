@@ -12,7 +12,7 @@ namespace DA_PhanMemBaiGiuXe.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "12.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "11.0.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -42,6 +42,27 @@ namespace DA_PhanMemBaiGiuXe.Properties {
         public string QL_BaiGiuXeConnectionString1 {
             get {
                 return ((string)(this["QL_BaiGiuXeConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-H0R3HLD\\SQLEXPRESS;Initial Catalog=QL_BaiGiuXe;User ID=sa;Pas" +
+            "sword=1")]
+        public string QL_BaiGiuXeConnectionString2 {
+            get {
+                return ((string)(this["QL_BaiGiuXeConnectionString2"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-5HAB20B;Initial Catalog=QL_BaiGiuXe;Integrated Security=True")]
+        public string QL_BaiGiuXeConnectionString3 {
+            get {
+                return ((string)(this["QL_BaiGiuXeConnectionString3"]));
             }
         }
     }

@@ -27,3 +27,16 @@ C:\Users\Admin\Documents\GitHub\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\CropImag
 C:\Users\Admin\Documents\GitHub\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\CropImage\obj\Debug\CropImage.csproj.GenerateResource.Cache
 C:\Users\Admin\Documents\GitHub\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\CropImage\obj\Debug\CropImage.exe
 C:\Users\Admin\Documents\GitHub\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\CropImage\obj\Debug\CropImage.pdb
+C:\Users\Admin\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\CropImage\bin\Debug\CropImage.exe.config
+C:\Users\Admin\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\CropImage\obj\Debug\CropImage.exe
+C:\Users\Admin\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\CropImage\obj\Debug\CropImage.pdb
+C:\Users\Admin\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\CropImage\bin\Debug\CropImage.exe
+C:\Users\Admin\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\CropImage\bin\Debug\CropImage.pdb
+C:\Users\Admin\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\CropImage\bin\Debug\ZedGraph.dll
+C:\Users\Admin\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\CropImage\bin\Debug\Emgu.CV.xml
+C:\Users\Admin\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\CropImage\bin\Debug\Emgu.CV.UI.xml
+C:\Users\Admin\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\CropImage\bin\Debug\Emgu.Util.xml
+C:\Users\Admin\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\CropImage\obj\Debug\CropImage.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\CropImage\obj\Debug\CropImage.Crop_location.resources
+C:\Users\Admin\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\CropImage\obj\Debug\CropImage.Properties.Resources.resources
+C:\Users\Admin\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\CropImage\obj\Debug\CropImage.csproj.GenerateResource.Cache

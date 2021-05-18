@@ -13,7 +13,7 @@ namespace DA_PhanMemBaiGiuXe
     
     public partial class Form1 : Form
     {
-        QLXMDataContext data = new QLXMDataContext();
+        DataClasses1DataContext data = new DataClasses1DataContext();
         public Form1()
         {
             InitializeComponent();

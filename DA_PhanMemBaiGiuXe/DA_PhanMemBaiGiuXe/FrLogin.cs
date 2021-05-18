@@ -12,7 +12,7 @@ namespace DA_PhanMemBaiGiuXe
 {
     public partial class FrLogin : Form
     {
-        QLXMDataContext data = new QLXMDataContext();
+        DataClasses1DataContext data = new DataClasses1DataContext();
         public FrLogin()
         {
             InitializeComponent();
