@@ -140,3 +140,6 @@ C:\Users\Admin\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_Phan
 C:\Users\Admin\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\Emgu.CV.UI.xml
 C:\Users\Admin\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\Emgu.Util.xml
 >>>>>>> Stashed changes
+C:\Users\Admin\Desktop\DA_CongNghePhanMem\DA_CNPM\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\DA_PhanMemBaiGiuXe.exe.config
+C:\Users\Admin\Desktop\DA_CongNghePhanMem\DA_CNPM\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\obj\Debug\DA_PhanMemBaiGiuXe.exe
+C:\Users\Admin\Desktop\DA_CongNghePhanMem\DA_CNPM\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\obj\Debug\DA_PhanMemBaiGiuXe.pdb
