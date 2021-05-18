@@ -48,7 +48,7 @@ namespace DA_PhanMemBaiGiuXe
     #endregion
 		
 		public DataClasses1DataContext() : 
-				base(global::DA_PhanMemBaiGiuXe.Properties.Settings.Default.QL_BaiGiuXeConnectionString3, mappingSource)
+				base(global::DA_PhanMemBaiGiuXe.Properties.Settings.Default.QL_BaiGiuXeConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}

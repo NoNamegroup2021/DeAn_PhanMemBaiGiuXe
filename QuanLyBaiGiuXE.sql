@@ -36,6 +36,7 @@ create table QuetXe
 	Constraint FK_QX primary key (IDThe,BIENSO),
 	Constraint PK_QX_BT  FOREIGN KEY(IDthe) REFERENCES BangThe(MaThe),
 )
+drop trigger tr_qet_the
 go
 use QL_BaiGiuXe
 go

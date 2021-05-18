@@ -88,7 +88,6 @@ C:\Users\Admin\Desktop\QLBaiXe\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMe
 C:\Users\Admin\Desktop\QLBaiXe\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\DA_PhanMemBaiGiuXe.pdb
 C:\Users\Admin\Desktop\QLBaiXe\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\WindowsFormsControlLibrary1.dll
 C:\Users\Admin\Desktop\QLBaiXe\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\WindowsFormsControlLibrary1.pdb
-C:\Users\Admin\Desktop\QLBaiXe\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\Emgu.CV.xml
 C:\Users\Admin\Desktop\QLBaiXe\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\obj\Debug\DA_PhanMemBaiGiuXe.csprojResolveAssemblyReference.cache
 C:\Users\Admin\Desktop\QLBaiXe\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\obj\Debug\DA_PhanMemBaiGiuXe.Form1.resources
 C:\Users\Admin\Desktop\QLBaiXe\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\obj\Debug\DA_PhanMemBaiGiuXe.FrLogin.resources
@@ -128,3 +127,7 @@ C:\Users\Admin\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_Phan
 C:\Users\Admin\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\obj\Debug\DA_PhanMemBaiGiuXe.Properties.Resources.resources
 C:\Users\Admin\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\obj\Debug\DA_PhanMemBaiGiuXe.testCascade.resources
 C:\Users\Admin\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\obj\Debug\DA_PhanMemBaiGiuXe.csproj.GenerateResource.Cache
+C:\Users\Admin\Desktop\QLBaiXe\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\PhanMemBaiGiuXeBLL.dll
+C:\Users\Admin\Desktop\QLBaiXe\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\PhanMemBaiGiuXeDAL.dll
+C:\Users\Admin\Desktop\QLBaiXe\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\PhanMemBaiGiuXeBLL.pdb
+C:\Users\Admin\Desktop\QLBaiXe\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\PhanMemBaiGiuXeDAL.pdb

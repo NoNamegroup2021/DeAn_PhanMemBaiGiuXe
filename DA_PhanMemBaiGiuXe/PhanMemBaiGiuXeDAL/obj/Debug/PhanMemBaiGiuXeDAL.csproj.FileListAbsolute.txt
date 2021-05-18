@@ -1,0 +1,5 @@
+C:\Users\Admin\Desktop\QLBaiXe\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\bin\Debug\PhanMemBaiGiuXeDAL.dll
+C:\Users\Admin\Desktop\QLBaiXe\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\bin\Debug\PhanMemBaiGiuXeDAL.pdb
+C:\Users\Admin\Desktop\QLBaiXe\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\obj\Debug\PhanMemBaiGiuXeDAL.dll
+C:\Users\Admin\Desktop\QLBaiXe\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\obj\Debug\PhanMemBaiGiuXeDAL.pdb
+C:\Users\Admin\Desktop\QLBaiXe\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\bin\Debug\PhanMemBaiGiuXeDAL.dll.config

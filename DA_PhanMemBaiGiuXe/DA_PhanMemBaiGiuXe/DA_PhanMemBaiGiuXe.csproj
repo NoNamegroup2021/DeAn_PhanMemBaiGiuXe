@@ -49,6 +49,12 @@
     <Reference Include="Emgu.Util">
       <HintPath>C:\Emgu\emgucv-windows-universal 3.0.0.2157\bin\Emgu.Util.dll</HintPath>
     </Reference>
+    <Reference Include="PhanMemBaiGiuXeBLL">
+      <HintPath>..\PhanMemBaiGiuXeBLL\bin\Debug\PhanMemBaiGiuXeBLL.dll</HintPath>
+    </Reference>
+    <Reference Include="PhanMemBaiGiuXeDAL">
+      <HintPath>..\PhanMemBaiGiuXeDAL\bin\Debug\PhanMemBaiGiuXeDAL.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
