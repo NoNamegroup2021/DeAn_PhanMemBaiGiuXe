@@ -25,6 +25,15 @@ namespace DA_PhanMemBaiGiuXe
         private string chucvu;
         private CascadeClassifier carLicense_classifier;
         private Rectangle[] rects_area;
+
+        private string _TenNV;
+
+        public string TenNV
+        {
+            get { return _TenNV; }
+            set { _TenNV = value; }
+        }
+        
         public string Chucvu
         {
             get { return chucvu; }
@@ -39,7 +48,7 @@ namespace DA_PhanMemBaiGiuXe
 
         private void FrMain_Load(object sender, EventArgs e)
         {
-            
+            label15.Text = _TenNV;   
             if (chucvu == "Nhân Viên")
             {
                 this.tp_QL.Enabled = true;
@@ -273,6 +282,14 @@ namespace DA_PhanMemBaiGiuXe
                     pictureBox2.Image = crop;
                     pictureBox2.Invalidate();
                 }
+            }
+        }
+
+        private void txt_MaThe_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == 13)
+            {
+
             }
         }
     }
