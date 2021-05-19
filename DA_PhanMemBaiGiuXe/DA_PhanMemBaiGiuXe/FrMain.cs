@@ -42,7 +42,7 @@ namespace DA_PhanMemBaiGiuXe
             
             if (chucvu == "Nhân Viên")
             {
-                this.tp_NV.Enabled = true;
+                this.tp_QL.Enabled = true;
                 this.tp_XeVao.Enabled = false;
                 this.tp_XeRa.Enabled = false;
             }
@@ -50,7 +50,7 @@ namespace DA_PhanMemBaiGiuXe
             {
                 this.tp_XeVao.Enabled = true;
                 this.tp_XeRa.Enabled = true;
-                this.tp_NV.Enabled = true;
+                this.tp_QL.Enabled = true;
             }
             this.timer1.Interval = 100;
         }

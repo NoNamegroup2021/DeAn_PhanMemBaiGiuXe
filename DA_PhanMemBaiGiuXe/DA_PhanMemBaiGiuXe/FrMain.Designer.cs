@@ -53,7 +53,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.tp_NV = new System.Windows.Forms.TabPage();
+            this.tp_QL = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -86,7 +86,7 @@
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.tp_NV.SuspendLayout();
+            this.tp_QL.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -96,7 +96,7 @@
             // 
             this.tabControl1.Controls.Add(this.tp_XeVao);
             this.tabControl1.Controls.Add(this.tp_XeRa);
-            this.tabControl1.Controls.Add(this.tp_NV);
+            this.tabControl1.Controls.Add(this.tp_QL);
             this.tabControl1.Location = new System.Drawing.Point(16, 15);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
@@ -381,17 +381,17 @@
             this.textBox3.Size = new System.Drawing.Size(132, 22);
             this.textBox3.TabIndex = 12;
             // 
-            // tp_NV
+            // tp_QL
             // 
-            this.tp_NV.Controls.Add(this.tableLayoutPanel3);
-            this.tp_NV.Controls.Add(this.toolStrip1);
-            this.tp_NV.Location = new System.Drawing.Point(4, 25);
-            this.tp_NV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tp_NV.Name = "tp_NV";
-            this.tp_NV.Size = new System.Drawing.Size(1216, 709);
-            this.tp_NV.TabIndex = 2;
-            this.tp_NV.Text = "Nhân Viên";
-            this.tp_NV.UseVisualStyleBackColor = true;
+            this.tp_QL.Controls.Add(this.tableLayoutPanel3);
+            this.tp_QL.Controls.Add(this.toolStrip1);
+            this.tp_QL.Location = new System.Drawing.Point(4, 25);
+            this.tp_QL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tp_QL.Name = "tp_QL";
+            this.tp_QL.Size = new System.Drawing.Size(1216, 709);
+            this.tp_QL.TabIndex = 2;
+            this.tp_QL.Text = "Quản Lý";
+            this.tp_QL.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel3
             // 
@@ -657,8 +657,8 @@
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.tp_NV.ResumeLayout(false);
-            this.tp_NV.PerformLayout();
+            this.tp_QL.ResumeLayout(false);
+            this.tp_QL.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -690,7 +690,7 @@
         private WindowsFormsControlLibrary1.UserControl1 userControl11;
         private WindowsFormsControlLibrary1.UserControl1 userControl12;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.TabPage tp_NV;
+        private System.Windows.Forms.TabPage tp_QL;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
