@@ -23,6 +23,8 @@ namespace DA_PhanMemBaiGiuXe
             NhanVien nv = new NhanVien();
         }
 
+        
+
         private void btn_Login_Click(object sender, EventArgs e)
         {
             string id = txt_Login.Text;
@@ -53,7 +55,8 @@ namespace DA_PhanMemBaiGiuXe
                         break;
                     }
                 }
-
+                Login kq = data.Logins.Where(t => t.Username == id).SingleOrDefault();
+                Program.main.TenNV =kq.NhanVien.HoTen;
                 Program.main.Show();
                 this.Hide();
             }
