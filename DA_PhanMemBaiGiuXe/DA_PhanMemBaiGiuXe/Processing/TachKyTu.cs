@@ -18,16 +18,19 @@ namespace DA_PhanMemBaiGiuXe
 	{
 		
 		private Bitmap img;
+		private Rectangle[] rects_areas;
 	
 		public TachKyTu()
 		{
 		}
 
 		public Bitmap Img { get => img; set => img = value; }
+        public Rectangle[] Rects_areas { get => rects_areas; set => rects_areas = value; }
 
-		public void setData(Bitmap img)
+        public void setData(Bitmap img)
 		{
 			this.img = img;
+			Rects_areas = null;
 		}
 		
 		public void contour(Image<Gray,Byte>src)
@@ -35,7 +38,7 @@ namespace DA_PhanMemBaiGiuXe
 			Image<Gray, Byte> img_contours = new Image<Gray, byte>(src.ToBitmap());
 			src = AdaptiveThreshold(src);
 			
-
+			
         }
 
 		/// <summary>

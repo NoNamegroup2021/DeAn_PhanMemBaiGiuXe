@@ -19,11 +19,12 @@ namespace DA_PhanMemBaiGiuXe
 {
     public partial class testCascade : Form
     {
-        Rectangle rect = new Rectangle();
         Bitmap img;
         Bitmap crop_img;
         string haarcascade_file = Application.StartupPath + "\\car_lp_cascade.xml";
         CascadeClassifier carLicense_class;
+        Rectangle[] rect_found = null;
+
         public testCascade()
         {
             InitializeComponent();
@@ -169,6 +170,8 @@ namespace DA_PhanMemBaiGiuXe
             return src;
         }
 
+
+
         private void button5_Click(object sender, EventArgs e)
         {
             try
@@ -180,6 +183,31 @@ namespace DA_PhanMemBaiGiuXe
                 CvInvoke.FindContours(src_img, contours, hier, Emgu.CV.CvEnum.RetrType.List, Emgu.CV.CvEnum.ChainApproxMethod.ChainApproxSimple);
                 CvInvoke.DrawContours(src_img, contours, -1, new MCvScalar(255, 0, 0));
                 pictureBox5.Image = src_img.ToBitmap();
+
+                // draw Rectangle for each contour is number
+                
+                int count = contours.Size;
+                rect_found = new Rectangle[count];
+                int jumpstep = 0;
+                Image<Bgr, Byte> img_brg_draw = new Image<Bgr, byte>(pictureBox2.Image as Bitmap);
+                for (int i = 0; i < count; i++)
+                {
+                    int width = CvInvoke.BoundingRectangle(contours[i]).Width;
+                    int height = CvInvoke.BoundingRectangle(contours[i]).Height;
+
+
+                    if (width <= height &&  (float)width / height > 0.2 && (float)width / height < 0.5)
+                    {
+                        int x = CvInvoke.BoundingRectangle(contours[i]).X;
+                        int y = CvInvoke.BoundingRectangle(contours[i]).Y;
+                        Rectangle rect = new Rectangle(x, y, width, height);
+                        CvInvoke.Rectangle(img_brg_draw,rect, new MCvScalar(0, 0, 255), 2);
+                        rect_found[jumpstep] = rect;
+                        jumpstep++;
+                    }
+                }
+
+                pictureBox6.Image = img_brg_draw.ToBitmap();
             }
             catch
             {
