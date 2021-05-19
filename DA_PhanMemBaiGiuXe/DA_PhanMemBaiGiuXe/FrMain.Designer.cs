@@ -43,6 +43,7 @@
             this.txt_MaThe = new System.Windows.Forms.TextBox();
             this.txt_LinkAnh = new System.Windows.Forms.TextBox();
             this.userControl11 = new WindowsFormsControlLibrary1.UserControl1();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.tp_XeRa = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -56,7 +57,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.tp_NV = new System.Windows.Forms.TabPage();
+            this.tp_QL = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,7 +81,6 @@
             this.btnSua = new System.Windows.Forms.ToolStripButton();
             this.btnDong = new System.Windows.Forms.ToolStripButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tp_XeVao.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -91,7 +91,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.tp_NV.SuspendLayout();
+            this.tp_QL.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -101,9 +101,9 @@
             // 
             this.tabControl1.Controls.Add(this.tp_XeVao);
             this.tabControl1.Controls.Add(this.tp_XeRa);
-            this.tabControl1.Controls.Add(this.tp_NV);
+            this.tabControl1.Controls.Add(this.tp_QL);
             this.tabControl1.Location = new System.Drawing.Point(16, 15);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1224, 738);
@@ -113,9 +113,9 @@
             // 
             this.tp_XeVao.Controls.Add(this.tableLayoutPanel1);
             this.tp_XeVao.Location = new System.Drawing.Point(4, 25);
-            this.tp_XeVao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tp_XeVao.Margin = new System.Windows.Forms.Padding(4);
             this.tp_XeVao.Name = "tp_XeVao";
-            this.tp_XeVao.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tp_XeVao.Padding = new System.Windows.Forms.Padding(4);
             this.tp_XeVao.Size = new System.Drawing.Size(1216, 709);
             this.tp_XeVao.TabIndex = 0;
             this.tp_XeVao.Text = "Xe Vào";
@@ -143,7 +143,7 @@
             this.tableLayoutPanel1.Controls.Add(this.userControl11, 4, 2);
             this.tableLayoutPanel1.Controls.Add(this.textBox3, 4, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(8, 7);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 11F));
@@ -159,7 +159,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(15, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.tableLayoutPanel1.SetRowSpan(this.pictureBox1, 5);
             this.pictureBox1.Size = new System.Drawing.Size(385, 662);
@@ -169,7 +169,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Location = new System.Drawing.Point(408, 15);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.tableLayoutPanel1.SetRowSpan(this.pictureBox2, 5);
             this.pictureBox2.Size = new System.Drawing.Size(505, 662);
@@ -232,7 +232,7 @@
             // txt_MaThe
             // 
             this.txt_MaThe.Location = new System.Drawing.Point(1004, 193);
-            this.txt_MaThe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_MaThe.Margin = new System.Windows.Forms.Padding(4);
             this.txt_MaThe.Name = "txt_MaThe";
             this.txt_MaThe.Size = new System.Drawing.Size(180, 22);
             this.txt_MaThe.TabIndex = 8;
@@ -241,7 +241,7 @@
             // txt_LinkAnh
             // 
             this.txt_LinkAnh.Location = new System.Drawing.Point(1004, 239);
-            this.txt_LinkAnh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_LinkAnh.Margin = new System.Windows.Forms.Padding(4);
             this.txt_LinkAnh.Name = "txt_LinkAnh";
             this.txt_LinkAnh.Size = new System.Drawing.Size(180, 22);
             this.txt_LinkAnh.TabIndex = 9;
@@ -254,13 +254,22 @@
             this.userControl11.Size = new System.Drawing.Size(183, 66);
             this.userControl11.TabIndex = 10;
             // 
+            // textBox3
+            // 
+            this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox3.Location = new System.Drawing.Point(1003, 14);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(183, 57);
+            this.textBox3.TabIndex = 11;
+            // 
             // tp_XeRa
             // 
             this.tp_XeRa.Controls.Add(this.tableLayoutPanel2);
             this.tp_XeRa.Location = new System.Drawing.Point(4, 25);
-            this.tp_XeRa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tp_XeRa.Margin = new System.Windows.Forms.Padding(4);
             this.tp_XeRa.Name = "tp_XeRa";
-            this.tp_XeRa.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tp_XeRa.Padding = new System.Windows.Forms.Padding(4);
             this.tp_XeRa.Size = new System.Drawing.Size(1216, 709);
             this.tp_XeRa.TabIndex = 1;
             this.tp_XeRa.Text = "Xe Ra";
@@ -288,7 +297,7 @@
             this.tableLayoutPanel2.Controls.Add(this.textBox2, 4, 4);
             this.tableLayoutPanel2.Controls.Add(this.pictureBox3, 1, 1);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(8, 7);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 7;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
@@ -304,7 +313,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Location = new System.Drawing.Point(472, 14);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.tableLayoutPanel2.SetRowSpan(this.pictureBox4, 5);
             this.pictureBox4.Size = new System.Drawing.Size(463, 667);
@@ -375,7 +384,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Location = new System.Drawing.Point(1034, 14);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(145, 105);
             this.pictureBox5.TabIndex = 8;
@@ -384,7 +393,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(1034, 200);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(132, 22);
             this.textBox1.TabIndex = 9;
@@ -392,7 +401,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(1034, 246);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(132, 22);
             this.textBox2.TabIndex = 10;
@@ -400,24 +409,24 @@
             // pictureBox3
             // 
             this.pictureBox3.Location = new System.Drawing.Point(15, 14);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.tableLayoutPanel2.SetRowSpan(this.pictureBox3, 5);
             this.pictureBox3.Size = new System.Drawing.Size(449, 667);
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
-            // tp_NV
+            // tp_QL
             // 
-            this.tp_NV.Controls.Add(this.tableLayoutPanel3);
-            this.tp_NV.Controls.Add(this.toolStrip1);
-            this.tp_NV.Location = new System.Drawing.Point(4, 25);
-            this.tp_NV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tp_NV.Name = "tp_NV";
-            this.tp_NV.Size = new System.Drawing.Size(1216, 709);
-            this.tp_NV.TabIndex = 2;
-            this.tp_NV.Text = "Nhân Viên";
-            this.tp_NV.UseVisualStyleBackColor = true;
+            this.tp_QL.Controls.Add(this.tableLayoutPanel3);
+            this.tp_QL.Controls.Add(this.toolStrip1);
+            this.tp_QL.Location = new System.Drawing.Point(4, 25);
+            this.tp_QL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tp_QL.Name = "tp_QL";
+            this.tp_QL.Size = new System.Drawing.Size(1216, 709);
+            this.tp_QL.TabIndex = 2;
+            this.tp_QL.Text = "Nhân Viên";
+            this.tp_QL.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel3
             // 
@@ -442,7 +451,7 @@
             this.tableLayoutPanel3.Controls.Add(this.txtDiaChi, 4, 4);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 27);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 6;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
@@ -467,7 +476,7 @@
             this.tableLayoutPanel3.SetColumnSpan(this.dataGridView1, 5);
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(186, 327);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -513,7 +522,7 @@
             // txtMaNV
             // 
             this.txtMaNV.Location = new System.Drawing.Point(609, 4);
-            this.txtMaNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaNV.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaNV.Multiline = true;
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(319, 43);
@@ -522,7 +531,7 @@
             // txtTenNV
             // 
             this.txtTenNV.Location = new System.Drawing.Point(609, 66);
-            this.txtTenNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenNV.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenNV.Multiline = true;
             this.txtTenNV.Name = "txtTenNV";
             this.txtTenNV.Size = new System.Drawing.Size(319, 43);
@@ -531,7 +540,7 @@
             // txtCMND
             // 
             this.txtCMND.Location = new System.Drawing.Point(609, 193);
-            this.txtCMND.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCMND.Margin = new System.Windows.Forms.Padding(4);
             this.txtCMND.Multiline = true;
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.Size = new System.Drawing.Size(319, 43);
@@ -590,7 +599,7 @@
             // txtGT
             // 
             this.txtGT.Location = new System.Drawing.Point(609, 128);
-            this.txtGT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGT.Margin = new System.Windows.Forms.Padding(4);
             this.txtGT.Multiline = true;
             this.txtGT.Name = "txtGT";
             this.txtGT.Size = new System.Drawing.Size(319, 43);
@@ -599,7 +608,7 @@
             // txtDiaChi
             // 
             this.txtDiaChi.Location = new System.Drawing.Point(609, 257);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiaChi.Multiline = true;
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(319, 43);
@@ -661,15 +670,6 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // textBox3
-            // 
-            this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox3.Location = new System.Drawing.Point(1003, 14);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(183, 57);
-            this.textBox3.TabIndex = 11;
-            // 
             // FrMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -677,7 +677,7 @@
             this.ClientSize = new System.Drawing.Size(1256, 758);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrMain";
             this.Text = "Hệ thống bãi giữ xe thông minh";
             this.Load += new System.EventHandler(this.FrMain_Load);
@@ -693,8 +693,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.tp_NV.ResumeLayout(false);
-            this.tp_NV.PerformLayout();
+            this.tp_QL.ResumeLayout(false);
+            this.tp_QL.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -710,7 +710,7 @@
         private System.Windows.Forms.TabPage tp_XeVao;
         private System.Windows.Forms.TabPage tp_XeRa;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.TabPage tp_NV;
+        private System.Windows.Forms.TabPage tp_QL;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
