@@ -3,9 +3,6 @@ go
 use QL_HeThongBaiGiuXe
 go
 
-drop database QL_HeThongBaiGiuXe
-use QL_DTDD1
-
 create table NhanVien
 (
 	MaNV varchar(11) not null,
@@ -54,11 +51,11 @@ create table TheXe
 
 create table QuanLyTheXe
 (
-	ID varchar(11),
+	IDQLy int IDENTITY (1,1),
 	TenTaiKhoan varchar(30) not null,
 	MaThe varchar(30) not null,
 	ThoiGianXuLy date
-	Constraint PK_QuanLyTheXe primary key (TenTaiKhoan,MaThe,ID),
+	Constraint PK_QuanLyTheXe primary key (IDQLy),
 	Constraint Fk_QuanLy_TaiKhoan Foreign key (TenTaiKhoan) references TaiKhoan(TenTaiKhoan),
 	Constraint FK_QuanLy_The foreign key (MaThe) references TheXe(MaThe)
 )
@@ -71,23 +68,33 @@ create table KhachHang
 	Constraint PK_KH primary key (MaKH)
 )
 
+create table LoaiGiaoTac
+(
+	MaGiaoTac int primary key,
+	TenGiaoTac nvarchar(30)
+
+)
+
 create table GiaoTac
 (
+	MaGiaoTac int IDENTITY (1,1),
 	MaThe varchar(30),
 	TenTaiKhoan varchar(30),
 	MaKH varchar(30),
-	MaGiaoTac varchar(30),
-	LoaiGiaoTac int,
+	MaLoaiGiaoTac int,
 	ThoiGIan date,
 	Constraint PK_GiaoTac primary key (MaGiaoTac),
 	Constraint FK_GiaoTac_The foreign key (MaThe) references TheXe(MaThe),
 	Constraint FK_GiaoTac_TK foreign key (TenTaiKhoan) references TaiKhoan(TenTaiKhoan),
-	Constraint FK_GiaoTac_KH foreign key (MaKH) references KhachHang(MaKH)
+	Constraint FK_GiaoTac_KH foreign key (MaKH) references KhachHang(MaKH),
+	Constraint FK_GiaoTac_Loai foreign key (MaLoaiGiaoTac) references LoaiGiaoTac(MaGiaoTac)
 )
+
+
 
 create table NgoaiLe
 (
-	MaNL varchar(30),
+	MaNL int IDENTITY (1,1),
 	MaKH varchar(30),
 	TenTaiKhoan varchar(30),
 	TrangThaiNL  bit,
@@ -124,3 +131,8 @@ values
 ('tuyen','123','NV03','01/01/2020',2),
 ('an','456','QL03','01/01/2020',1),
 ('quy','789','NV01','01/01/2020',1)
+
+insert into LoaiGiaoTac
+values 
+(1,N'Gửi Xe'),
+(2,N'Lấy Xe')

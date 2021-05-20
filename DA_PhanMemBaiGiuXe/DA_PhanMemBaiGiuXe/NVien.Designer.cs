@@ -31,8 +31,6 @@ namespace DA_PhanMemBaiGiuXe
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.báoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lịchSửĐăngNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,9 +38,7 @@ namespace DA_PhanMemBaiGiuXe
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.báoCáoToolStripMenuItem,
-            this.đổiMậtKhẩuToolStripMenuItem,
-            this.lịchSửĐăngNhậpToolStripMenuItem});
+            this.báoCáoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 28);
@@ -54,18 +50,6 @@ namespace DA_PhanMemBaiGiuXe
             this.báoCáoToolStripMenuItem.Name = "báoCáoToolStripMenuItem";
             this.báoCáoToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
             this.báoCáoToolStripMenuItem.Text = "Báo Cáo";
-            // 
-            // đổiMậtKhẩuToolStripMenuItem
-            // 
-            this.đổiMậtKhẩuToolStripMenuItem.Name = "đổiMậtKhẩuToolStripMenuItem";
-            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(114, 24);
-            this.đổiMậtKhẩuToolStripMenuItem.Text = "Đổi Mật Khẩu";
-            // 
-            // lịchSửĐăngNhậpToolStripMenuItem
-            // 
-            this.lịchSửĐăngNhậpToolStripMenuItem.Name = "lịchSửĐăngNhậpToolStripMenuItem";
-            this.lịchSửĐăngNhậpToolStripMenuItem.Size = new System.Drawing.Size(150, 24);
-            this.lịchSửĐăngNhậpToolStripMenuItem.Text = "Lịch Sử Đăng Nhập";
             // 
             // NVien
             // 
@@ -88,7 +72,5 @@ namespace DA_PhanMemBaiGiuXe
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem báoCáoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem lịchSửĐăngNhậpToolStripMenuItem;
     }
 }
