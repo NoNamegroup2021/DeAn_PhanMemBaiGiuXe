@@ -5,3 +5,13 @@ C:\Users\Admin\Desktop\QLBaiXe\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBa
 C:\Users\Admin\Desktop\QLBaiXe\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\bin\Debug\PhanMemBaiGiuXeDAL.dll
 C:\Users\Admin\Desktop\QLBaiXe\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\bin\Debug\PhanMemBaiGiuXeDAL.pdb
 C:\Users\Admin\Desktop\QLBaiXe\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\obj\Debug\PhanMemBaiGiuXeBLL.csprojResolveAssemblyReference.cache
+D:\Nhan_Folder\DA_CNPM\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\obj\Debug\PhanMemBaiGiuXeBLL.csprojAssemblyReference.cache
+D:\Nhan_Folder\DA_CNPM\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\obj\Debug\PhanMemBaiGiuXeBLL.csproj.CoreCompileInputs.cache
+D:\Nhan_Folder\DA_CNPM\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\obj\Debug\PhanMemBaiGiuXeBLL.dll
+D:\Nhan_Folder\DA_CNPM\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\obj\Debug\PhanMemBaiGiuXeBLL.pdb
+D:\Nhan_Folder\DA_CNPM\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\bin\Debug\PhanMemBaiGiuXeBLL.dll
+D:\Nhan_Folder\DA_CNPM\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\bin\Debug\PhanMemBaiGiuXeBLL.pdb
+D:\Nhan_Folder\DA_CNPM\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\bin\Debug\PhanMemBaiGiuXeDAL.dll
+D:\Nhan_Folder\DA_CNPM\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\bin\Debug\PhanMemBaiGiuXeDAL.pdb
+D:\Nhan_Folder\DA_CNPM\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\bin\Debug\PhanMemBaiGiuXeDAL.dll.config
+D:\Nhan_Folder\DA_CNPM\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\obj\Debug\PhanMemBaiGiuXeBLL.csproj.CopyComplete

@@ -3,3 +3,10 @@ C:\Users\Admin\Desktop\QLBaiXe\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBa
 C:\Users\Admin\Desktop\QLBaiXe\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\obj\Debug\PhanMemBaiGiuXeDAL.dll
 C:\Users\Admin\Desktop\QLBaiXe\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\obj\Debug\PhanMemBaiGiuXeDAL.pdb
 C:\Users\Admin\Desktop\QLBaiXe\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\bin\Debug\PhanMemBaiGiuXeDAL.dll.config
+D:\Nhan_Folder\DA_CNPM\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\obj\Debug\PhanMemBaiGiuXeDAL.csprojAssemblyReference.cache
+D:\Nhan_Folder\DA_CNPM\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\obj\Debug\PhanMemBaiGiuXeDAL.csproj.CoreCompileInputs.cache
+D:\Nhan_Folder\DA_CNPM\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\obj\Debug\PhanMemBaiGiuXeDAL.dll
+D:\Nhan_Folder\DA_CNPM\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\obj\Debug\PhanMemBaiGiuXeDAL.pdb
+D:\Nhan_Folder\DA_CNPM\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\bin\Debug\PhanMemBaiGiuXeDAL.dll.config
+D:\Nhan_Folder\DA_CNPM\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\bin\Debug\PhanMemBaiGiuXeDAL.dll
+D:\Nhan_Folder\DA_CNPM\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\bin\Debug\PhanMemBaiGiuXeDAL.pdb

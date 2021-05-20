@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PhanMemBaiGiuXeBLL;
 
 namespace DA_PhanMemBaiGiuXe
 {
     public partial class FrLogin : Form
     {
         DataClasses1DataContext data = new DataClasses1DataContext();
+        LoginBLL log_functs = new LoginBLL();
         public FrLogin()
         {
             InitializeComponent();
@@ -27,55 +29,64 @@ namespace DA_PhanMemBaiGiuXe
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            string id = txt_Login.Text;
-            string pw = txt_Password.Text;
-            string chucvu = null;
-            foreach (Control ctr in tableLayoutPanel1.Controls)
+            try
             {
-                if (ctr.GetType() == typeof(RadioButton))
+                int type = 0;
+                foreach(Control ctr in tableLayoutPanel1.Controls)
                 {
-                    RadioButton rd = ctr as RadioButton;
-                    if (rd.Checked == true)
+                    if(ctr.GetType() == typeof(RadioButton))
                     {
-                        chucvu = rd.Text;
-                        break;
-                    }
+                        RadioButton rd = ctr as RadioButton;
+                        if(rd.Checked)
+                        {
+                            if (rd.Name.Equals("rdo_NV"))
+                                type = 1;
+                            else if(rd.Name.Equals("rdo_QL"))
+                                type = 2;
+                        }
+                        if (type != 0)
+                            break;
+                    }    
                 }
-            }
-
-            if (!ktKhoaChinh(txt_Login.Text,txt_Password.Text))
-            {
-                Program.main = new FrMain();
-                foreach (Control ctr in Program.main.Controls)
+                string user = this.txt_Login.Text;
+                string mk = this.txt_Password.Text;
+                bool kq = log_functs.log(user, mk, type);
+                if(kq)
                 {
-                    if (ctr.GetType() == typeof(TabControl))
+                    Program.main_from = new MainForm();
+                    this.Hide();
+                    if(type ==1)
                     {
-                        TabControl tab = ctr as TabControl;
-                        tab.SelectedTab = tab.TabPages["tp_XeVao"];
-                        break;
+                        Control ctr = Program.main_from.Controls["tableLayoutPanel1"];
+                        if(ctr != null)
+                        {
+                            foreach(Control item in ctr.Controls)
+                            {
+                                if(item.GetType() == typeof(GroupBox))
+                                {
+                                    MenuStrip mnu = item.Controls["menuStrip2"] as MenuStrip;
+                                    if (mnu == null)
+                                        return;
+                                    else
+                                    {
+                                        ToolStripMenuItem tagItem = mnu.Items["QLY"] as ToolStripMenuItem;
+                                        if (tagItem != null)
+                                            tagItem.Visible = false;
+                                    }
+                                }
+                            }
+                        }
                     }
+                    Program.main_from.Show();
+                    MessageBox.Show("Dang nhap thanh cong");
                 }
-                Login kq = data.Logins.Where(t => t.Username == id).SingleOrDefault();
-                Program.main.TenNV =kq.NhanVien.HoTen;
-                Program.main.Show();
-                this.Hide();
+                else
+                    MessageBox.Show("Dang nhap that bai");
             }
-            else
+            catch
             {
-                MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác");
-                return;
+                MessageBox.Show("Dang nhap that bai");
             }
-        }
-        public bool ktKhoaChinh(string ma, string mk)
-        {
-            Login tk = data.Logins.Where(t => t.Username == ma && t.Password == mk).SingleOrDefault();
-          
-            // LinQ 
-            if (tk != null)
-            {
-                return false;
-            }
-            return true;
         }
 
         private void btn_Thoat_Click(object sender, EventArgs e)
