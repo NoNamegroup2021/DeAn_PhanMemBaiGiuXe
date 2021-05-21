@@ -14,7 +14,6 @@ namespace DA_PhanMemBaiGiuXe
         public static FrMain main = null;
         public static FrLogin login = null;
         public static Form1 nhanvien = null;
-        public static testCascade test = null;
         public static Welcome welcome_screen = null;
         public static QLy qly = null;
         public static NVien nv = null;
@@ -25,7 +24,7 @@ namespace DA_PhanMemBaiGiuXe
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Welcome());
+            Application.Run(new testCascade());
         }
     }
 }

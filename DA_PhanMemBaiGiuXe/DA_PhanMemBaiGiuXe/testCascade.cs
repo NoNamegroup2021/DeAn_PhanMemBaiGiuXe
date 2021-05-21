@@ -61,10 +61,10 @@ namespace DA_PhanMemBaiGiuXe
                     Image<Bgr, Byte> img = new Image<Bgr, byte>(bm2);
                     Image<Gray, Byte> gray = img.Convert<Gray, Byte>();
 
-                    Rectangle[] carLicenses = carLicense_class.DetectMultiScale(gray, scale, 4, new Size(40, 30));
+                    Rectangle[] carLicenses = carLicense_class.DetectMultiScale(gray,1.1, 4, new Size(40, 30));
                     foreach (var carLicense in carLicenses)
                     {
-                        img.Draw(carLicense, new Bgr(Color.Green), 3);
+                        img.Draw(carLicense, new Bgr(Color.Green), 1);
                     }
                     pictureBox1.Image = img.ToBitmap();
                     rects = carLicenses;
@@ -90,13 +90,17 @@ namespace DA_PhanMemBaiGiuXe
             if(rects != null && rects.Count() >0)
             {
                 var boundingBox = rects[rects.Count() - 1];
+
                 Bitmap src = pictureBox1.Image as Bitmap;
                 Bitmap crop = new Bitmap(boundingBox.Width, boundingBox.Height);
                
+
                 using(Graphics g = Graphics.FromImage(crop))
                 {
                     g.DrawImage(src, new Rectangle(0, 0, crop.Width, crop.Height), boundingBox, GraphicsUnit.Pixel);
                 }
+
+
                 Image<Bgr, Byte> img_cropped = new Image<Bgr, byte>(crop);
                 img_cropped = resizeImage(img_cropped, pictureBox2.Width, pictureBox2.Height);
                 pictureBox2.Image = img_cropped.ToBitmap();
@@ -145,13 +149,23 @@ namespace DA_PhanMemBaiGiuXe
 
                 Image<Gray, Byte> gray_scale = new Image<Gray, byte>(ori_img.ToBitmap());
 
+                //Can bang sang anh 
+                CvInvoke.EqualizeHist(gray_scale,gray_scale);
+
+                //Lam tron anh
+
+                //Gaussian
                 Mat gaussian = Gaussianblur(gray_scale);
+
+
+                //Median
+                //Mat gaussian = medianSmooth(gray_scale);
 
                 Image<Gray, Byte> gray_gua_scale = gaussian.ToImage<Gray, Byte>();
 
                 //gray_gua_scale = gray_gua_scale.ThresholdBinary(new Gray(150), new Gray(255));
-                CvInvoke.AdaptiveThreshold(gaussian, gray_gua_scale, 255, Emgu.CV.CvEnum.AdaptiveThresholdType.MeanC, Emgu.CV.CvEnum.ThresholdType.BinaryInv, 51, 2);
-
+                CvInvoke.AdaptiveThreshold(gaussian, gray_gua_scale, 255, Emgu.CV.CvEnum.AdaptiveThresholdType.MeanC, Emgu.CV.CvEnum.ThresholdType.BinaryInv, 11, 3);
+                //CvInvoke.Canny(gaussian, gray_gua_scale, 50, 300);
 
                 Bitmap gray_bm = gray_gua_scale.ToBitmap();
 
@@ -166,11 +180,16 @@ namespace DA_PhanMemBaiGiuXe
         private Mat Gaussianblur(Image<Gray, Byte> img)
         {
             Mat src = img.Mat;
-            CvInvoke.GaussianBlur(src, src, new Size(5, 5), 0);
+            CvInvoke.GaussianBlur(src, src, new Size(5, 5),6,4);
             return src;
         }
 
-
+        private Mat medianSmooth(Image<Gray,Byte>img)
+        {
+            Mat src = img.Mat;
+            CvInvoke.MedianBlur(src, src, 5);
+            return src;
+        }
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -194,25 +213,56 @@ namespace DA_PhanMemBaiGiuXe
                 {
                     int width = CvInvoke.BoundingRectangle(contours[i]).Width;
                     int height = CvInvoke.BoundingRectangle(contours[i]).Height;
+                    int x = CvInvoke.BoundingRectangle(contours[i]).X;
+                    int y = CvInvoke.BoundingRectangle(contours[i]).Y;
 
-
-                    if (width <= height &&  (float)width / height > 0.2 && (float)width / height < 0.5)
+                    if ( height >= 45 && height <= 80  && width >= 15 && width <= 30 && width <= height && (float)width / height > 0.2 && (float)width / height < 0.5)
                     {
-                        int x = CvInvoke.BoundingRectangle(contours[i]).X;
-                        int y = CvInvoke.BoundingRectangle(contours[i]).Y;
+
                         Rectangle rect = new Rectangle(x, y, width, height);
-                        CvInvoke.Rectangle(img_brg_draw,rect, new MCvScalar(0, 0, 255), 2);
+                        CvInvoke.Rectangle(img_brg_draw, rect, new MCvScalar(0, 0, 255), 2);
                         rect_found[jumpstep] = rect;
                         jumpstep++;
                     }
                 }
 
                 pictureBox6.Image = img_brg_draw.ToBitmap();
+                printRec();
             }
             catch
             {
 
             }
+        }
+
+
+        private void printRec()
+        {
+            if(rect_found != null)
+            {
+                foreach(Rectangle rect in rect_found)
+                {
+                }    
+            }    
+        }
+
+        private PointF getPoint(float x,float y)
+        {
+            return new PointF(x, y);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            var boundingBox = rect_found[1];
+            Bitmap draw = pictureBox2.Image as Bitmap;
+            Bitmap crop = new Bitmap(boundingBox.Width, boundingBox.Height);
+
+            using (Graphics g = Graphics.FromImage(crop))
+            {
+                g.DrawImage(draw, new Rectangle(0, 0, crop.Width, crop.Height), boundingBox, GraphicsUnit.Pixel);
+            }
+            Image<Bgr, Byte> img_cropped = new Image<Bgr, byte>(crop);
+            pictureBox7.Image = img_cropped.ToBitmap();
         }
     }
 }
