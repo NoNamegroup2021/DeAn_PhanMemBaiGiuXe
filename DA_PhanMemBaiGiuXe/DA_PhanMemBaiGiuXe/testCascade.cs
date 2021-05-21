@@ -150,22 +150,23 @@ namespace DA_PhanMemBaiGiuXe
                 Image<Gray, Byte> gray_scale = new Image<Gray, byte>(ori_img.ToBitmap());
 
                 //Can bang sang anh 
-                CvInvoke.EqualizeHist(gray_scale,gray_scale);
+                //CvInvoke.EqualizeHist(gray_scale,gray_scale);
 
                 //Lam tron anh
 
                 //Gaussian
-                Mat gaussian = Gaussianblur(gray_scale);
+                //Mat gaussian = Gaussianblur(gray_scale);
 
-
+                
                 //Median
-                //Mat gaussian = medianSmooth(gray_scale);
+                Mat gaussian = medianSmooth(gray_scale);
 
                 Image<Gray, Byte> gray_gua_scale = gaussian.ToImage<Gray, Byte>();
 
                 //gray_gua_scale = gray_gua_scale.ThresholdBinary(new Gray(150), new Gray(255));
-                CvInvoke.AdaptiveThreshold(gaussian, gray_gua_scale, 255, Emgu.CV.CvEnum.AdaptiveThresholdType.MeanC, Emgu.CV.CvEnum.ThresholdType.BinaryInv, 11, 3);
-                //CvInvoke.Canny(gaussian, gray_gua_scale, 50, 300);
+                CvInvoke.Canny(gaussian, gray_gua_scale, 50, 300);
+                CvInvoke.AdaptiveThreshold(gaussian, gaussian, 255, Emgu.CV.CvEnum.AdaptiveThresholdType.MeanC, Emgu.CV.CvEnum.ThresholdType.BinaryInv, 7,7);
+
 
                 Bitmap gray_bm = gray_gua_scale.ToBitmap();
 
@@ -180,14 +181,14 @@ namespace DA_PhanMemBaiGiuXe
         private Mat Gaussianblur(Image<Gray, Byte> img)
         {
             Mat src = img.Mat;
-            CvInvoke.GaussianBlur(src, src, new Size(5, 5),6,4);
+            CvInvoke.GaussianBlur(src, src, new Size(7,7),6,4);
             return src;
         }
 
         private Mat medianSmooth(Image<Gray,Byte>img)
         {
             Mat src = img.Mat;
-            CvInvoke.MedianBlur(src, src, 5);
+            CvInvoke.MedianBlur(src, src, 3);
             return src;
         }
 
@@ -216,7 +217,9 @@ namespace DA_PhanMemBaiGiuXe
                     int x = CvInvoke.BoundingRectangle(contours[i]).X;
                     int y = CvInvoke.BoundingRectangle(contours[i]).Y;
 
-                    if ( height >= 45 && height <= 80  && width >= 15 && width <= 30 && width <= height && (float)width / height > 0.2 && (float)width / height < 0.5)
+
+
+                    if ( height >= 40 && height <= 80  && width >= 12 && width <= 40 && (float)width / height > 0.2 && (float)width / height < 0.5)
                     {
 
                         Rectangle rect = new Rectangle(x, y, width, height);
