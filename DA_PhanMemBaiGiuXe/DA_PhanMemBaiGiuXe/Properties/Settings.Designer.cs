@@ -48,8 +48,18 @@ namespace DA_PhanMemBaiGiuXe.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-H0R3HLD\\SQLEXPRESS;Initial Catalog=QL_BaiGiuXe;User ID=sa;Pas" +
-            "sword=1")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-5HAB20B;Initial Catalog=QL_BaiGiuXe;Integrated Security=True")]
+        public string QL_BaiGiuXeConnectionString3 {
+            get {
+                return ((string)(this["QL_BaiGiuXeConnectionString3"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-H0R3HLD\\SQLEXPRESS;Initial Catalog=QL_HeThongBaiGiuXe;User ID" +
+            "=sa;Password=1")]
         public string QL_BaiGiuXeConnectionString2 {
             get {
                 return ((string)(this["QL_BaiGiuXeConnectionString2"]));
@@ -59,10 +69,11 @@ namespace DA_PhanMemBaiGiuXe.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-5HAB20B;Initial Catalog=QL_BaiGiuXe;Integrated Security=True")]
-        public string QL_BaiGiuXeConnectionString3 {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-5HAB20B;Initial Catalog=QL_HeThongBaiGiuXe;Integrated Securit" +
+            "y=True")]
+        public string QL_HeThongBaiGiuXeConnectionString {
             get {
-                return ((string)(this["QL_BaiGiuXeConnectionString3"]));
+                return ((string)(this["QL_HeThongBaiGiuXeConnectionString"]));
             }
         }
     }

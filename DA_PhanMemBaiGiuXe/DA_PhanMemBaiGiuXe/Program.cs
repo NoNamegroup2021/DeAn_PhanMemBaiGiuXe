@@ -13,18 +13,18 @@ namespace DA_PhanMemBaiGiuXe
         /// </summary>
         public static FrMain main = null;
         public static FrLogin login = null;
-        public static Form1 nhanvien = null;
         public static Welcome welcome_screen = null;
         public static QLy qly = null;
         public static NVien nv = null;
         public static ChuongTrinhChinh ctr = null;
         public static MainForm main_from = null;
+        public static DangKy dk = null;
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new testCascade());
+            Application.Run(new DangKy());
         }
     }
 }

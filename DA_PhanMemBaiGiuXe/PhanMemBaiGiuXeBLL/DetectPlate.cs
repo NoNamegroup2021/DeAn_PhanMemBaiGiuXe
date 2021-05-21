@@ -6,11 +6,11 @@ using System.Drawing;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Emgu;
-using Emgu.CV;
-using Emgu.Util;
-using System.IO;
-using Emgu.CV.Structure;
+//using Emgu;
+//using Emgu.CV;
+//using Emgu.Util;
+//using System.IO;
+//using Emgu.CV.Structure;
 
 namespace PhanMemBaiGiuXeBLL
 {
