@@ -2,7 +2,7 @@
 go
 use QL_HeThongBaiGiuXe
 go
-
+drop database QL_HeThongBaiGiuXe
 create table NhanVien
 (
 	MaNV varchar(11) not null,
@@ -64,7 +64,6 @@ create table KhachHang
 (
 	MaKH varchar(30),
 	BienSo nvarchar(21),
-	TrangThaiKH nvarchar(21),
 	Constraint PK_KH primary key (MaKH)
 )
 
