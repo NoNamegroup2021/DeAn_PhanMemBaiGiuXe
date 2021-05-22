@@ -24,7 +24,7 @@ namespace DA_PhanMemBaiGiuXe
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DangKy());
+            Application.Run(new XeVao());
         }
     }
 }
