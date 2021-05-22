@@ -11,6 +11,7 @@ create table NhanVien
 	SDT varchar(30),
 	NgaySinh date,
 	DiaChi nvarchar(101),
+	SoCMND nvarchar(21),
 	COnstraint PK_NhanVien primary key (MaNV)
 )
 
@@ -62,7 +63,7 @@ create table QuanLyTheXe
 
 create table KhachHang
 (
-	MaKH varchar(30),
+	MaKH int IDENTITY(1,1),
 	BienSo nvarchar(21),
 	Constraint PK_KH primary key (MaKH)
 )
@@ -79,7 +80,7 @@ create table GiaoTac
 	MaGiaoTac int IDENTITY (1,1),
 	MaThe varchar(30),
 	TenTaiKhoan varchar(30),
-	MaKH varchar(30),
+	MaKH int,
 	MaLoaiGiaoTac int,
 	ThoiGIan date,
 	Constraint PK_GiaoTac primary key (MaGiaoTac),
@@ -94,10 +95,11 @@ create table GiaoTac
 create table NgoaiLe
 (
 	MaNL int IDENTITY (1,1),
-	MaKH varchar(30),
+	MaKH int,
 	TenTaiKhoan varchar(30),
 	TrangThaiNL  bit,
 	ThoiGian date,
+	NoiDung varchar(51),
 	Constraint PK_NgoaiLe primary key (MaNL,MaKH,TenTaiKhoan),
 	Constraint FK_NgoaiLe_KH foreign key (MaKH) references KhachHang(MaKH),
 	Constraint FK_NgoaiLe_Tk foreign key (TenTaiKhoan) references TaiKhoan(TenTaiKhoan)
