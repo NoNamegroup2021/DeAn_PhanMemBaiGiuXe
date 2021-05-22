@@ -23,8 +23,16 @@ namespace PhanMemBaiGiuXeBLL
 		{
 		}
 
-		public Bitmap Img { get => img; set => img = value; }
-		public Rectangle[] Rects_areas { get => rects_areas; set => rects_areas = value; }
+		public Bitmap Img1
+        {
+            get {	return img; }
+			set {   img = value; }
+        }			
+		public Rectangle[] Rects_areas 
+		{ 
+			get { return rects_areas; }
+			set { rects_areas = value; }
+		}
 
 		public void setData(Bitmap img)
 		{
