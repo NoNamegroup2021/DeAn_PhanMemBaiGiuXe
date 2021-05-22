@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace DA_PhanMemBaiGiuXe
 {
-    public partial class XeVao : Form
+    public partial class XeRa : Form
     {
-        public XeVao()
+        public XeRa()
         {
             InitializeComponent();
-        }
-
-        private void txt_MaThe_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
