@@ -29,6 +29,7 @@ namespace DA_PhanMemBaiGiuXe
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XeVao));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -87,7 +88,11 @@ namespace DA_PhanMemBaiGiuXe
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.ErrorImage = null;
+            this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(15, 15);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
@@ -184,6 +189,8 @@ namespace DA_PhanMemBaiGiuXe
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Location = new System.Drawing.Point(15, 458);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
@@ -208,6 +215,7 @@ namespace DA_PhanMemBaiGiuXe
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1300, 857);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "XeVao";
             this.Text = "XeVao";

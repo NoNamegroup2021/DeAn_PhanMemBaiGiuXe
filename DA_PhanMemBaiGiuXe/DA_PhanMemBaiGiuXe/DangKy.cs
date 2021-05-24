@@ -19,7 +19,7 @@ namespace DA_PhanMemBaiGiuXe
         }
         public void reload()
         {
-            var TK = from tk in data.TaiKhoans select tk;
+            var TK = from tk in data.TaiKhoans select new { TenTaiKhoan = tk.TenTaiKhoan, Password = tk.Password, LoaiTaiKhoan = tk.LoaiTaiKhoan,MaNV = tk.MaNV };
             dtgv_TK.DataSource = TK;
         }
         public bool ktkhoachinh(string ttk)
@@ -34,7 +34,14 @@ namespace DA_PhanMemBaiGiuXe
 
         private void DangKy_Load(object sender, EventArgs e)
         {
-            reload();
+            try
+            {
+                reload();
+            }
+            catch
+            {
+
+            }
         }
 
         private void dtgv_TK_CellClick(object sender, DataGridViewCellEventArgs e)
