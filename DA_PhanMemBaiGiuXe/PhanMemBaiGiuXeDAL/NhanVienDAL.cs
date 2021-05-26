@@ -42,6 +42,25 @@ namespace PhanMemBaiGiuXeDAL
                 return false;
             }    
         }
+
+        public bool SuaNhanVien(string manv, string tennv, string gtinh, string sdt, DateTime ngaysinh, string diachi)
+        {
+            try
+            {
+                NhanVien NV = data.NhanViens.Where(t => t.MaNV == manv).SingleOrDefault();
+                NV.TenNV = tennv;
+                NV.GioiTinh = gtinh;
+                NV.SDT = sdt;
+                NV.NgaySinh = ngaysinh;
+                NV.DiaChi = diachi;
+                data.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
         public bool XoaNhanVien(string manv)
         {
             try {

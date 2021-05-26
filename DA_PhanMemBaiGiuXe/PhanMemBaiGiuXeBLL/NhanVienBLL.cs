@@ -26,6 +26,11 @@ namespace PhanMemBaiGiuXeBLL
         {
             return NV.ThemNhanVien(manv, tennv, gtinh, sdt, ngaysinh, diachi);
         }
+
+        public bool SuaNhanVien(string manv, string tennv, string gtinh, string sdt, DateTime ngaysinh, string diachi)
+        {
+            return NV.SuaNhanVien(manv, tennv, gtinh, sdt, ngaysinh, diachi);
+        }
         public bool XoaNhanVien(string manv)
         {
             return NV.XoaNhanVien(manv);

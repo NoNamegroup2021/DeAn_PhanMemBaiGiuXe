@@ -35,13 +35,12 @@ namespace DA_PhanMemBaiGiuXe
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.lb_TenNV = new System.Windows.Forms.Label();
-            this.txt_LinkAnh = new System.Windows.Forms.TextBox();
             this.userControl11 = new WindowsFormsControlLibrary1.UserControl1();
             this.txt_BienSo = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txt_MaThe = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -53,20 +52,19 @@ namespace DA_PhanMemBaiGiuXe
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 11F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 896F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 11F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 76F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 295F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 81F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 290F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 12F));
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.label5, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label14, 3, 4);
             this.tableLayoutPanel1.Controls.Add(this.lb_TenNV, 3, 5);
-            this.tableLayoutPanel1.Controls.Add(this.txt_LinkAnh, 4, 4);
             this.tableLayoutPanel1.Controls.Add(this.userControl11, 4, 2);
             this.tableLayoutPanel1.Controls.Add(this.txt_BienSo, 4, 1);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.txt_MaThe, 4, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 3, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
@@ -108,7 +106,7 @@ namespace DA_PhanMemBaiGiuXe
             this.label1.Location = new System.Drawing.Point(922, 11);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 63);
+            this.label1.Size = new System.Drawing.Size(73, 63);
             this.label1.TabIndex = 3;
             this.label1.Text = "Biển số";
             // 
@@ -119,7 +117,7 @@ namespace DA_PhanMemBaiGiuXe
             this.label2.Location = new System.Drawing.Point(922, 74);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 75);
+            this.label2.Size = new System.Drawing.Size(73, 75);
             this.label2.TabIndex = 4;
             this.label2.Text = "Thời gian";
             // 
@@ -130,20 +128,9 @@ namespace DA_PhanMemBaiGiuXe
             this.label5.Location = new System.Drawing.Point(922, 149);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 85);
+            this.label5.Size = new System.Drawing.Size(73, 85);
             this.label5.TabIndex = 5;
             this.label5.Text = "Mã thẻ";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label14.Location = new System.Drawing.Point(922, 234);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(68, 39);
-            this.label14.TabIndex = 6;
-            this.label14.Text = "Link ảnh";
             // 
             // lb_TenNV
             // 
@@ -159,32 +146,23 @@ namespace DA_PhanMemBaiGiuXe
             this.lb_TenNV.Text = "Tên nhân viên";
             this.lb_TenNV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txt_LinkAnh
-            // 
-            this.txt_LinkAnh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_LinkAnh.Location = new System.Drawing.Point(998, 238);
-            this.txt_LinkAnh.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_LinkAnh.Name = "txt_LinkAnh";
-            this.txt_LinkAnh.Size = new System.Drawing.Size(287, 22);
-            this.txt_LinkAnh.TabIndex = 9;
-            // 
             // userControl11
             // 
             this.userControl11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControl11.Location = new System.Drawing.Point(997, 76);
+            this.userControl11.Location = new System.Drawing.Point(1002, 76);
             this.userControl11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.userControl11.Name = "userControl11";
-            this.userControl11.Size = new System.Drawing.Size(289, 71);
+            this.userControl11.Size = new System.Drawing.Size(284, 71);
             this.userControl11.TabIndex = 10;
             // 
             // txt_BienSo
             // 
             this.txt_BienSo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_BienSo.Location = new System.Drawing.Point(997, 13);
+            this.txt_BienSo.Location = new System.Drawing.Point(1002, 13);
             this.txt_BienSo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_BienSo.Multiline = true;
             this.txt_BienSo.Name = "txt_BienSo";
-            this.txt_BienSo.Size = new System.Drawing.Size(289, 59);
+            this.txt_BienSo.Size = new System.Drawing.Size(284, 59);
             this.txt_BienSo.TabIndex = 11;
             // 
             // pictureBox2
@@ -202,12 +180,27 @@ namespace DA_PhanMemBaiGiuXe
             // txt_MaThe
             // 
             this.txt_MaThe.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_MaThe.Location = new System.Drawing.Point(998, 153);
+            this.txt_MaThe.Location = new System.Drawing.Point(1003, 153);
             this.txt_MaThe.Margin = new System.Windows.Forms.Padding(4);
             this.txt_MaThe.Name = "txt_MaThe";
-            this.txt_MaThe.Size = new System.Drawing.Size(287, 22);
+            this.txt_MaThe.Size = new System.Drawing.Size(282, 22);
             this.txt_MaThe.TabIndex = 8;
             this.txt_MaThe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_MaThe_KeyPress);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Red;
+            this.tableLayoutPanel1.SetColumnSpan(this.label3, 2);
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(921, 234);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(365, 39);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Đang xử lý..........";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // XeVao
             // 
@@ -234,12 +227,11 @@ namespace DA_PhanMemBaiGiuXe
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label lb_TenNV;
         private System.Windows.Forms.TextBox txt_MaThe;
-        private System.Windows.Forms.TextBox txt_LinkAnh;
         private WindowsFormsControlLibrary1.UserControl1 userControl11;
         private System.Windows.Forms.TextBox txt_BienSo;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label3;
     }
 }
