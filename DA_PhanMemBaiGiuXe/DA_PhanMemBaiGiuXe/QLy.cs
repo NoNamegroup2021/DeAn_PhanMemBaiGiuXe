@@ -46,5 +46,10 @@ namespace DA_PhanMemBaiGiuXe
             the.Show();
 
         }
+
+        private void quảnLýNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

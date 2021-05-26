@@ -35,8 +35,8 @@ namespace DA_PhanMemBaiGiuXe
             this.xemLịchSửĐăngNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lậpBiênBảnXửLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.thẻToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +69,7 @@ namespace DA_PhanMemBaiGiuXe
             this.quảnLýNhânViênToolStripMenuItem.Name = "quảnLýNhânViênToolStripMenuItem";
             this.quảnLýNhânViênToolStripMenuItem.Size = new System.Drawing.Size(147, 24);
             this.quảnLýNhânViênToolStripMenuItem.Text = "Quản Lý Nhân Viên";
+            this.quảnLýNhânViênToolStripMenuItem.Click += new System.EventHandler(this.quảnLýNhânViênToolStripMenuItem_Click);
             // 
             // xemLịchSửĐăngNhậpToolStripMenuItem
             // 
@@ -88,6 +89,13 @@ namespace DA_PhanMemBaiGiuXe
             this.lậpBiênBảnXửLýToolStripMenuItem.Size = new System.Drawing.Size(148, 24);
             this.lậpBiênBảnXửLýToolStripMenuItem.Text = "Lập Biên Bản Xử Lý";
             // 
+            // thẻToolStripMenuItem
+            // 
+            this.thẻToolStripMenuItem.Name = "thẻToolStripMenuItem";
+            this.thẻToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
+            this.thẻToolStripMenuItem.Text = "Thẻ";
+            this.thẻToolStripMenuItem.Click += new System.EventHandler(this.thẻToolStripMenuItem_Click);
+            // 
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -95,13 +103,6 @@ namespace DA_PhanMemBaiGiuXe
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(868, 451);
             this.panel1.TabIndex = 1;
-            // 
-            // thẻToolStripMenuItem
-            // 
-            this.thẻToolStripMenuItem.Name = "thẻToolStripMenuItem";
-            this.thẻToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
-            this.thẻToolStripMenuItem.Text = "Thẻ";
-            this.thẻToolStripMenuItem.Click += new System.EventHandler(this.thẻToolStripMenuItem_Click);
             // 
             // QLy
             // 

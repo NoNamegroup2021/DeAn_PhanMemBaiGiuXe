@@ -15,4 +15,10 @@ C:\Users\Admin\Desktop\QLBaiXeNEw\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMe
 C:\Users\Admin\Desktop\QLBaiXeNEw\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\bin\Debug\PhanMemBaiGiuXeDAL.dll.config
 C:\Users\Admin\Desktop\QLBaiXeNEw\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\bin\Debug\PhanMemBaiGiuXeDAL.dll
 C:\Users\Admin\Desktop\QLBaiXeNEw\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\bin\Debug\PhanMemBaiGiuXeDAL.pdb
-C:\Users\Admin\Desktop\QLBaiXeNEw\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\obj\Debug\PhanMemBaiGiuXeDAL.csprojResolveAssemblyReference.cache
+C:\Users\luhoa\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\bin\Debug\PhanMemBaiGiuXeDAL.dll.config
+C:\Users\luhoa\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\bin\Debug\PhanMemBaiGiuXeDAL.dll
+C:\Users\luhoa\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\bin\Debug\PhanMemBaiGiuXeDAL.pdb
+C:\Users\luhoa\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\obj\Debug\PhanMemBaiGiuXeDAL.csprojAssemblyReference.cache
+C:\Users\luhoa\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\obj\Debug\PhanMemBaiGiuXeDAL.csproj.CoreCompileInputs.cache
+C:\Users\luhoa\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\obj\Debug\PhanMemBaiGiuXeDAL.dll
+C:\Users\luhoa\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\obj\Debug\PhanMemBaiGiuXeDAL.pdb
