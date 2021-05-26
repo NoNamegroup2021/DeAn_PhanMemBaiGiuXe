@@ -17,7 +17,7 @@ namespace CropImage
 {
     public partial class Crop_location : Form
     {
-        cropImageProcess.cropImage crop = new cropImageProcess.cropImage();
+
         FolderBrowserDialog folder_brower = new FolderBrowserDialog();
         DirectoryInfo dir;
         List<string> direct_img = new List<string>();
@@ -52,13 +52,13 @@ namespace CropImage
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             int index = listBox1.SelectedIndex;
-            string file =direct_img[index];
-            string path = dir +"\\"+ file;
+            string file = direct_img[index];
+            string path = dir + "\\" + file;
             Bitmap bm = new Bitmap(path);
             ori_img.Image = (Image)bm;
         }
 
-        int xCordinate, yCordinate,crop_imgH,crop_imgW;
+        int xCordinate, yCordinate, crop_imgH, crop_imgW;
         bool started_draw = false;
 
         private void ori_img_MouseDown(object sender, MouseEventArgs e)
@@ -90,9 +90,9 @@ namespace CropImage
             if (started_draw)
             {
                 Graphics g = e.Graphics;
-                if(rect != null && rect.Width >0 && rect.Height >0)
-                    e.Graphics.DrawRectangle(new Pen(Color.Green,2),rect);
-              
+                if (rect != null && rect.Width > 0 && rect.Height > 0)
+                    e.Graphics.DrawRectangle(new Pen(Color.Green, 2), rect);
+
             }
         }
 
@@ -111,7 +111,7 @@ namespace CropImage
                 if (e.Button != MouseButtons.Left)
                     return;
                 Point endPoint = e.Location;
-                rect.Location = new Point(Math.Min(xCordinate, endPoint.X), Math.Min(yCordinate, endPoint.Y)); 
+                rect.Location = new Point(Math.Min(xCordinate, endPoint.X), Math.Min(yCordinate, endPoint.Y));
                 crop_imgH = endPoint.Y - yCordinate;
                 crop_imgW = endPoint.X - xCordinate;
                 rect.Size = new Size(Math.Abs(crop_imgW), Math.Abs(crop_imgH));
@@ -143,13 +143,13 @@ namespace CropImage
                         string[] array = listBox1.Items.OfType<string>().ToArray();
                         int index = listBox1.SelectedIndex;
                         string info = direct_img[index];
-                        string getLocation_info = string.Format("{0} {1} {2} {3}",txtX.Text,txtY.Text,txtW.Text,txtH.Text);
-                        string info_loca = info + " 1 "+ getLocation_info;
+                        string getLocation_info = string.Format("{0} {1} {2} {3}", txtX.Text, txtY.Text, txtW.Text, txtH.Text);
+                        string info_loca = info + " 1 " + getLocation_info;
                         array[index] = info_loca;
                         listBox1.Items.Clear();
                         listBox1.Items.AddRange(array);
                         listBox1.ClearSelected();
-                        index ++;
+                        index++;
                         listBox1.SelectedIndex = index;
                         clearLocaCordinate();
                     }
@@ -180,10 +180,10 @@ namespace CropImage
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string ten="";
+            string ten = "";
             if (!checkData_isValid())
                 return;
-            if (SaveFileDialog.Show("Tên file muốn lưu", "Tên File",ref ten) == DialogResult.OK)
+            if (SaveFileDialog.Show("Tên file muốn lưu", "Tên File", ref ten) == DialogResult.OK)
             {
                 ten = ten;
 
@@ -191,7 +191,7 @@ namespace CropImage
                 if (rs == DialogResult.OK)
                 {
                     string path = folder_brower.SelectedPath;
-                    path = path + "\\" + ten +".txt";
+                    path = path + "\\" + ten + ".txt";
                     try
                     {
                         using (StreamWriter sw = new StreamWriter(path))
@@ -207,7 +207,7 @@ namespace CropImage
                         MessageBox.Show(ex.ToString());
                     }
                 }
-            
+
             }
         }
 

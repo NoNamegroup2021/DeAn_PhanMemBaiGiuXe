@@ -23,8 +23,16 @@ namespace PhanMemBaiGiuXeBLL
 		{
 		}
 
-		public Bitmap Img { get => img; set => img = value; }
-		public Rectangle[] Rects_areas { get => rects_areas; set => rects_areas = value; }
+		public Bitmap Img1
+        {
+            get {	return img; }
+			set {   img = value; }
+        }			
+		public Rectangle[] Rects_areas 
+		{ 
+			get { return rects_areas; }
+			set { rects_areas = value; }
+		}
 
 		public void setData(Bitmap img)
 		{
@@ -32,13 +40,59 @@ namespace PhanMemBaiGiuXeBLL
 			Rects_areas = null;
 		}
 
-		public void contour(Image<Gray, Byte> src)
+		private Bitmap findEdge(Image<Bgr, Byte> src,int w,int h)
 		{
-			Image<Gray, Byte> img_contours = new Image<Gray, byte>(src.ToBitmap());
-			src = AdaptiveThreshold(src);
 
+			src = resizeImage(src, w, h);
+			Image<Gray, Byte> input = new Image<Gray, byte>(src.ToBitmap());
+			Mat input_mat = MedianBlur(input);
+			Image<Gray, Byte> output_img = input_mat.ToImage<Gray, Byte>();
 
+			CvInvoke.AdaptiveThreshold(input_mat, output_img, 255, Emgu.CV.CvEnum.AdaptiveThresholdType.MeanC, Emgu.CV.CvEnum.ThresholdType.BinaryInv, 51, 2);
+			CvInvoke.Canny(input_mat, output_img, 50, 300);
+			Bitmap output_bm = output_img.ToBitmap();
+			return output_bm;
 		}
+
+		public Rectangle[] findContours(Image src,Image<Bgr,Byte> input,int w,int h)
+        {
+            try
+            {
+				Bitmap input_bm = findEdge(input, w, h);
+				Image<Gray, Byte> input_img = new Image<Gray, byte>(input_bm);
+				Emgu.CV.Util.VectorOfVectorOfPoint contours = new Emgu.CV.Util.VectorOfVectorOfPoint();
+				Mat hier = new Mat();
+				CvInvoke.FindContours(input_img, contours, hier, Emgu.CV.CvEnum.RetrType.List, Emgu.CV.CvEnum.ChainApproxMethod.ChainApproxSimple);
+				CvInvoke.DrawContours(input_img, contours, -1, new MCvScalar(255, 0, 0));
+
+				int count = contours.Size;
+				Rectangle[] rect_found = new Rectangle[count];
+				int jumpstep = 0;
+				Image<Bgr, Byte> img_brg_draw = new Image<Bgr, byte>(src as Bitmap);
+				for (int i = 0; i < count; i++)
+				{
+					int width = CvInvoke.BoundingRectangle(contours[i]).Width;
+					int height = CvInvoke.BoundingRectangle(contours[i]).Height;
+					int x = CvInvoke.BoundingRectangle(contours[i]).X;
+					int y = CvInvoke.BoundingRectangle(contours[i]).Y;
+
+
+
+					if (height >= 45 && height <= 80 && width >= 12 && width <= 40 && width <= height && (float)width / height > 0.2 && (float)width / height < 0.5)
+					{
+
+						Rectangle rect = new Rectangle(x, y, width, height);
+						rect_found[jumpstep] = rect;
+						jumpstep++;
+					}
+				}
+				return rect_found;
+            }
+            catch
+            {
+				return null;
+            }
+        }
 
 		/// <summary>
 		/// Ham thuc hien lam mo anh voi GuassianBlur
@@ -53,26 +107,52 @@ namespace PhanMemBaiGiuXeBLL
 			return src;
 		}
 
-
-		/// <summary>
-		/// AdaptiveThreshold dung de phan nguong anh ve nhi phan
-		/// Tang kha nang tach ky tu trong bien so
-		/// Ham AdaptiveThreshold su dung cac tham so
-		/// src : Array dau vo
-		/// dest : Array dau ra
-		/// maxValue : Value toi da cua diem anh 
-		/// AdaptiveThresholdType
-		/// ThresholdType
-		/// Blocksize : so cac pixel lan can dung de tinh gia tri cho 1 pixel
-		/// </summary>
-		/// <param name="InputImage"></param>
-		/// <returns></returns>
-		private Image<Gray, Byte> AdaptiveThreshold(Image<Gray, Byte> InputImage)
-		{
-			Mat input_mat = Gaussianblur(InputImage);
-			CvInvoke.AdaptiveThreshold(input_mat, input_mat, 255, Emgu.CV.CvEnum.AdaptiveThresholdType.MeanC, Emgu.CV.CvEnum.ThresholdType.BinaryInv, 51, 2);
-			Image<Gray, Byte> Output_image = input_mat.ToImage<Gray, Byte>();
-			return Output_image;
+		private Mat MedianBlur (Image <Gray,Byte> img)
+        {
+			Mat src = img.Mat;
+			CvInvoke.MedianBlur(src, src, 3);
+			return src;
 		}
+
+		private Image<Bgr, Byte> resizeImage(Image<Bgr, Byte> original, int width, int height)
+		{
+			Image<Bgr, Byte> img_resized = original.Resize(width, height, Emgu.CV.CvEnum.Inter.Linear);
+			return img_resized;
+		}
+
+		public ImageList CharList(Rectangle[] rects,Image src)
+        {
+			try
+            {
+				ImageList output = new ImageList();
+
+				int count = rects.Length;
+				if(count >0)
+                {
+					for( int i = 0 ; i <count ; i++ )
+                    {
+						var boundingBox = rects[i];
+						if(boundingBox.Width != 0 && boundingBox.Height != 0)
+                        {
+							Bitmap src_bm = src as Bitmap;
+							Bitmap char_bm = new Bitmap(boundingBox.Width, boundingBox.Height);
+							using (Graphics g = Graphics.FromImage(char_bm))
+                            {
+								g.DrawImage(src_bm, new Rectangle(0, 0, boundingBox.Width, boundingBox.Height), boundingBox, GraphicsUnit.Pixel);
+                            }
+							Image<Bgr, Byte> output_img = resizeImage(new Image<Bgr,Byte>(char_bm), 28, 28);
+							Bitmap output_bm = output_img.ToBitmap();
+							output.Images.Add(output_bm);
+                        }
+                    }
+                }
+
+				return output;
+            }
+			catch
+            {
+				return null;
+            }
+        }
 	}
 }

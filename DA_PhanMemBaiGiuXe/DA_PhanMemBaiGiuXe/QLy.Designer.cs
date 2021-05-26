@@ -30,12 +30,13 @@ namespace DA_PhanMemBaiGiuXe
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.quảnLýNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quảnLýNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xemLịchSửĐăngNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lậpBiênBảnXửLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.thẻToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,16 +44,24 @@ namespace DA_PhanMemBaiGiuXe
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.quảnLýNhânViênToolStripMenuItem,
             this.quảnLýTàiKhoảnToolStripMenuItem,
+            this.quảnLýNhânViênToolStripMenuItem,
             this.xemLịchSửĐăngNhậpToolStripMenuItem,
             this.thốngKêToolStripMenuItem,
-            this.lậpBiênBảnXửLýToolStripMenuItem});
+            this.lậpBiênBảnXửLýToolStripMenuItem,
+            this.thẻToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(868, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // quảnLýTàiKhoảnToolStripMenuItem
+            // 
+            this.quảnLýTàiKhoảnToolStripMenuItem.Name = "quảnLýTàiKhoảnToolStripMenuItem";
+            this.quảnLýTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.quảnLýTàiKhoảnToolStripMenuItem.Text = "Quản Lý Tài Khoản";
+            this.quảnLýTàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.quảnLýTàiKhoảnToolStripMenuItem_Click);
             // 
             // quảnLýNhânViênToolStripMenuItem
             // 
@@ -60,12 +69,6 @@ namespace DA_PhanMemBaiGiuXe
             this.quảnLýNhânViênToolStripMenuItem.Name = "quảnLýNhânViênToolStripMenuItem";
             this.quảnLýNhânViênToolStripMenuItem.Size = new System.Drawing.Size(147, 24);
             this.quảnLýNhânViênToolStripMenuItem.Text = "Quản Lý Nhân Viên";
-            // 
-            // quảnLýTàiKhoảnToolStripMenuItem
-            // 
-            this.quảnLýTàiKhoảnToolStripMenuItem.Name = "quảnLýTàiKhoảnToolStripMenuItem";
-            this.quảnLýTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
-            this.quảnLýTàiKhoảnToolStripMenuItem.Text = "Quản Lý Tài Khoản";
             // 
             // xemLịchSửĐăngNhậpToolStripMenuItem
             // 
@@ -93,6 +96,13 @@ namespace DA_PhanMemBaiGiuXe
             this.panel1.Size = new System.Drawing.Size(868, 451);
             this.panel1.TabIndex = 1;
             // 
+            // thẻToolStripMenuItem
+            // 
+            this.thẻToolStripMenuItem.Name = "thẻToolStripMenuItem";
+            this.thẻToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
+            this.thẻToolStripMenuItem.Text = "Thẻ";
+            this.thẻToolStripMenuItem.Click += new System.EventHandler(this.thẻToolStripMenuItem_Click);
+            // 
             // QLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -119,5 +129,6 @@ namespace DA_PhanMemBaiGiuXe
         private System.Windows.Forms.ToolStripMenuItem thốngKêToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lậpBiênBảnXửLýToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolStripMenuItem thẻToolStripMenuItem;
     }
 }

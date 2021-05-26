@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Emgu;
-using Emgu.CV;
-using Emgu.Util;
-using System.IO;
 
-namespace DA_PhanMemBaiGiuXe.Processing
+namespace DA_PhanMemBaiGiuXe
 {
-    class Genarate_Data
+    public partial class XeRa : Form
     {
+        public XeRa()
+        {
+            InitializeComponent();
+        }
     }
 }

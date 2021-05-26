@@ -18,14 +18,6 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=DESKTOP-OCS8BFD\SQLEXPRESS;Initial Catalog=QL_BaiGiuXe;User ID=sa;Password=123</Value>
     </Setting>
-    <Setting Name="QL_BaiGiuXeConnectionString2" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=DESKTOP-H0R3HLD\SQLEXPRESS;Initial Catalog=QL_BaiGiuXe;User ID=sa;Password=1&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=DESKTOP-H0R3HLD\SQLEXPRESS;Initial Catalog=QL_BaiGiuXe;User ID=sa;Password=1</Value>
-    </Setting>
     <Setting Name="QL_BaiGiuXeConnectionString3" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
@@ -33,6 +25,30 @@
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=DESKTOP-5HAB20B;Initial Catalog=QL_BaiGiuXe;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="QL_BaiGiuXeConnectionString2" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=DESKTOP-H0R3HLD\SQLEXPRESS;Initial Catalog=QL_HeThongBaiGiuXe;User ID=sa;Password=1&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=DESKTOP-H0R3HLD\SQLEXPRESS;Initial Catalog=QL_HeThongBaiGiuXe;User ID=sa;Password=1</Value>
+    </Setting>
+    <Setting Name="QL_HeThongBaiGiuXeConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=DESKTOP-5HAB20B;Initial Catalog=QL_HeThongBaiGiuXe;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=DESKTOP-5HAB20B;Initial Catalog=QL_HeThongBaiGiuXe;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="QL_HeThongBaiGiuXeConnectionString1" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=DESKTOP-8O63SGA\SQLEXPRESS;Initial Catalog=QL_HeThongBaiGiuXe;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=DESKTOP-8O63SGA\SQLEXPRESS;Initial Catalog=QL_HeThongBaiGiuXe;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False</Value>
     </Setting>
   </Settings>
 </SettingsFile>

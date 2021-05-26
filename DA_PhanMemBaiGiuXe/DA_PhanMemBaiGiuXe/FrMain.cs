@@ -191,10 +191,10 @@ namespace DA_PhanMemBaiGiuXe
             {
                 NhanVien nv = new NhanVien();
                 nv.MaNV = txtMaNV.Text;
-                nv.HoTen = txtTenNV.Text;
+                
                 nv.DiaChi = txtDiaChi.Text;
                 nv.GioiTinh = txtGT.Text;
-                nv.SoCMND = txtCMND.Text;
+                
                 data.NhanViens.InsertOnSubmit(nv);
                 data.SubmitChanges();
                 reLoad();
@@ -229,9 +229,9 @@ namespace DA_PhanMemBaiGiuXe
             {
                 string maNV = dataGridView1.CurrentRow.Cells[0].Value.ToString();
                 NhanVien nv = data.NhanViens.Where(t => t.MaNV == maNV).SingleOrDefault();
-                nv.HoTen = txtTenNV.Text;
+                
                 nv.GioiTinh = txtGT.Text;
-                nv.SoCMND = txtCMND.Text;
+                
                 nv.DiaChi = txtDiaChi.Text;
                 data.SubmitChanges();
                 reLoad();

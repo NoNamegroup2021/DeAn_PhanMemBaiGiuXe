@@ -11,6 +11,7 @@ create table NhanVien
 	SDT varchar(30),
 	NgaySinh date,
 	DiaChi nvarchar(101),
+	SoCMND nvarchar(21),
 	COnstraint PK_NhanVien primary key (MaNV)
 )
 
@@ -62,7 +63,7 @@ create table QuanLyTheXe
 
 create table KhachHang
 (
-	MaKH varchar(30),
+	MaKH int IDENTITY(1,1),
 	BienSo nvarchar(21),
 	Constraint PK_KH primary key (MaKH)
 )
@@ -79,7 +80,7 @@ create table GiaoTac
 	MaGiaoTac int IDENTITY (1,1),
 	MaThe varchar(30),
 	TenTaiKhoan varchar(30),
-	MaKH varchar(30),
+	MaKH int,
 	MaLoaiGiaoTac int,
 	ThoiGIan date,
 	Constraint PK_GiaoTac primary key (MaGiaoTac),
@@ -89,15 +90,14 @@ create table GiaoTac
 	Constraint FK_GiaoTac_Loai foreign key (MaLoaiGiaoTac) references LoaiGiaoTac(MaGiaoTac)
 )
 
-
-
 create table NgoaiLe
 (
 	MaNL int IDENTITY (1,1),
-	MaKH varchar(30),
+	MaKH int,
 	TenTaiKhoan varchar(30),
 	TrangThaiNL  bit,
 	ThoiGian date,
+	NoiDung varchar(51),
 	Constraint PK_NgoaiLe primary key (MaNL,MaKH,TenTaiKhoan),
 	Constraint FK_NgoaiLe_KH foreign key (MaKH) references KhachHang(MaKH),
 	Constraint FK_NgoaiLe_Tk foreign key (TenTaiKhoan) references TaiKhoan(TenTaiKhoan)
@@ -107,12 +107,12 @@ create table NgoaiLe
 set dateformat dmy 
 insert into NhanVien
 values 
-('NV01',N'Nguyễn Hoàng Quý',N'Nam','0123456789113','01/01/2000',N'Bình Tân'),
-('NV02',N'Lữ Hoàng Hiếu',N'Nam','0123456789114','01/01/2000',N'Gò Vấp'),
-('NV03',N'Võ Bội Tuyền',N'Nữ','0123456789115','01/01/2000',N'Bình Tân'),
-('QL01',N'Nguyễn Văn Thảo',N'Nam','0123456789116','01/01/2000',N'Bình Tân'),
-('QL02',N'Tô Đình Nhân',N'Nam','0123456789117','19/06/1997',N'Quận 4'),
-('QL03',N'Vũ Hoàng Thiên Ân',N'Nam','0123456789118','21/05/2000',N'Bình Tân')
+('NV01',N'Nguyễn Hoàng Quý',N'Nam','0123456789113','01/01/2000',N'Bình Tân',null),
+('NV02',N'Lữ Hoàng Hiếu',N'Nam','0123456789114','01/01/2000',N'Gò Vấp',null),
+('NV03',N'Võ Bội Tuyền',N'Nữ','0123456789115','01/01/2000',N'Bình Tân',null),
+('QL01',N'Nguyễn Văn Thảo',N'Nam','0123456789116','01/01/2000',N'Bình Tân',null),
+('QL02',N'Tô Đình Nhân',N'Nam','0123456789117','19/06/1997',N'Quận 4',null),
+('QL03',N'Vũ Hoàng Thiên Ân',N'Nam','0123456789118','21/05/2000',N'Bình Tân',null)
 
 
 insert into LoaiTK
@@ -135,3 +135,5 @@ insert into LoaiGiaoTac
 values 
 (1,N'Gửi Xe'),
 (2,N'Lấy Xe')
+
+select * from TaiKhoan

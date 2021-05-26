@@ -12,6 +12,12 @@ namespace DA_PhanMemBaiGiuXe
 {
     public partial class MainForm : Form
     {
+        private string tendn;
+        public string tenDN
+        {
+            get { return tendn; }
+            set { tendn = value; }
+        }
         public MainForm()
         {
             InitializeComponent();
@@ -20,6 +26,7 @@ namespace DA_PhanMemBaiGiuXe
         private void QLY_Click(object sender, EventArgs e)
         {
             Program.qly = new QLy();
+            Program.qly.tenDN = tendn;
             if(Program.qly != null)
             {
                 this.mainPanel.Show();
@@ -31,19 +38,6 @@ namespace DA_PhanMemBaiGiuXe
             }    
         }
 
-        private void NV_Click(object sender, EventArgs e)
-        {
-            Program.nv = new NVien();
-            if(Program.nv != null)
-            {
-                this.mainPanel.Show();
-                this.mainPanel.Controls.Clear();
-                Program.nv.TopLevel = false;
-                Program.nv.Dock = DockStyle.Fill;
-                this.mainPanel.Controls.Add(Program.nv);
-                Program.nv.Show();
-            }    
-        }
 
         private void mainActivity_Click(object sender, EventArgs e)
         {
@@ -61,7 +55,11 @@ namespace DA_PhanMemBaiGiuXe
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-           
+            if(tendn != null)
+            {
+                tendn = tendn.ToUpper();
+                this.Text += "            WELCOME " + tendn;
+            }    
         }
 
         private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

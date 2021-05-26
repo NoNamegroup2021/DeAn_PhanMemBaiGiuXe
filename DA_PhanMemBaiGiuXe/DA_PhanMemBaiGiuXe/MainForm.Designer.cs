@@ -29,19 +29,17 @@ namespace DA_PhanMemBaiGiuXe
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.mainPanel = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.mainActivity = new System.Windows.Forms.ToolStripMenuItem();
             this.QLY = new System.Windows.Forms.ToolStripMenuItem();
-            this.NV = new System.Windows.Forms.ToolStripMenuItem();
-            this.mainPanel = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -102,6 +100,14 @@ namespace DA_PhanMemBaiGiuXe
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1582, 1027);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
+            // mainPanel
+            // 
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(319, 3);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(1260, 1021);
+            this.mainPanel.TabIndex = 3;
+            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -120,8 +126,7 @@ namespace DA_PhanMemBaiGiuXe
             this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mainActivity,
-            this.QLY,
-            this.NV});
+            this.QLY});
             this.menuStrip2.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table;
             this.menuStrip2.Location = new System.Drawing.Point(3, 18);
             this.menuStrip2.Name = "menuStrip2";
@@ -150,25 +155,6 @@ namespace DA_PhanMemBaiGiuXe
             this.QLY.Size = new System.Drawing.Size(132, 97);
             this.QLY.Text = "Quản Lý";
             this.QLY.Click += new System.EventHandler(this.QLY_Click);
-            // 
-            // NV
-            // 
-            this.NV.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NV.Image = ((System.Drawing.Image)(resources.GetObject("NV.Image")));
-            this.NV.Margin = new System.Windows.Forms.Padding(10);
-            this.NV.Name = "NV";
-            this.NV.Padding = new System.Windows.Forms.Padding(5, 5, 5, 50);
-            this.NV.Size = new System.Drawing.Size(181, 97);
-            this.NV.Text = "Nhân Viên";
-            this.NV.Click += new System.EventHandler(this.NV_Click);
-            // 
-            // mainPanel
-            // 
-            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(319, 3);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1260, 1021);
-            this.mainPanel.TabIndex = 3;
             // 
             // MainForm
             // 
@@ -204,7 +190,6 @@ namespace DA_PhanMemBaiGiuXe
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem mainActivity;
         private System.Windows.Forms.ToolStripMenuItem QLY;
-        private System.Windows.Forms.ToolStripMenuItem NV;
         private System.Windows.Forms.Panel mainPanel;
     }
 }

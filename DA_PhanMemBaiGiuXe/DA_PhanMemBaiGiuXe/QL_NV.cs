@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DA_PhanMemBaiGiuXe
 {
-    public partial class NVien : Form
+    public partial class QL_NV : Form
     {
-        public NVien()
+        public QL_NV()
         {
             InitializeComponent();
         }
