@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="DetectPlate.cs" />
     <Compile Include="LoginBLL.cs" />
+    <Compile Include="NhanVienBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SegmentChar.cs" />
   </ItemGroup>
