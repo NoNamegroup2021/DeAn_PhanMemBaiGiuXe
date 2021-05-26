@@ -35,3 +35,17 @@ D:\Nhan_Folder\DA_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBL
 D:\Nhan_Folder\DA_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\obj\Debug\PhanMemBaiGiuXeBLL.csproj.CopyComplete
 D:\Nhan_Folder\DA_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\obj\Debug\PhanMemBaiGiuXeBLL.dll
 D:\Nhan_Folder\DA_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\obj\Debug\PhanMemBaiGiuXeBLL.pdb
+C:\Users\luhoa\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\bin\Debug\PhanMemBaiGiuXeBLL.dll
+C:\Users\luhoa\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\bin\Debug\PhanMemBaiGiuXeBLL.pdb
+C:\Users\luhoa\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\bin\Debug\PhanMemBaiGiuXeDAL.dll
+C:\Users\luhoa\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\bin\Debug\ZedGraph.dll
+C:\Users\luhoa\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\bin\Debug\Emgu.CV.xml
+C:\Users\luhoa\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\bin\Debug\Emgu.CV.UI.xml
+C:\Users\luhoa\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\bin\Debug\Emgu.Util.xml
+C:\Users\luhoa\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\bin\Debug\PhanMemBaiGiuXeDAL.pdb
+C:\Users\luhoa\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\bin\Debug\PhanMemBaiGiuXeDAL.dll.config
+C:\Users\luhoa\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\obj\Debug\PhanMemBaiGiuXeBLL.csprojAssemblyReference.cache
+C:\Users\luhoa\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\obj\Debug\PhanMemBaiGiuXeBLL.csproj.CoreCompileInputs.cache
+C:\Users\luhoa\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\obj\Debug\PhanMemBaiGiuXeBLL.csproj.CopyComplete
+C:\Users\luhoa\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\obj\Debug\PhanMemBaiGiuXeBLL.dll
+C:\Users\luhoa\Desktop\DOAN_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\obj\Debug\PhanMemBaiGiuXeBLL.pdb
