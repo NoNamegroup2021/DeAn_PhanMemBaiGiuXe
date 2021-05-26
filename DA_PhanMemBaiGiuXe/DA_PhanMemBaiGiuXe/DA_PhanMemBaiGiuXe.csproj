@@ -133,6 +133,12 @@
     <Compile Include="Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
+    <Compile Include="XeRa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XeRa.Designer.cs">
+      <DependentUpon>XeRa.cs</DependentUpon>
+    </Compile>
     <Compile Include="XeVao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XeRa.resx">
+      <DependentUpon>XeRa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XeVao.resx">
       <DependentUpon>XeVao.cs</DependentUpon>
