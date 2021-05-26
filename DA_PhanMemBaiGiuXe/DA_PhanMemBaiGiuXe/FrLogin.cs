@@ -77,6 +77,7 @@ namespace DA_PhanMemBaiGiuXe
                             }
                         }
                     }
+                    Program.main_from.tenDN = user;
                     Program.main_from.Show();
                     MessageBox.Show("Dang nhap thanh cong");
                 }

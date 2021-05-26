@@ -16,5 +16,18 @@ namespace DA_PhanMemBaiGiuXe
         {
             InitializeComponent();
         }
+
+        private void xeVàoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Program.frmXevao  = new XeVao();
+            if(Program.frmXevao != null)
+            {
+                this.panel1.Controls.Clear();
+                Program.frmXevao.TopLevel = false;
+                Program.frmXevao.Dock = DockStyle.Fill;
+                this.panel1.Controls.Add(Program.frmXevao);
+                Program.frmXevao.Show();
+            }    
+        }
     }
 }
