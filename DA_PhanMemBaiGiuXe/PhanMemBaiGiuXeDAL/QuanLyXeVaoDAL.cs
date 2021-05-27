@@ -59,7 +59,7 @@ namespace PhanMemBaiGiuXeDAL
                     gt.KhachHang.BienSo = bienso;
                     gt.ThoiGIan = thoigian;
                     gt.TenTaiKhoan = tenNV;
-                    gt.LoaiGiaoTac = loaigt;
+                    gt.MaLoaiGiaoTac = loaigt;
                     HTBGX.GiaoTacs.InsertOnSubmit(gt);
                     HTBGX.SubmitChanges();
                 }

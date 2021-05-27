@@ -17,6 +17,21 @@ namespace WindowsFormsControlLibrary1
             InitializeComponent();
         }
 
+        private string _Ngay;
+
+        public string Ngay
+        {
+            get { return _Ngay; }
+            set { _Ngay = value; }
+        }
+        private string _Gio;
+
+        public string Gio
+        {
+            get { return _Gio; }
+            set { _Gio = value; }
+        }
+
         private void UserControl1_Load(object sender, EventArgs e)
         {
             timer1.Start();
@@ -24,8 +39,11 @@ namespace WindowsFormsControlLibrary1
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            label1.Text = DateTime.Now.ToLongDateString();
+            //label1.Text = DateTime.Now.ToLongDateString();
+            label1.Text = DateTime.Now.ToString("dd/MM/yyyy");
             label2.Text = DateTime.Now.ToLongTimeString();
+            Ngay = label1.Text;
+            Gio = label2.Text;
         }
     }
 }

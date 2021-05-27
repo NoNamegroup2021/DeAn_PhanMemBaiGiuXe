@@ -8,19 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PhanMemBaiGiuXeBLL;
+using WindowsFormsControlLibrary1;
 
 namespace DA_PhanMemBaiGiuXe
 {
     public partial class XeVao : Form
     {
         QuanLyXeVaoBLL QLXEV = new QuanLyXeVaoBLL();
-
+        UserControl1 UC = new UserControl1();
         public XeVao()
         {
             InitializeComponent();
+            string a = UC.Ngay;
         }
-
-
 
         private void txt_MaThe_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -44,7 +44,7 @@ namespace DA_PhanMemBaiGiuXe
 
                         if (kq == false)
                         {
-                            if (QLXEV.LuuGiaoTac(txt_MaThe.Text, txt_BienSo.Text, DateTime.Parse(""), lb_TenNV.Text, 1))
+                            if (QLXEV.LuuGiaoTac(txt_MaThe.Text, txt_BienSo.Text, DateTime.Parse(UC.Ngay), lb_TenNV.Text, 1))
                             {
 
                                 MessageBox.Show("Thêm thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
