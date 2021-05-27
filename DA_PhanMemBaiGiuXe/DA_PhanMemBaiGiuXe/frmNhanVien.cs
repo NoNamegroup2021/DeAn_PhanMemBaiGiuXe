@@ -96,30 +96,30 @@ namespace DA_PhanMemBaiGiuXe
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string manv = dataGridView1.SelectedCells[0].OwningRow.Cells["Column1"].Value.ToString();
-                string tennv = dataGridView1.SelectedCells[0].OwningRow.Cells["Column2"].Value.ToString();
-                string gt = dataGridView1.SelectedCells[0].OwningRow.Cells["Column3"].Value.ToString();
-                string sdt = dataGridView1.SelectedCells[0].OwningRow.Cells["Column4"].Value.ToString();
-                string ns = dataGridView1.SelectedCells[0].OwningRow.Cells["Column5"].Value.ToString();
-                string diachi = dataGridView1.SelectedCells[0].OwningRow.Cells["Column6"].Value.ToString();
-                if (NV.SuaNhanVien(manv, tennv, gt, sdt, DateTime.Parse(ns.ToString()), diachi))
-                {
-                    reload();
-                    MessageBox.Show("Sửa thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //try
+            //{
+            //    string manv = dataGridView1.SelectedCells[0].OwningRow.Cells["Column1"].Value.ToString();
+            //    string tennv = dataGridView1.SelectedCells[0].OwningRow.Cells["Column2"].Value.ToString();
+            //    string gt = dataGridView1.SelectedCells[0].OwningRow.Cells["Column3"].Value.ToString();
+            //    string sdt = dataGridView1.SelectedCells[0].OwningRow.Cells["Column4"].Value.ToString();
+            //    string ns = dataGridView1.SelectedCells[0].OwningRow.Cells["Column5"].Value.ToString();
+            //    string diachi = dataGridView1.SelectedCells[0].OwningRow.Cells["Column6"].Value.ToString();
+            //    if (NV.SuaNhanVien(manv, tennv, gt, sdt, DateTime.Parse(ns.ToString()), diachi))
+            //    {
+            //        reload();
+            //        MessageBox.Show("Sửa thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                }
-                else
-                {
-                    reload();
-                    MessageBox.Show("Sửa không thành công", "Thất Bại", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Vui lòng nhập đầy đủ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //    }
+            //    else
+            //    {
+            //        reload();
+            //        MessageBox.Show("Sửa không thành công", "Thất Bại", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    }
+            //}
+            //catch
+            //{
+            //    MessageBox.Show("Vui lòng nhập đầy đủ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         private void btnDong_Click(object sender, EventArgs e)

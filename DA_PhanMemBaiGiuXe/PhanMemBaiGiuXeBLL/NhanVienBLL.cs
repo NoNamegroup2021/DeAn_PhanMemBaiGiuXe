@@ -29,7 +29,14 @@ namespace PhanMemBaiGiuXeBLL
 
         public bool SuaNhanVien(string manv, string tennv, string gtinh, string sdt, DateTime ngaysinh, string diachi)
         {
-            return NV.SuaNhanVien(manv, tennv, gtinh, sdt, ngaysinh, diachi);
+            try
+            {
+                return NV.SuaNhanVien(manv, tennv, gtinh, sdt, ngaysinh, diachi);
+            }
+            catch
+            {
+                return false;
+            }
         }
         public bool XoaNhanVien(string manv)
         {
