@@ -40,7 +40,7 @@ namespace WindowsFormsControlLibrary1
         private void timer1_Tick(object sender, EventArgs e)
         {
             //label1.Text = DateTime.Now.ToLongDateString();
-            label1.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            label1.Text = DateTime.Now.ToString("MM/dd/yyyy");
             label2.Text = DateTime.Now.ToLongTimeString();
             Ngay = label1.Text;
             Gio = label2.Text;

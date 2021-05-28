@@ -43,6 +43,10 @@ namespace PhanMemBaiGiuXeDAL
             }
             return true;
         }
+        public int count()
+        {
+            return HTBGX.GiaoTacs.Count();
+        }
 
         public bool LuuGiaoTac(string maThe, string bienso, DateTime thoigian, string tenNV, int loaigt)
         {
@@ -50,23 +54,26 @@ namespace PhanMemBaiGiuXeDAL
             {
 
                 TheXe the = HTBGX.TheXes.Where(t => t.MaThe == maThe).SingleOrDefault();
-
                 if (the.TinhTrang == false)
                 {
-
+                    KhachHang kh = new KhachHang();
+                    kh.BienSo = bienso;
+                    HTBGX.KhachHangs.InsertOnSubmit(kh);
+                    HTBGX.SubmitChanges();
                     GiaoTac gt = new GiaoTac();
                     gt.MaThe = maThe;
-                    gt.KhachHang.BienSo = bienso;
-                    gt.ThoiGIan = thoigian;
                     gt.TenTaiKhoan = tenNV;
                     gt.MaLoaiGiaoTac = loaigt;
+                    gt.ThoiGIan = thoigian;
+                    gt.MaKH = kh.MaKH;
                     HTBGX.GiaoTacs.InsertOnSubmit(gt);
                     HTBGX.SubmitChanges();
                 }
                 return true;
             }
-            catch
+            catch(Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 return false;
             }
         }

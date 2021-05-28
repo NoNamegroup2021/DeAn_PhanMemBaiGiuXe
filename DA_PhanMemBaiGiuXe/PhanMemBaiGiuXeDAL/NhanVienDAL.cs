@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Linq;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,7 +26,7 @@ namespace PhanMemBaiGiuXeDAL
                 return true;
             return false; 
         }
-        public bool ThemNhanVien(string manv, string tennv, string gtinh, string sdt, DateTime ngaysinh, string diachi)
+        public bool ThemNhanVien(string manv, string tennv, string gtinh, string sdt, DateTime ngaysinh, string diachi, string cmnd)
         {
             try {
                 NhanVien NV = new NhanVien();
@@ -35,15 +36,18 @@ namespace PhanMemBaiGiuXeDAL
                 NV.SDT = sdt;
                 NV.NgaySinh = ngaysinh;
                 NV.DiaChi = diachi;
+                NV.SoCMND = cmnd;
                 data.NhanViens.InsertOnSubmit(NV);
+                data.SubmitChanges();
                 return true;
             }
-            catch {
+            catch(Exception ex) {
+                Console.WriteLine(ex.Message);
                 return false;
             }    
         }
 
-        public bool SuaNhanVien(string manv, string tennv, string gtinh, string sdt, DateTime ngaysinh, string diachi)
+        public bool SuaNhanVien(string manv, string tennv, string gtinh, string sdt, DateTime ngaysinh, string diachi, string cmnd)
         {
             try
             {
@@ -53,11 +57,13 @@ namespace PhanMemBaiGiuXeDAL
                 NV.SDT = sdt;
                 NV.NgaySinh = ngaysinh;
                 NV.DiaChi = diachi;
+                NV.SoCMND = cmnd;
                 data.SubmitChanges();
                 return true;
             }
-            catch
+            catch(Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 return false;
             }
         }
@@ -72,7 +78,7 @@ namespace PhanMemBaiGiuXeDAL
             {
                 return false;
             }
-        }
+    }
         public bool LuuNhanVien()
         {
             try
@@ -80,8 +86,9 @@ namespace PhanMemBaiGiuXeDAL
                 data.SubmitChanges();
                 return true;
             }
-            catch
+            catch(Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 return false;
             }
         }

@@ -33,6 +33,7 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnThem = new System.Windows.Forms.ToolStripButton();
             this.btnXoa = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.btnLuu = new System.Windows.Forms.ToolStripButton();
             this.btnDong = new System.Windows.Forms.ToolStripButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -42,7 +43,7 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -58,7 +59,8 @@
             this.Column3,
             this.Column4,
             this.Column5,
-            this.Column6});
+            this.Column6,
+            this.Column7});
             this.tableLayoutPanel1.SetColumnSpan(this.dataGridView1, 2);
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
@@ -101,6 +103,15 @@
             this.btnXoa.Text = "Xóa";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = global::DA_PhanMemBaiGiuXe.Properties.Resources.save;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(57, 24);
+            this.toolStripButton1.Text = "Lưu";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // btnLuu
             // 
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
@@ -108,7 +119,6 @@
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(57, 24);
             this.btnLuu.Text = "Sua";
-            this.btnLuu.Visible = false;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnDong
@@ -171,14 +181,11 @@
             this.Column6.HeaderText = "Địa Chỉ";
             this.Column6.Name = "Column6";
             // 
-            // toolStripButton1
+            // Column7
             // 
-            this.toolStripButton1.Image = global::DA_PhanMemBaiGiuXe.Properties.Resources.save;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(57, 24);
-            this.toolStripButton1.Text = "Lưu";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.Column7.DataPropertyName = "soCMND";
+            this.Column7.HeaderText = "Số CMND";
+            this.Column7.Name = "Column7";
             // 
             // frmNhanVien
             // 
@@ -208,12 +215,13 @@
         private System.Windows.Forms.ToolStripButton btnXoa;
         private System.Windows.Forms.ToolStripButton btnLuu;
         private System.Windows.Forms.ToolStripButton btnDong;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
     }
 }

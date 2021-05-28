@@ -12,6 +12,14 @@ namespace DA_PhanMemBaiGiuXe
 {
     public partial class ChuongTrinhChinh : Form
     {
+        private string tendn;
+
+        public string Tendn
+        {
+            get { return tendn; }
+            set { tendn = value; }
+        }
+
         public ChuongTrinhChinh()
         {
             InitializeComponent();
@@ -25,6 +33,7 @@ namespace DA_PhanMemBaiGiuXe
                 this.panel1.Controls.Clear();
                 Program.frmXevao.TopLevel = false;
                 Program.frmXevao.Dock = DockStyle.Fill;
+                Program.frmXevao.TenDN = tendn;
                 this.panel1.Controls.Add(Program.frmXevao);
                 Program.frmXevao.Show();
             }    

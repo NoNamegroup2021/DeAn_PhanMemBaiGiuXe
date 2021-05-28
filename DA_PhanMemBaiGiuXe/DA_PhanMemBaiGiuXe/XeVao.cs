@@ -15,17 +15,24 @@ namespace DA_PhanMemBaiGiuXe
     public partial class XeVao : Form
     {
         QuanLyXeVaoBLL QLXEV = new QuanLyXeVaoBLL();
-        UserControl1 UC = new UserControl1();
+        private string tenDN;
+
+        public string TenDN
+        {
+            get { return tenDN; }
+            set { tenDN = value; }
+        }
         public XeVao()
         {
             InitializeComponent();
-            string a = UC.Ngay;
+            
         }
 
         private void txt_MaThe_KeyPress(object sender, KeyPressEventArgs e)
         {
             try
             {
+                
                 if (e.KeyChar == 13)
                 {
 
@@ -33,7 +40,7 @@ namespace DA_PhanMemBaiGiuXe
                     {
                         MessageBox.Show("Vui lòng nhập mã môn học và tên môn học", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    else if (QLXEV.ktKhoaChinh(txt_MaThe.Text,txt_BienSo.Text))
+                    else if (!QLXEV.ktKhoaChinh(txt_MaThe.Text,txt_BienSo.Text))
                     {
                         MessageBox.Show("Mã này đã tồn tại! Xin vui lòng thử lại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
@@ -44,9 +51,9 @@ namespace DA_PhanMemBaiGiuXe
 
                         if (kq == false)
                         {
-                            if (QLXEV.LuuGiaoTac(txt_MaThe.Text, txt_BienSo.Text, DateTime.Parse(UC.Ngay), lb_TenNV.Text, 1))
+                            if (QLXEV.LuuGiaoTac(txt_MaThe.Text, txt_BienSo.Text, DateTime.Parse(userControl11.Ngay + " " + userControl11.Gio), tenDN, 1))
                             {
-
+                                QLXEV.SetTT(txt_MaThe.Text);
                                 MessageBox.Show("Thêm thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
 

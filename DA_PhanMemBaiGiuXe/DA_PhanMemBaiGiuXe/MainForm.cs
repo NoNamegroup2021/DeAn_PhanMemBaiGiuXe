@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PhanMemBaiGiuXeBLL;
 
 namespace DA_PhanMemBaiGiuXe
 {
     public partial class MainForm : Form
     {
+        LuuThongTinDNBLL LTT = new LuuThongTinDNBLL();
         private string tendn;
+        string dateDN;
         public string tenDN
         {
             get { return tendn; }
@@ -48,6 +51,7 @@ namespace DA_PhanMemBaiGiuXe
                 this.mainPanel.Controls.Clear();
                 Program.ctr.TopLevel = false;
                 Program.ctr.Dock = DockStyle.Fill;
+                Program.ctr.Tendn = tendn;
                 this.mainPanel.Controls.Add(Program.ctr);
                 Program.ctr.Show();
             }    
@@ -59,10 +63,27 @@ namespace DA_PhanMemBaiGiuXe
             {
                 tendn = tendn.ToUpper();
                 this.Text += "            WELCOME " + tendn;
-            }    
+            }
+            dateDN = DateTime.Now.ToString("");
+            string[] date = dateDN.Split(' ');
+            dateDN = date[0] +" "+ date[1];
+
+            LTT.ThemTTDN(tenDN, DateTime.Parse(dateDN), DateTime.Parse(DateTime.Now.ToString()));
+
         }
 
         private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LTT.SuaTTDN(tenDN, DateTime.Parse(dateDN), DateTime.Parse(DateTime.Now.ToString()));
+
+        }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

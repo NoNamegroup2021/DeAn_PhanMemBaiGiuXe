@@ -2,7 +2,6 @@
 go
 use QL_HeThongBaiGiuXe
 go
-drop database QL_HeThongBaiGiuXe
 create table NhanVien
 (
 	MaNV varchar(11) not null,
@@ -38,10 +37,12 @@ create table TaiKhoan
 create table DangNhap
 (
 	TenTaiKhoan varchar(30) not null primary key,
-	ThoiGianDangNhap date,
-	ThoiGianDangXuat date,
+	ThoiGianDangNhap datetime,
+	ThoiGianDangXuat datetime,
 	Constraint FK_DangNhap foreign key (TenTaiKhoan) references TaiKhoan(TenTaiKhoan)
 )
+alter table DangNhap
+ADD IDDN int IDENTITY (1,1)
 
 create table TheXe
 (
