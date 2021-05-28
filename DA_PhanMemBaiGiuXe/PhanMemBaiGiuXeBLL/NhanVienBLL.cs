@@ -22,16 +22,16 @@ namespace PhanMemBaiGiuXeBLL
         {
             return NV.KTKhoaChinh(manv);
         }
-        public bool ThemNhanVien(string manv, string tennv, string gtinh, string sdt, DateTime ngaysinh, string diachi)
+        public bool ThemNhanVien(string manv, string tennv, string gtinh, string sdt, DateTime ngaysinh, string diachi, string cmnd)
         {
-            return NV.ThemNhanVien(manv, tennv, gtinh, sdt, ngaysinh, diachi,null);
+            return NV.ThemNhanVien(manv, tennv, gtinh, sdt, ngaysinh, diachi,cmnd);
         }
 
-        public bool SuaNhanVien(string manv, string tennv, string gtinh, string sdt, DateTime ngaysinh, string diachi)
+        public bool SuaNhanVien(string manv, string tennv, string gtinh, string sdt, DateTime ngaysinh, string diachi, string cmnd)
         {
             try
             {
-                return NV.SuaNhanVien(manv, tennv, gtinh, sdt, ngaysinh, diachi,null);
+                return NV.SuaNhanVien(manv, tennv, gtinh, sdt, ngaysinh, diachi, cmnd);
             }
             catch
             {
