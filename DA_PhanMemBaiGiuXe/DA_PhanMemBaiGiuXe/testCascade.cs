@@ -21,7 +21,7 @@ namespace DA_PhanMemBaiGiuXe
     {
         Bitmap img;
         Bitmap crop_img;
-        string haarcascade_file = Application.StartupPath + "\\car_lp_cascade.xml";
+        string haarcascade_file = Application.StartupPath + "\\cascade.xml";
         CascadeClassifier carLicense_class;
         Rectangle[] rect_found = null;
 

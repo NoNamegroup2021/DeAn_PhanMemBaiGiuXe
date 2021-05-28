@@ -31,13 +31,12 @@ namespace DA_PhanMemBaiGiuXe
         {
             try
             {
-                string manv = dataGridView1.SelectedCells[0].OwningRow.Cells["Column1"].Value.ToString().Trim();
-                string tennv = dataGridView1.SelectedCells[0].OwningRow.Cells["Column2"].Value.ToString().Trim();
-                string gt = dataGridView1.SelectedCells[0].OwningRow.Cells["Column3"].Value.ToString().Trim();
-                string sdt = dataGridView1.SelectedCells[0].OwningRow.Cells["Column4"].Value.ToString().Trim();
-                string ns = dataGridView1.SelectedCells[0].OwningRow.Cells["Column5"].Value.ToString().Trim();
-                string diachi = dataGridView1.SelectedCells[0].OwningRow.Cells["Column6"].Value.ToString().Trim();
-                string cmnd = dataGridView1.SelectedCells[0].OwningRow.Cells["Column7"].Value.ToString().Trim();
+                string manv = dataGridView1.SelectedCells[0].OwningRow.Cells["Column1"].Value.ToString();
+                string tennv = dataGridView1.SelectedCells[0].OwningRow.Cells["Column2"].Value.ToString();
+                string gt = dataGridView1.SelectedCells[0].OwningRow.Cells["Column3"].Value.ToString();
+                string sdt = dataGridView1.SelectedCells[0].OwningRow.Cells["Column4"].Value.ToString();
+                string ns = dataGridView1.SelectedCells[0].OwningRow.Cells["Column5"].Value.ToString();
+                string diachi = dataGridView1.SelectedCells[0].OwningRow.Cells["Column6"].Value.ToString();
                 if (String.IsNullOrEmpty(manv) || String.IsNullOrEmpty(manv) || String.IsNullOrEmpty(tennv) || String.IsNullOrEmpty(gt) || String.IsNullOrEmpty(sdt))
                 {
                     MessageBox.Show("Vui lòng nhập đầy đủ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -48,15 +47,15 @@ namespace DA_PhanMemBaiGiuXe
                 }
                 else
                 {
-                    if (NV.ThemNhanVien(manv, tennv, gt, sdt, DateTime.Parse(ns.ToString()), diachi, cmnd))
+                    if (NV.ThemNhanVien(manv, tennv, gt, sdt, DateTime.Parse(ns.ToString()), diachi))
                     {
-                        reload();
+                        //reload();
                         MessageBox.Show("Thêm thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     }
                     else
                     {
-                        reload();
+                        //reload();
                         MessageBox.Show("Thêm không thành công", "Thất Bại", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
@@ -97,31 +96,30 @@ namespace DA_PhanMemBaiGiuXe
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string manv = dataGridView1.SelectedCells[0].OwningRow.Cells["Column1"].Value.ToString();
-                string tennv = dataGridView1.SelectedCells[0].OwningRow.Cells["Column2"].Value.ToString();
-                string gt = dataGridView1.SelectedCells[0].OwningRow.Cells["Column3"].Value.ToString();
-                string sdt = dataGridView1.SelectedCells[0].OwningRow.Cells["Column4"].Value.ToString();
-                string ns = dataGridView1.SelectedCells[0].OwningRow.Cells["Column5"].Value.ToString();
-                string diachi = dataGridView1.SelectedCells[0].OwningRow.Cells["Column6"].Value.ToString();
-                string cmnd = dataGridView1.SelectedCells[0].OwningRow.Cells["Column7"].Value.ToString();
-                if (NV.SuaNhanVien(manv, tennv, gt, sdt, DateTime.Parse(ns.ToString()), diachi, cmnd))
-                {
-                    reload();
-                    MessageBox.Show("Sửa thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //try
+            //{
+            //    string manv = dataGridView1.SelectedCells[0].OwningRow.Cells["Column1"].Value.ToString();
+            //    string tennv = dataGridView1.SelectedCells[0].OwningRow.Cells["Column2"].Value.ToString();
+            //    string gt = dataGridView1.SelectedCells[0].OwningRow.Cells["Column3"].Value.ToString();
+            //    string sdt = dataGridView1.SelectedCells[0].OwningRow.Cells["Column4"].Value.ToString();
+            //    string ns = dataGridView1.SelectedCells[0].OwningRow.Cells["Column5"].Value.ToString();
+            //    string diachi = dataGridView1.SelectedCells[0].OwningRow.Cells["Column6"].Value.ToString();
+            //    if (NV.SuaNhanVien(manv, tennv, gt, sdt, DateTime.Parse(ns.ToString()), diachi))
+            //    {
+            //        reload();
+            //        MessageBox.Show("Sửa thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                }
-                else
-                {
-                    reload();
-                    MessageBox.Show("Sửa không thành công", "Thất Bại", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Vui lòng nhập đầy đủ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //    }
+            //    else
+            //    {
+            //        reload();
+            //        MessageBox.Show("Sửa không thành công", "Thất Bại", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    }
+            //}
+            //catch
+            //{
+            //    MessageBox.Show("Vui lòng nhập đầy đủ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         private void btnDong_Click(object sender, EventArgs e)
