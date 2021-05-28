@@ -2,6 +2,7 @@
 go
 use QL_HeThongBaiGiuXe
 go
+drop database QL_HeThongBaiGiuXe
 create table NhanVien
 (
 	MaNV varchar(11) not null,
@@ -125,11 +126,11 @@ values
 set dateformat dmy 
 insert into TaiKhoan
 values
-('hieu','123','NV02','01/01/2020',2),
-('nhan','456','QL01','01/01/2020',1),
+('hieu','123','NV02','01/01/2020',1),
+('nhan','456','QL01','01/01/2020',2),
 ('thao','789','QL02','01/01/2020',2),
-('tuyen','123','NV03','01/01/2020',2),
-('an','456','QL03','01/01/2020',1),
+('tuyen','123','NV03','01/01/2020',1),
+('an','456','QL03','01/01/2020',2),
 ('quy','789','NV01','01/01/2020',1)
 
 insert into LoaiGiaoTac

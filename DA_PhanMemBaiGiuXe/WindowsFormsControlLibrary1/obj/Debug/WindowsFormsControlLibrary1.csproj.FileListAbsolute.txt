@@ -51,7 +51,6 @@ D:\Nhan_Folder\DA_CNPM\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\WindowsFormsControl
 D:\Nhan_Folder\DA_CNPM\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\WindowsFormsControlLibrary1\obj\Debug\WindowsFormsControlLibrary1.pdb
 C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\WindowsFormsControlLibrary1\bin\Debug\WindowsFormsControlLibrary1.dll
 C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\WindowsFormsControlLibrary1\bin\Debug\WindowsFormsControlLibrary1.pdb
-C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\WindowsFormsControlLibrary1\obj\Debug\WindowsFormsControlLibrary1.csprojResolveAssemblyReference.cache
 C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\WindowsFormsControlLibrary1\obj\Debug\WindowsFormsControlLibrary1.UserControl1.resources
 C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\WindowsFormsControlLibrary1\obj\Debug\WindowsFormsControlLibrary1.csproj.GenerateResource.Cache
 C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\WindowsFormsControlLibrary1\obj\Debug\WindowsFormsControlLibrary1.dll

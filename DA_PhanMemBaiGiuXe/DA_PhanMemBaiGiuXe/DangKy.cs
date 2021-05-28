@@ -46,32 +46,32 @@ namespace DA_PhanMemBaiGiuXe
 
         private void dtgv_TK_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dtgv_TK.CurrentRow != null)
+            try
             {
-                txt_Username.Text = dtgv_TK.CurrentRow.Cells[0].Value.ToString();
-                txt_Password.Text = dtgv_TK.CurrentRow.Cells[1].Value.ToString();
-                txt_ConfirmPW.Text = dtgv_TK.CurrentRow.Cells[1].Value.ToString();
-                txt_MaNV.Text = dtgv_TK.CurrentRow.Cells[2].Value.ToString();
-                string ltk = dtgv_TK.CurrentRow.Cells[3].Value.ToString().Trim();
-                for (int i = 0; i < pn_LTK.Controls.Count; i++)
+                if (dtgv_TK.CurrentRow != null)
                 {
-                    RadioButton rd = (RadioButton)pn_LTK.Controls[i];
-                    switch (ltk)
+                    txt_Username.Text = dtgv_TK.CurrentRow.Cells[0].Value.ToString();
+                    txt_Password.Text = dtgv_TK.CurrentRow.Cells[1].Value.ToString();
+                    txt_ConfirmPW.Text = dtgv_TK.CurrentRow.Cells[1].Value.ToString();
+                    txt_MaNV.Text = dtgv_TK.CurrentRow.Cells["MaNV"].Value.ToString();
+                    int type = int.Parse(dtgv_TK.CurrentRow.Cells["LoaiTK"].Value.ToString());
+                    if (type == 1)
                     {
-                        case "CV01":
-                            if (rd.Name == "rdo_QuanLy")
-                            {
-                                rd.Checked = true;
-                            }
-                            break;
-                        case "CV02":
-                            if (rd.Name == "rdo_NhanVien")
-                            {
-                                rd.Checked = true;
-                            }
-                            break;
+                        Control ctr = pn_LTK.Controls["rdo_NhanVien"];
+                        RadioButton rd = ctr as RadioButton;
+                        rd.Checked = true;
+
+                    }
+                    else
+                    {
+                        Control ctr = pn_LTK.Controls["rdo_QuanLy"];
+                        RadioButton rd = ctr as RadioButton;
+                        rd.Checked = true;
                     }
                 }
+            }
+            catch
+            {           
             }
         }
         public bool ktCheck(Panel p)
@@ -100,30 +100,31 @@ namespace DA_PhanMemBaiGiuXe
                     tk.TenTaiKhoan = txt_Username.Text;
                     tk.Password = txt_Password.Text;
                     tk.MaNV = txt_MaNV.Text;
+                    int LoaiTK = 0;
                     if (ktCheck(pn_LTK))
+                    {
+                        for (int i = 0; i < pn_LTK.Controls.Count; i++)
                         {
-                            string maCV = "";
-                            for (int i = 0; i < pn_LTK.Controls.Count; i++)
+                            RadioButton rd = (RadioButton)pn_LTK.Controls[i];
+                            if (rd.Checked)
                             {
-                                RadioButton rd = (RadioButton)pn_LTK.Controls[i];
-                                if (rd.Checked)
+                                switch (rd.Text)
                                 {
-                                    switch (rd.Text)
-                                    {
-                                        case "Nhân Viên":
-                                            maCV = "CV02";
-                                            break;
-                                        case "Quản Lý":
-                                            maCV = "CV01";
-                                            break;
-                                    }
+                                    case "Nhân Viên":
+                                        LoaiTK = 1;
+                                        break;
+                                    case "Quản Lý":
+                                        LoaiTK = 2;
+                                        break;
                                 }
                             }
                         }
+                     }
                   else
                     {
                         MessageBox.Show("Bạn phải check vào loại tài khoản muốn tạo", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }                   
+                    }
+                    tk.LoaiTaiKhoan = LoaiTK;
                     data.TaiKhoans.InsertOnSubmit(tk);
                     data.SubmitChanges();
                     reload();
@@ -166,9 +167,9 @@ namespace DA_PhanMemBaiGiuXe
                     tk.TenTaiKhoan = txt_Username.Text;
                     tk.Password = txt_Password.Text;
                     tk.MaNV = txt_MaNV.Text;
+                    int LoaiTK = 0;
                     if (ktCheck(pn_LTK))
-                    {
-                        string maCV = "";
+                    {                        
                         for (int i = 0; i < pn_LTK.Controls.Count; i++)
                         {
                             RadioButton rd = (RadioButton)pn_LTK.Controls[i];
@@ -177,19 +178,20 @@ namespace DA_PhanMemBaiGiuXe
                                 switch (rd.Text)
                                 {
                                     case "Nhân Viên":
-                                        maCV = "CV02";
+                                        LoaiTK = 1;
                                         break;
                                     case "Quản Lý":
-                                        maCV = "CV01";
+                                        LoaiTK = 2;
                                         break;
                                 }
                             }
                         }
-                    }
+                      }
                     else
                     {
                         MessageBox.Show("Bạn phải check vào loại tài khoản muốn tạo", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }                    
+                    }
+                    tk.LoaiTaiKhoan = LoaiTK;
                     data.SubmitChanges();
                     reload();
                     MessageBox.Show("Sửa tài khoản thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);

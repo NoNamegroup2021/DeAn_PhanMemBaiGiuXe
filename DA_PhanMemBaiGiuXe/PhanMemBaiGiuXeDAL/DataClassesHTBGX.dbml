@@ -1,19 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QL_HeThongBaiGiuXe" Class="DataClassesHTBGXDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-OCS8BFD\SQLEXPRESS;Initial Catalog=QL_HeThongBaiGiuXe;User ID=sa" SettingsObjectName="PhanMemBaiGiuXeDAL.Properties.Settings" SettingsPropertyName="QL_HeThongBaiGiuXeConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-5HAB20B;Initial Catalog=QL_HeThongBaiGiuXe;Integrated Security=True" SettingsObjectName="PhanMemBaiGiuXeDAL.Properties.Settings" SettingsPropertyName="QL_HeThongBaiGiuXeConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.DangNhap" Member="DangNhaps">
     <Type Name="DangNhap">
       <Column Name="TenTaiKhoan" Type="System.String" DbType="VarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="ThoiGianDangNhap" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="ThoiGianDangXuat" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IDDN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
       <Association Name="TaiKhoan_DangNhap" Member="TaiKhoan" ThisKey="TenTaiKhoan" OtherKey="TenTaiKhoan" Type="TaiKhoan" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.KhachHang" Member="KhachHangs">
-    <Type Name="KhachHang">
-      <Column Name="MaKH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="BienSo" Type="System.String" DbType="NVarChar(21)" CanBeNull="true" />
-      <Association Name="KhachHang_GiaoTac" Member="GiaoTacs" ThisKey="MaKH" OtherKey="MaKH" Type="GiaoTac" />
-      <Association Name="KhachHang_NgoaiLe" Member="NgoaiLes" ThisKey="MaKH" OtherKey="MaKH" Type="NgoaiLe" />
     </Type>
   </Table>
   <Table Name="dbo.GiaoTac" Member="GiaoTacs">
@@ -28,6 +21,14 @@
       <Association Name="LoaiGiaoTac_GiaoTac" Member="LoaiGiaoTac" ThisKey="MaLoaiGiaoTac" OtherKey="MaGiaoTac" Type="LoaiGiaoTac" IsForeignKey="true" />
       <Association Name="TaiKhoan_GiaoTac" Member="TaiKhoan" ThisKey="TenTaiKhoan" OtherKey="TenTaiKhoan" Type="TaiKhoan" IsForeignKey="true" />
       <Association Name="TheXe_GiaoTac" Member="TheXe" ThisKey="MaThe" OtherKey="MaThe" Type="TheXe" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KhachHang" Member="KhachHangs">
+    <Type Name="KhachHang">
+      <Column Name="MaKH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BienSo" Type="System.String" DbType="NVarChar(21)" CanBeNull="true" />
+      <Association Name="KhachHang_GiaoTac" Member="GiaoTacs" ThisKey="MaKH" OtherKey="MaKH" Type="GiaoTac" />
+      <Association Name="KhachHang_NgoaiLe" Member="NgoaiLes" ThisKey="MaKH" OtherKey="MaKH" Type="NgoaiLe" />
     </Type>
   </Table>
   <Table Name="dbo.LoaiGiaoTac" Member="LoaiGiaoTacs">

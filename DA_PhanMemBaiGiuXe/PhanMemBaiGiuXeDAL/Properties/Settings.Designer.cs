@@ -12,7 +12,7 @@ namespace PhanMemBaiGiuXeDAL.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "12.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "11.0.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -64,6 +64,17 @@ namespace PhanMemBaiGiuXeDAL.Properties {
         public string QL_HeThongBaiGiuXeConnectionString1 {
             get {
                 return ((string)(this["QL_HeThongBaiGiuXeConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-5HAB20B;Initial Catalog=QL_HeThongBaiGiuXe;Integrated Securit" +
+            "y=True")]
+        public string QL_HeThongBaiGiuXeConnectionString2 {
+            get {
+                return ((string)(this["QL_HeThongBaiGiuXeConnectionString2"]));
             }
         }
     }
