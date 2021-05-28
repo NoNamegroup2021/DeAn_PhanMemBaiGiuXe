@@ -248,9 +248,11 @@
             // 
             // userControl11
             // 
+            this.userControl11.Gio = "11:00:17 PM";
             this.userControl11.Location = new System.Drawing.Point(1003, 76);
             this.userControl11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.userControl11.Name = "userControl11";
+            this.userControl11.Ngay = "05/28/2021";
             this.userControl11.Size = new System.Drawing.Size(183, 66);
             this.userControl11.TabIndex = 10;
             // 
@@ -375,9 +377,11 @@
             // 
             // userControl12
             // 
+            this.userControl12.Gio = "11:00:17 PM";
             this.userControl12.Location = new System.Drawing.Point(1033, 125);
             this.userControl12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.userControl12.Name = "userControl12";
+            this.userControl12.Ngay = "05/28/2021";
             this.userControl12.Size = new System.Drawing.Size(147, 68);
             this.userControl12.TabIndex = 7;
             // 

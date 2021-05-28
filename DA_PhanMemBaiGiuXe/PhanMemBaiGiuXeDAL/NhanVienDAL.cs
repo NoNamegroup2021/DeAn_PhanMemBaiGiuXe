@@ -17,7 +17,9 @@ namespace PhanMemBaiGiuXeDAL
         }
         public IQueryable loadNhanVien()
         {
-            return data.NhanViens.Select(t=>t);
+            IQueryable ds = from nv in data.NhanViens select new { nv.MaNV, nv.TenNV, nv.GioiTinh, nv.SDT, nv.NgaySinh, nv.DiaChi, nv.SoCMND};
+            //IQueryable ds = data.NhanViens.Select(t=>t);
+            return ds;
         }
         public bool KTKhoaChinh(string manv)
         {
@@ -72,6 +74,7 @@ namespace PhanMemBaiGiuXeDAL
             try {
                 NhanVien h = data.NhanViens.Where(t => t.MaNV == manv).SingleOrDefault();
                 data.NhanViens.DeleteOnSubmit(h);
+                data.SubmitChanges();
                 return true;
             } 
             catch
