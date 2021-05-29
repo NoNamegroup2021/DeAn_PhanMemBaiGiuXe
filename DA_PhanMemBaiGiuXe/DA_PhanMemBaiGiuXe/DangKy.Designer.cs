@@ -29,21 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangKy));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnTimKiem = new System.Windows.Forms.Button();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_Xoa = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.US_Time = new WindowsFormsControlLibrary1.UserControl1();
             this.label6 = new System.Windows.Forms.Label();
-            this.btn_Sua = new System.Windows.Forms.Button();
             this.pn_LTK = new System.Windows.Forms.Panel();
-            this.rdo_NhanVien = new System.Windows.Forms.RadioButton();
             this.rdo_QuanLy = new System.Windows.Forms.RadioButton();
+            this.rdo_NhanVien = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_MaNV = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btn_Xoa = new System.Windows.Forms.Button();
-            this.btn_DangKy = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -57,8 +58,7 @@
             this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoaiTK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.pn_LTK.SuspendLayout();
@@ -88,19 +88,17 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.simpleButton3);
             this.groupBox1.Controls.Add(this.simpleButton2);
+            this.groupBox1.Controls.Add(this.btn_Xoa);
             this.groupBox1.Controls.Add(this.simpleButton1);
-            this.groupBox1.Controls.Add(this.btnTimKiem);
             this.groupBox1.Controls.Add(this.txtTimKiem);
             this.groupBox1.Controls.Add(this.US_Time);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.btn_Sua);
             this.groupBox1.Controls.Add(this.pn_LTK);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txt_MaNV);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.btn_Xoa);
-            this.groupBox1.Controls.Add(this.btn_DangKy);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -116,19 +114,47 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Đăng ký tài khoản";
             // 
-            // btnTimKiem
+            // simpleButton3
             // 
-            this.btnTimKiem.Location = new System.Drawing.Point(366, 430);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(76, 24);
-            this.btnTimKiem.TabIndex = 23;
-            this.btnTimKiem.Text = "Tìm Kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.simpleButton3.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.simpleButton3.Appearance.Options.UseForeColor = true;
+            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.simpleButton3.Location = new System.Drawing.Point(367, 430);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton3.TabIndex = 27;
+            this.simpleButton3.Text = "Tìm kiếm";
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(367, 368);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton2.TabIndex = 26;
+            this.simpleButton2.Text = "Sửa";
+            // 
+            // btn_Xoa
+            // 
+            this.btn_Xoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Xoa.ImageOptions.Image")));
+            this.btn_Xoa.Location = new System.Drawing.Point(220, 368);
+            this.btn_Xoa.Name = "btn_Xoa";
+            this.btn_Xoa.Size = new System.Drawing.Size(75, 23);
+            this.btn_Xoa.TabIndex = 25;
+            this.btn_Xoa.Text = "Xóa";
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(87, 368);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton1.TabIndex = 24;
+            this.simpleButton1.Text = "Đăng Ký";
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Location = new System.Drawing.Point(82, 433);
+            this.txtTimKiem.Location = new System.Drawing.Point(86, 430);
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(216, 20);
@@ -136,11 +162,11 @@
             // 
             // US_Time
             // 
-            this.US_Time.Gio = "11:19:05 PM";
+            this.US_Time.Gio = "1:05:50 PM";
             this.US_Time.Location = new System.Drawing.Point(220, 261);
             this.US_Time.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.US_Time.Name = "US_Time";
-            this.US_Time.Ngay = "05/28/2021";
+            this.US_Time.Ngay = "05/29/2021";
             this.US_Time.Size = new System.Drawing.Size(222, 62);
             this.US_Time.TabIndex = 21;
             // 
@@ -153,16 +179,6 @@
             this.label6.TabIndex = 20;
             this.label6.Text = "Thời gian đăng ký";
             // 
-            // btn_Sua
-            // 
-            this.btn_Sua.Location = new System.Drawing.Point(367, 368);
-            this.btn_Sua.Name = "btn_Sua";
-            this.btn_Sua.Size = new System.Drawing.Size(75, 23);
-            this.btn_Sua.TabIndex = 19;
-            this.btn_Sua.Text = "Sửa";
-            this.btn_Sua.UseVisualStyleBackColor = true;
-            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
-            // 
             // pn_LTK
             // 
             this.pn_LTK.Controls.Add(this.rdo_QuanLy);
@@ -171,17 +187,6 @@
             this.pn_LTK.Name = "pn_LTK";
             this.pn_LTK.Size = new System.Drawing.Size(222, 23);
             this.pn_LTK.TabIndex = 18;
-            // 
-            // rdo_NhanVien
-            // 
-            this.rdo_NhanVien.AutoSize = true;
-            this.rdo_NhanVien.Location = new System.Drawing.Point(3, 3);
-            this.rdo_NhanVien.Name = "rdo_NhanVien";
-            this.rdo_NhanVien.Size = new System.Drawing.Size(75, 17);
-            this.rdo_NhanVien.TabIndex = 16;
-            this.rdo_NhanVien.TabStop = true;
-            this.rdo_NhanVien.Text = "Nhân Viên";
-            this.rdo_NhanVien.UseVisualStyleBackColor = true;
             // 
             // rdo_QuanLy
             // 
@@ -193,6 +198,17 @@
             this.rdo_QuanLy.TabStop = true;
             this.rdo_QuanLy.Text = "Quản Lý";
             this.rdo_QuanLy.UseVisualStyleBackColor = true;
+            // 
+            // rdo_NhanVien
+            // 
+            this.rdo_NhanVien.AutoSize = true;
+            this.rdo_NhanVien.Location = new System.Drawing.Point(3, 3);
+            this.rdo_NhanVien.Name = "rdo_NhanVien";
+            this.rdo_NhanVien.Size = new System.Drawing.Size(75, 17);
+            this.rdo_NhanVien.TabIndex = 16;
+            this.rdo_NhanVien.TabStop = true;
+            this.rdo_NhanVien.Text = "Nhân Viên";
+            this.rdo_NhanVien.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -218,26 +234,6 @@
             this.label4.Size = new System.Drawing.Size(75, 13);
             this.label4.TabIndex = 12;
             this.label4.Text = "Mã Nhân Viên";
-            // 
-            // btn_Xoa
-            // 
-            this.btn_Xoa.Location = new System.Drawing.Point(223, 368);
-            this.btn_Xoa.Name = "btn_Xoa";
-            this.btn_Xoa.Size = new System.Drawing.Size(75, 23);
-            this.btn_Xoa.TabIndex = 11;
-            this.btn_Xoa.Text = "Xoá";
-            this.btn_Xoa.UseVisualStyleBackColor = true;
-            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
-            // 
-            // btn_DangKy
-            // 
-            this.btn_DangKy.Location = new System.Drawing.Point(83, 368);
-            this.btn_DangKy.Name = "btn_DangKy";
-            this.btn_DangKy.Size = new System.Drawing.Size(75, 23);
-            this.btn_DangKy.TabIndex = 0;
-            this.btn_DangKy.Text = "Đăng Ký";
-            this.btn_DangKy.UseVisualStyleBackColor = true;
-            this.btn_DangKy.Click += new System.EventHandler(this.btn_DangKy_Click);
             // 
             // label3
             // 
@@ -352,22 +348,6 @@
             this.LoaiTK.Name = "LoaiTK";
             this.LoaiTK.ReadOnly = true;
             // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Location = new System.Drawing.Point(6, 368);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton1.TabIndex = 24;
-            this.simpleButton1.Text = "simpleButton1";
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Location = new System.Drawing.Point(6, 405);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton2.TabIndex = 25;
-            this.simpleButton2.Text = "simpleButton2";
-            // 
             // DangKy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -393,15 +373,12 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btn_Sua;
         private System.Windows.Forms.Panel pn_LTK;
         private System.Windows.Forms.RadioButton rdo_NhanVien;
         private System.Windows.Forms.RadioButton rdo_QuanLy;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_MaNV;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btn_Xoa;
-        private System.Windows.Forms.Button btn_DangKy;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -417,9 +394,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MatKhau;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn LoaiTK;
-        private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.TextBox txtTimKiem;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btn_Xoa;
+        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
