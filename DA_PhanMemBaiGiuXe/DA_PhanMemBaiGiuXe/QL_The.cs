@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using PhanMemBaiGiuXeDAL;
 namespace DA_PhanMemBaiGiuXe
 {
     public partial class QL_The : Form
     {
-        DataClasses1DataContext data = new DataClasses1DataContext();
+        DataClassesHTBGXDataContext data = new DataClassesHTBGXDataContext();
         private string tentk;
 
         public string TenTk

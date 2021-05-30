@@ -95,11 +95,6 @@
     <Compile Include="DangKy.Designer.cs">
       <DependentUpon>DangKy.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataClasses1.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataClasses1.dbml</DependentUpon>
-    </Compile>
     <Compile Include="FrLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,9 +193,6 @@
     <EmbeddedResource Include="DangKy.resx">
       <DependentUpon>DangKy.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DataClasses1.dbml.layout">
-      <DependentUpon>DataClasses1.dbml</DependentUpon>
-    </None>
     <EmbeddedResource Include="LapBienBan.resx">
       <DependentUpon>LapBienBan.cs</DependentUpon>
     </EmbeddedResource>
@@ -254,11 +246,6 @@
     <EmbeddedResource Include="testCascade.resx">
       <DependentUpon>testCascade.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DataClasses1.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
