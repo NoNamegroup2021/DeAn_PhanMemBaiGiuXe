@@ -37,7 +37,6 @@
             this.btn_Xoa = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.US_Time = new WindowsFormsControlLibrary1.UserControl1();
             this.label6 = new System.Windows.Forms.Label();
             this.pn_LTK = new System.Windows.Forms.Panel();
             this.rdo_QuanLy = new System.Windows.Forms.RadioButton();
@@ -59,6 +58,7 @@
             this.LoaiTK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.US_Time = new WindowsFormsControlLibrary1.UserControl1();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.pn_LTK.SuspendLayout();
@@ -72,7 +72,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 9F));
             this.tableLayoutPanel1.Controls.Add(this.groupBox1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.groupBox2, 2, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -159,16 +159,6 @@
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(216, 20);
             this.txtTimKiem.TabIndex = 22;
-            // 
-            // US_Time
-            // 
-            this.US_Time.Gio = "1:05:50 PM";
-            this.US_Time.Location = new System.Drawing.Point(220, 261);
-            this.US_Time.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.US_Time.Name = "US_Time";
-            this.US_Time.Ngay = "05/29/2021";
-            this.US_Time.Size = new System.Drawing.Size(222, 62);
-            this.US_Time.TabIndex = 21;
             // 
             // label6
             // 
@@ -347,6 +337,16 @@
             this.LoaiTK.MinimumWidth = 6;
             this.LoaiTK.Name = "LoaiTK";
             this.LoaiTK.ReadOnly = true;
+            // 
+            // US_Time
+            // 
+            this.US_Time.Gio = "3:02:22 PM";
+            this.US_Time.Location = new System.Drawing.Point(220, 261);
+            this.US_Time.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.US_Time.Name = "US_Time";
+            this.US_Time.Ngay = "05/29/2021";
+            this.US_Time.Size = new System.Drawing.Size(222, 62);
+            this.US_Time.TabIndex = 21;
             // 
             // DangKy
             // 
