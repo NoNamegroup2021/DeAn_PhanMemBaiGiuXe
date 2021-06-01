@@ -45,8 +45,9 @@ namespace PhanMemBaiGiuXeDAL
                 TaiKhoan tk = data.TaiKhoans.Where(t => t.TenTaiKhoan.ToLower().Equals(user.ToLower()) && t.Password.ToLower().Equals(pass.ToLower())).SingleOrDefault();
                 return tk;
             }
-            catch
+            catch(Exception ex)
             {
+                Console.Write(ex.Message);
                 return null;
             }
         }

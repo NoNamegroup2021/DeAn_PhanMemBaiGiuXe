@@ -8,12 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PhanMemBaiGiuXeBLL;
-
+using PhanMemBaiGiuXeDAL;
 namespace DA_PhanMemBaiGiuXe
 {
     public partial class FrLogin : Form
     {
-        DataClasses1DataContext data = new DataClasses1DataContext();
         LoginBLL log_functs = new LoginBLL();
         public FrLogin()
         {

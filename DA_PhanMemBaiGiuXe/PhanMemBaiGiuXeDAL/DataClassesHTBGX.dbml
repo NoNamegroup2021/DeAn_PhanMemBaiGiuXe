@@ -1,11 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QL_HeThongBaiGiuXe" Class="DataClassesHTBGXDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-5HAB20B;Initial Catalog=QL_HeThongBaiGiuXe;Integrated Security=True" SettingsObjectName="PhanMemBaiGiuXeDAL.Properties.Settings" SettingsPropertyName="QL_HeThongBaiGiuXeConnectionString2" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-8O63SGA\SQLEXPRESS;Initial Catalog=QL_HeThongBaiGiuXe;Integrated Security=True" SettingsObjectName="PhanMemBaiGiuXeDAL.Properties.Settings" SettingsPropertyName="QL_HeThongBaiGiuXeConnectionString3" Provider="System.Data.SqlClient" />
   <Table Name="dbo.DangNhap" Member="DangNhaps">
     <Type Name="DangNhap">
       <Column Name="TenTaiKhoan" Type="System.String" DbType="VarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="ThoiGianDangNhap" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="ThoiGianDangXuat" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="IDDN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ThoiGianDangNhap" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ThoiGianDangXuat" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Association Name="TaiKhoan_DangNhap" Member="TaiKhoan" ThisKey="TenTaiKhoan" OtherKey="TenTaiKhoan" Type="TaiKhoan" IsForeignKey="true" />
     </Type>
   </Table>
@@ -31,20 +30,6 @@
       <Association Name="KhachHang_NgoaiLe" Member="NgoaiLes" ThisKey="MaKH" OtherKey="MaKH" Type="NgoaiLe" />
     </Type>
   </Table>
-  <Table Name="dbo.LoaiGiaoTac" Member="LoaiGiaoTacs">
-    <Type Name="LoaiGiaoTac">
-      <Column Name="MaGiaoTac" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TenGiaoTac" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Association Name="LoaiGiaoTac_GiaoTac" Member="GiaoTacs" ThisKey="MaGiaoTac" OtherKey="MaLoaiGiaoTac" Type="GiaoTac" />
-    </Type>
-  </Table>
-  <Table Name="dbo.LoaiTK" Member="LoaiTKs">
-    <Type Name="LoaiTK">
-      <Column Name="MaLoai" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TenLoai" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Association Name="LoaiTK_TaiKhoan" Member="TaiKhoans" ThisKey="MaLoai" OtherKey="LoaiTaiKhoan" Type="TaiKhoan" />
-    </Type>
-  </Table>
   <Table Name="dbo.NgoaiLe" Member="NgoaiLes">
     <Type Name="NgoaiLe">
       <Column Name="MaNL" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -55,6 +40,20 @@
       <Column Name="NoiDung" Type="System.String" DbType="VarChar(51)" CanBeNull="true" />
       <Association Name="KhachHang_NgoaiLe" Member="KhachHang" ThisKey="MaKH" OtherKey="MaKH" Type="KhachHang" IsForeignKey="true" />
       <Association Name="TaiKhoan_NgoaiLe" Member="TaiKhoan" ThisKey="TenTaiKhoan" OtherKey="TenTaiKhoan" Type="TaiKhoan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoaiTK" Member="LoaiTKs">
+    <Type Name="LoaiTK">
+      <Column Name="MaLoai" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenLoai" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Association Name="LoaiTK_TaiKhoan" Member="TaiKhoans" ThisKey="MaLoai" OtherKey="LoaiTaiKhoan" Type="TaiKhoan" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoaiGiaoTac" Member="LoaiGiaoTacs">
+    <Type Name="LoaiGiaoTac">
+      <Column Name="MaGiaoTac" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenGiaoTac" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Association Name="LoaiGiaoTac_GiaoTac" Member="GiaoTacs" ThisKey="MaGiaoTac" OtherKey="MaLoaiGiaoTac" Type="GiaoTac" />
     </Type>
   </Table>
   <Table Name="dbo.NhanVien" Member="NhanViens">
