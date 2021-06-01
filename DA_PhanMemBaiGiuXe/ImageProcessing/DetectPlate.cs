@@ -12,9 +12,9 @@ using System.Windows.Forms;
 //using System.IO;
 //using Emgu.CV.Structure;
 
-namespace PhanMemBaiGiuXeBLL
+namespace ImageProcessing
 {
-    class DetectPlate
+    public class DetectPlate
     {
     }
 }

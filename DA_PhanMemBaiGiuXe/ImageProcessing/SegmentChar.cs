@@ -12,7 +12,7 @@ using Emgu.Util;
 using System.IO;
 using Emgu.CV.Structure;
 
-namespace PhanMemBaiGiuXeBLL
+namespace ImageProcessing
 {
     public class SegmentChar
     {
