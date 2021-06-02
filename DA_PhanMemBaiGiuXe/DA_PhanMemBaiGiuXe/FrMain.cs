@@ -13,13 +13,13 @@ using Emgu.CV;
 using Emgu.CV.Util;
 using Emgu.Util;
 using Emgu.CV.Structure;
-using PhanMemBaiGiuXeDAL;
+
 
 namespace DA_PhanMemBaiGiuXe
 {
     public partial class FrMain : Form
     {
-        DataClassesHTBGXDataContext data = new DataClassesHTBGXDataContext();
+        //DataClasses1DataContext data = new DataClasses1DataContext();
         private FilterInfoCollection dscam;
         private VideoCaptureDevice cam;
         private string chucvu;

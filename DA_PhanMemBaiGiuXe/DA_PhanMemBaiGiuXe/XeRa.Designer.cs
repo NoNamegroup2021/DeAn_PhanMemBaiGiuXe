@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.userControl12 = new WindowsFormsControlLibrary1.UserControl1();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.userControl12 = new WindowsFormsControlLibrary1.UserControl1();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -54,7 +54,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 297F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 67F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 242F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 9F));
             this.tableLayoutPanel2.Controls.Add(this.label3, 3, 1);
             this.tableLayoutPanel2.Controls.Add(this.label4, 3, 2);
             this.tableLayoutPanel2.Controls.Add(this.label6, 3, 3);
@@ -83,16 +83,6 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(966, 605);
             this.tableLayoutPanel2.TabIndex = 1;
             this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
-            // 
-            // pictureBox4
-            // 
-            this.tableLayoutPanel2.SetColumnSpan(this.pictureBox4, 2);
-            this.pictureBox4.Location = new System.Drawing.Point(11, 301);
-            this.pictureBox4.Name = "pictureBox4";
-            this.tableLayoutPanel2.SetRowSpan(this.pictureBox4, 2);
-            this.pictureBox4.Size = new System.Drawing.Size(634, 292);
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
             // 
             // label3
             // 
@@ -146,17 +136,6 @@
             this.label8.Text = "Tên nhân viên";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // userControl12
-            // 
-            this.userControl12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.userControl12.Gio = "11:21:16 PM";
-            this.userControl12.Location = new System.Drawing.Point(799, 102);
-            this.userControl12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.userControl12.Name = "userControl12";
-            this.userControl12.Ngay = "06/01/2021";
-            this.userControl12.Size = new System.Drawing.Size(73, 95);
-            this.userControl12.TabIndex = 7;
-            // 
             // pictureBox5
             // 
             this.pictureBox5.Location = new System.Drawing.Point(718, 11);
@@ -181,6 +160,17 @@
             this.textBox2.Size = new System.Drawing.Size(236, 20);
             this.textBox2.TabIndex = 10;
             // 
+            // userControl12
+            // 
+            this.userControl12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.userControl12.Gio = "11:21:16 PM";
+            this.userControl12.Location = new System.Drawing.Point(799, 102);
+            this.userControl12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.userControl12.Name = "userControl12";
+            this.userControl12.Ngay = "06/01/2021";
+            this.userControl12.Size = new System.Drawing.Size(73, 95);
+            this.userControl12.TabIndex = 7;
+            // 
             // pictureBox3
             // 
             this.tableLayoutPanel2.SetColumnSpan(this.pictureBox3, 2);
@@ -190,6 +180,16 @@
             this.pictureBox3.Size = new System.Drawing.Size(634, 284);
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.tableLayoutPanel2.SetColumnSpan(this.pictureBox4, 2);
+            this.pictureBox4.Location = new System.Drawing.Point(11, 301);
+            this.pictureBox4.Name = "pictureBox4";
+            this.tableLayoutPanel2.SetRowSpan(this.pictureBox4, 2);
+            this.pictureBox4.Size = new System.Drawing.Size(634, 292);
+            this.pictureBox4.TabIndex = 1;
+            this.pictureBox4.TabStop = false;
             // 
             // XeRa
             // 
@@ -201,9 +201,9 @@
             this.Text = "XeRa";
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }

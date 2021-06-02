@@ -395,3 +395,4 @@ D:\Nhan_Folder\DA_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuX
 D:\Nhan_Folder\DA_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\es\DevExpress.Pdf.v20.1.Core.resources.dll
 D:\Nhan_Folder\DA_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\ja\DevExpress.Pdf.v20.1.Core.resources.dll
 D:\Nhan_Folder\DA_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\ru\DevExpress.Pdf.v20.1.Core.resources.dll
+C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\obj\Debug\DA_PhanMemBaiGiuXe.XeRa.resources
