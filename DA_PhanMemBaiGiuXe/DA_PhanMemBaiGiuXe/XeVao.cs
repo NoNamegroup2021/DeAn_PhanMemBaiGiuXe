@@ -15,6 +15,12 @@ namespace DA_PhanMemBaiGiuXe
     public partial class XeVao : Form
     {
         QuanLyXeVaoBLL QLXEV = new QuanLyXeVaoBLL();
+        private FilterInfoCollection dscam;
+        private VideoCaptureDevice cam;
+        private string chucvu;
+        private CascadeClassifier carLicense_classifier;
+        private Rectangle[] rects_area;
+
         private string tenDN;
 
         public string TenDN
@@ -72,6 +78,22 @@ namespace DA_PhanMemBaiGiuXe
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void XeVao_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void XeVao_Enter(object sender, EventArgs e)
+        {
+            if (cam != null && cam.IsRunning)
+            {
+                cam.Stop();
+            }
+            cam = new VideoCaptureDevice(dscam[0].MonikerString);
+            cam.NewFrame += Cam_NewFrame;
+            cam.Start();
         }
     }
 }
