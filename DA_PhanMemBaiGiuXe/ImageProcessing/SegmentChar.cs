@@ -11,13 +11,16 @@ using Emgu.CV;
 using Emgu.Util;
 using System.IO;
 using Emgu.CV.Structure;
+using System.Linq;
 
 namespace ImageProcessing
 {
     public class SegmentChar
     {
 		private Bitmap img;
-		private Rectangle[] rects_areas;
+		private List<Rectangle> rects_areas;
+		private List<Rectangle> firstLine;
+		private List<Rectangle> secondLine;
 
 		public SegmentChar()
 		{
@@ -28,16 +31,37 @@ namespace ImageProcessing
             get {	return img; }
 			set {   img = value; }
         }			
-		public Rectangle[] Rects_areas 
-		{ 
-			get { return rects_areas; }
+
+		public List<Rectangle> Rects_areas
+        {
+            get { return rects_areas; }
 			set { rects_areas = value; }
+        }			
+
+        public List<Rectangle> getFirstLine 
+		{ 
+			get { return firstLine; }
+
 		}
 
-		public void setData(Bitmap img)
+		public List<Rectangle> getSecondLine
+        {
+            get { return secondLine; }
+        }
+
+		protected List<Rectangle> setFirstLine
+        {
+            set { firstLine = value; }
+        }			
+
+		protected List<Rectangle> setSecondLine
+        {
+			set { secondLine = value; }
+        }
+
+        public void setData(Bitmap img)
 		{
 			this.img = img;
-			Rects_areas = null;
 		}
 
 		private Bitmap findEdge(Image<Bgr, Byte> src,int w,int h)
@@ -54,7 +78,9 @@ namespace ImageProcessing
 			return output_bm;
 		}
 
-		public Rectangle[] findContours(Image src,Image<Bgr,Byte> input,int w,int h)
+		List<Rectangle> FirstLine = new List<Rectangle>();
+		List<Rectangle> SecondLine = new List<Rectangle>();
+		public List<Rectangle> findContours(Image src,Image<Bgr,Byte> input,int w,int h)
         {
             try
             {
@@ -66,8 +92,7 @@ namespace ImageProcessing
 				CvInvoke.DrawContours(input_img, contours, -1, new MCvScalar(255, 0, 0));
 
 				int count = contours.Size;
-				Rectangle[] rect_found = new Rectangle[count];
-				int jumpstep = 0;
+				rects_areas = new List<Rectangle>();
 				Image<Bgr, Byte> img_brg_draw = new Image<Bgr, byte>(src as Bitmap);
 				for (int i = 0; i < count; i++)
 				{
@@ -78,15 +103,21 @@ namespace ImageProcessing
 
 
 
-					if (height >= 45 && height <= 80 && width >= 12 && width <= 40 && width <= height && (float)width / height > 0.2 && (float)width / height < 0.5)
+					if (height >= 40 && height <= 66 && width >= 12 && width <= 26 && (float)width / height > 0.2 && (float)width / height < 0.5)
 					{
 
 						Rectangle rect = new Rectangle(x, y, width, height);
-						rect_found[jumpstep] = rect;
-						jumpstep++;
+						CvInvoke.Rectangle(img_brg_draw, rect, new MCvScalar(0, 0, 255), 2);
+						int index = -1;
+						index = rects_areas.FindIndex(r => r.X == rect.X && r.Y == rect.Y);
+						if (index < 0)
+							rects_areas.Add(rect);
 					}
 				}
-				return rect_found;
+				getLines(rects_areas, ref FirstLine, ref SecondLine);
+				firstLine = firstLine.OrderBy(r => r.X).ToList();
+				secondLine = secondLine.OrderBy(r => r.X).ToList();
+				return rects_areas;
             }
             catch
             {
@@ -154,5 +185,20 @@ namespace ImageProcessing
 				return null;
             }
         }
+
+		private void getLines(List<Rectangle> rects, ref List<Rectangle> firstline, ref List<Rectangle> secondline)
+		{
+			rects = rects.OrderBy(r => r.Y).ThenBy(r => r.X).ToList();
+			firstline.Add(rects[0]);
+			for (int i = 1; i < rects.Count; i++)
+			{
+				if ((rects[i].Y - FirstLine[0].Y) < 10)
+					firstline.Add(rects[i]);
+				else
+					secondline.Add(rects[i]);
+			}
+			setFirstLine = firstline;
+			setSecondLine = secondline;
+		}
 	}
 }
