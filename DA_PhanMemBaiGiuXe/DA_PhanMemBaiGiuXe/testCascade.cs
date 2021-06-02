@@ -23,7 +23,10 @@ namespace DA_PhanMemBaiGiuXe
         Bitmap crop_img;
         string haarcascade_file = Application.StartupPath + "\\cascade.xml";
         CascadeClassifier carLicense_class;
-        Rectangle[] rect_found = null;
+        List<Rectangle> rect_found = new List<Rectangle>();
+        List<Rectangle> firstLine = new List<Rectangle>();
+        List<Rectangle> secondLine = new List<Rectangle>();
+        int firstX_Line1,firstX_Line2;
 
         public testCascade()
         {
@@ -207,8 +210,7 @@ namespace DA_PhanMemBaiGiuXe
                 // draw Rectangle for each contour is number
                 
                 int count = contours.Size;
-                rect_found = new Rectangle[count];
-                int jumpstep = 0;
+                rect_found = new List<Rectangle>();
                 Image<Bgr, Byte> img_brg_draw = new Image<Bgr, byte>(pictureBox2.Image as Bitmap);
                 for (int i = 0; i < count; i++)
                 {
@@ -219,34 +221,77 @@ namespace DA_PhanMemBaiGiuXe
 
 
 
-                    if ( height >= 40 && height <= 80  && width >= 12 && width <= 40 && (float)width / height > 0.2 && (float)width / height < 0.5)
+                    if ( height >= 40 && height <= 66  && width >= 12 && width <= 26 && (float)width / height > 0.2 && (float)width / height < 0.5)
                     {
 
                         Rectangle rect = new Rectangle(x, y, width, height);
                         CvInvoke.Rectangle(img_brg_draw, rect, new MCvScalar(0, 0, 255), 2);
-                        rect_found[jumpstep] = rect;
-                        jumpstep++;
+                        int index = -1;
+                        index = rect_found.FindIndex(r => r.X == rect.X && r.Y == rect.Y);
+                        if(index <0)
+                            rect_found.Add(rect);
                     }
                 }
 
                 pictureBox6.Image = img_brg_draw.ToBitmap();
-                printRec();
+                firstLine = new List<Rectangle>();
+                secondLine = new List<Rectangle>();
+                getLines(rect_found, ref firstLine, ref secondLine);
+                firstLine = firstLine.OrderBy(r => r.X).ToList();
+                firstX_Line1 = firstLine[0].X;
+                secondLine = secondLine.OrderBy(r => r.X).ToList();
+                firstX_Line2 = secondLine[0].X;
             }
-            catch
+            catch(Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
         }
 
-
-        private void printRec()
+        private void getLines(List<Rectangle> rects,ref List<Rectangle> firstline,ref List<Rectangle> secondline)
         {
-            if(rect_found != null)
+            rects = rects.OrderBy(r => r.Y).ThenBy(r=> r.X).ToList();
+            firstLine.Add(rects[0]);
+            for(int i = 1 ; i <rects.Count ; i++)
             {
-                foreach(Rectangle rect in rect_found)
-                {
-                }    
-            }    
+                if ((rects[i].Y - firstLine[0].Y) < 10)
+                    firstLine.Add(rects[i]);
+                else
+                    secondLine.Add(rects[i]);
+            }
+        }
+        
+
+        private Rectangle getAreaRect_Line1(List<Rectangle> rects)
+        {
+            int count = rects.Count;
+            Rectangle frect = rects[0];
+            Rectangle lrect = rects[count-1];
+            int maxH = rects.Max(r => r.Height);
+
+            Rectangle[] bg_hr = rects.Where(r => r.Height == maxH).ToArray();
+            bg_hr = bg_hr.OrderByDescending(t => t.X).ToArray();
+            return new Rectangle(new Point(firstX_Line1, bg_hr[0].Y), new Size(Math.Abs(lrect.X + lrect.Width - firstX_Line1), bg_hr[0].Height+1));
+        }
+
+        private Rectangle getAreaRect_Line2(List<Rectangle> rects)
+        {
+            int count = rects.Count;
+            Rectangle frect = rects[0];
+            Rectangle lrect = rects[count - 1];
+            int maxH = rects.Max(r => r.Height);
+
+            Rectangle[] bg_hr = rects.Where(r => r.Height == maxH).ToArray();
+            bg_hr = bg_hr.OrderByDescending(t => t.X).ToArray();
+            return new Rectangle(new Point(firstX_Line2, bg_hr[0].Y), new Size(Math.Abs(lrect.X + lrect.Width - firstX_Line2), bg_hr[0].Height + 1));
+        }
+
+
+
+        private Image<Bgr,Byte> drawCropImage(Bitmap bitmap)
+        {
+            Image<Bgr, Byte> img = new Image<Bgr, byte>(bitmap);
+            return img;
         }
 
         private PointF getPoint(float x,float y)
@@ -256,16 +301,28 @@ namespace DA_PhanMemBaiGiuXe
 
         private void button6_Click(object sender, EventArgs e)
         {
-            var boundingBox = rect_found[1];
+            var boundingBox1 = getAreaRect_Line1(firstLine);
+            var boundingBox2 = getAreaRect_Line2(secondLine);
+            if (boundingBox1 == null || boundingBox2 == null)
+                return;
             Bitmap draw = pictureBox2.Image as Bitmap;
-            Bitmap crop = new Bitmap(boundingBox.Width, boundingBox.Height);
+            Bitmap crop1 = new Bitmap(boundingBox1.Width, boundingBox1.Height);
+            Bitmap crop2 = new Bitmap(boundingBox2.Width, boundingBox2.Height);
 
-            using (Graphics g = Graphics.FromImage(crop))
+            using (Graphics g = Graphics.FromImage(crop1))
             {
-                g.DrawImage(draw, new Rectangle(0, 0, crop.Width, crop.Height), boundingBox, GraphicsUnit.Pixel);
+                g.DrawImage(draw, new Rectangle(0, 0, crop1.Width, crop1.Height), boundingBox1, GraphicsUnit.Pixel);
             }
-            Image<Bgr, Byte> img_cropped = new Image<Bgr, byte>(crop);
-            pictureBox7.Image = img_cropped.ToBitmap();
+            Image<Bgr, Byte> img_cropped1 = new Image<Bgr, byte>(crop1);
+            pictureBox7.Image = img_cropped1.ToBitmap();
+
+            using (Graphics g = Graphics.FromImage(crop2))
+            {
+                g.DrawImage(draw, new Rectangle(0, 0, crop2.Width, crop2.Height), boundingBox2, GraphicsUnit.Pixel);
+            }
+            Image<Bgr, Byte> img_cropped2 = new Image<Bgr, byte>(crop2);
+            pictureBox8.Image = img_cropped2.ToBitmap();
+
         }
     }
 }
