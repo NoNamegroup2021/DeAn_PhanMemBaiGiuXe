@@ -38,12 +38,12 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.userControl12 = new WindowsFormsControlLibrary1.UserControl1();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -64,8 +64,8 @@
             this.tableLayoutPanel2.Controls.Add(this.textBox1, 4, 3);
             this.tableLayoutPanel2.Controls.Add(this.textBox2, 4, 4);
             this.tableLayoutPanel2.Controls.Add(this.userControl12, 4, 2);
-            this.tableLayoutPanel2.Controls.Add(this.pictureBox3, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.pictureBox4, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.pictureBox2, 1, 4);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -172,34 +172,35 @@
             // userControl12
             // 
             this.userControl12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.userControl12.Gio = "12:07:26 AM";
-            this.userControl12.Location = new System.Drawing.Point(1198, 157);
+            this.userControl12.Gio = "1:52:32 AM";
+            this.userControl12.Location = new System.Drawing.Point(1198, 158);
+            this.userControl12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.userControl12.Name = "userControl12";
             this.userControl12.Ngay = "06/03/2021";
-            this.userControl12.Size = new System.Drawing.Size(110, 146);
+            this.userControl12.Size = new System.Drawing.Size(110, 144);
             this.userControl12.TabIndex = 7;
             // 
-            // pictureBox3
+            // pictureBox1
             // 
-            this.tableLayoutPanel2.SetColumnSpan(this.pictureBox3, 2);
-            this.pictureBox3.Location = new System.Drawing.Point(16, 17);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.tableLayoutPanel2.SetRowSpan(this.pictureBox3, 3);
-            this.pictureBox3.Size = new System.Drawing.Size(951, 436);
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
+            this.tableLayoutPanel2.SetColumnSpan(this.pictureBox1, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 17);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.tableLayoutPanel2.SetRowSpan(this.pictureBox1, 3);
+            this.pictureBox1.Size = new System.Drawing.Size(951, 436);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
-            // pictureBox4
+            // pictureBox2
             // 
-            this.tableLayoutPanel2.SetColumnSpan(this.pictureBox4, 2);
-            this.pictureBox4.Location = new System.Drawing.Point(16, 463);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox4.Name = "pictureBox4";
-            this.tableLayoutPanel2.SetRowSpan(this.pictureBox4, 2);
-            this.pictureBox4.Size = new System.Drawing.Size(951, 448);
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
+            this.tableLayoutPanel2.SetColumnSpan(this.pictureBox2, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(16, 463);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.tableLayoutPanel2.SetRowSpan(this.pictureBox2, 2);
+            this.pictureBox2.Size = new System.Drawing.Size(951, 448);
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // XeRa
             // 
@@ -213,8 +214,8 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -222,7 +223,7 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
@@ -232,6 +233,6 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
