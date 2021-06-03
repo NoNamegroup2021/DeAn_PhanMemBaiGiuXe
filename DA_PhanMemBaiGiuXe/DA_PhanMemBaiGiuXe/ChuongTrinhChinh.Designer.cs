@@ -48,41 +48,45 @@ namespace DA_PhanMemBaiGiuXe
             this.xemTinhTrangTheToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // xeVàoToolStripMenuItem
             // 
             this.xeVàoToolStripMenuItem.Name = "xeVàoToolStripMenuItem";
-            this.xeVàoToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
+            this.xeVàoToolStripMenuItem.Size = new System.Drawing.Size(69, 26);
             this.xeVàoToolStripMenuItem.Text = "Xe Vào";
             this.xeVàoToolStripMenuItem.Click += new System.EventHandler(this.xeVàoToolStripMenuItem_Click);
             // 
             // xeRaToolStripMenuItem
             // 
             this.xeRaToolStripMenuItem.Name = "xeRaToolStripMenuItem";
-            this.xeRaToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
+            this.xeRaToolStripMenuItem.Size = new System.Drawing.Size(61, 26);
             this.xeRaToolStripMenuItem.Text = "Xe Ra";
+            this.xeRaToolStripMenuItem.Click += new System.EventHandler(this.xeRaToolStripMenuItem_Click);
             // 
             // xemLịchSửGửiXeToolStripMenuItem
             // 
             this.xemLịchSửGửiXeToolStripMenuItem.Name = "xemLịchSửGửiXeToolStripMenuItem";
-            this.xemLịchSửGửiXeToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.xemLịchSửGửiXeToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.xemLịchSửGửiXeToolStripMenuItem.Text = "Xem Lịch Sử Gửi Xe";
+            this.xemLịchSửGửiXeToolStripMenuItem.Click += new System.EventHandler(this.xemLịchSửGửiXeToolStripMenuItem_Click);
             // 
             // xemTinhTrangTheToolStripMenuItem
             // 
             this.xemTinhTrangTheToolStripMenuItem.Name = "xemTinhTrangTheToolStripMenuItem";
-            this.xemTinhTrangTheToolStripMenuItem.Size = new System.Drawing.Size(154, 24);
+            this.xemTinhTrangTheToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
             this.xemTinhTrangTheToolStripMenuItem.Text = "Xem Tinh Trang The";
+            this.xemTinhTrangTheToolStripMenuItem.Click += new System.EventHandler(this.xemTinhTrangTheToolStripMenuItem_Click);
             // 
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 30);
+            this.panel1.Location = new System.Drawing.Point(0, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 420);
+            this.panel1.Size = new System.Drawing.Size(800, 422);
             this.panel1.TabIndex = 1;
             // 
             // ChuongTrinhChinh

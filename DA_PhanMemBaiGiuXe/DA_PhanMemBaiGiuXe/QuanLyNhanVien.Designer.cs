@@ -76,53 +76,62 @@
             this.Column7});
             this.tableLayoutPanel1.SetColumnSpan(this.dataGridView1, 4);
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(46, 288);
+            this.dataGridView1.Location = new System.Drawing.Point(45, 288);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1032, 329);
+            this.dataGridView1.Size = new System.Drawing.Size(1031, 329);
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
             // 
             // Column1
             // 
             this.Column1.DataPropertyName = "MaNV";
             this.Column1.HeaderText = "Mã NV";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             // 
             // Column2
             // 
             this.Column2.DataPropertyName = "TenNV";
             this.Column2.HeaderText = "Tên NV";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             // 
             // Column3
             // 
             this.Column3.DataPropertyName = "GioiTinh";
             this.Column3.HeaderText = "Giới Tính";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             // 
             // Column4
             // 
             this.Column4.DataPropertyName = "SDT";
             this.Column4.HeaderText = "SDT";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             // 
             // Column5
             // 
             this.Column5.DataPropertyName = "NgaySinh";
             this.Column5.HeaderText = "Ngày Sinh";
+            this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             // 
             // Column6
             // 
             this.Column6.DataPropertyName = "DiaChi";
             this.Column6.HeaderText = "Địa Chỉ";
+            this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             // 
             // Column7
             // 
             this.Column7.DataPropertyName = "SoCMND";
             this.Column7.HeaderText = "CMND";
+            this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
             // 
             // toolStrip1
@@ -153,7 +162,7 @@
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(59, 24);
+            this.btnXoa.Size = new System.Drawing.Size(59, 28);
             this.btnXoa.Text = "Xóa";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
@@ -162,7 +171,7 @@
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(58, 24);
+            this.btnSua.Size = new System.Drawing.Size(58, 28);
             this.btnSua.Text = "Sửa";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
@@ -171,14 +180,14 @@
             this.btnDong.Image = ((System.Drawing.Image)(resources.GetObject("btnDong.Image")));
             this.btnDong.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnDong.Name = "btnDong";
-            this.btnDong.Size = new System.Drawing.Size(70, 24);
+            this.btnDong.Size = new System.Drawing.Size(70, 28);
             this.btnDong.Text = "Đóng";
             this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 0);
+            this.label1.Location = new System.Drawing.Point(45, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 17);
             this.label1.TabIndex = 9;
@@ -187,7 +196,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 74);
+            this.label2.Location = new System.Drawing.Point(45, 74);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 17);
             this.label2.TabIndex = 10;
@@ -196,7 +205,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(46, 155);
+            this.label3.Location = new System.Drawing.Point(45, 155);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 17);
             this.label3.TabIndex = 11;
@@ -205,7 +214,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(46, 222);
+            this.label4.Location = new System.Drawing.Point(45, 222);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 17);
             this.label4.TabIndex = 12;
@@ -214,7 +223,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(574, 155);
+            this.label5.Location = new System.Drawing.Point(572, 155);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 17);
             this.label5.TabIndex = 13;
@@ -223,7 +232,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(574, 74);
+            this.label6.Location = new System.Drawing.Point(572, 74);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 17);
             this.label6.TabIndex = 14;
@@ -232,7 +241,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(574, 0);
+            this.label7.Location = new System.Drawing.Point(572, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(36, 17);
             this.label7.TabIndex = 15;
@@ -240,7 +249,7 @@
             // 
             // txtMaNV
             // 
-            this.txtMaNV.Location = new System.Drawing.Point(200, 3);
+            this.txtMaNV.Location = new System.Drawing.Point(198, 3);
             this.txtMaNV.Multiline = true;
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(249, 39);
@@ -248,7 +257,7 @@
             // 
             // txtTenNV
             // 
-            this.txtTenNV.Location = new System.Drawing.Point(200, 77);
+            this.txtTenNV.Location = new System.Drawing.Point(198, 77);
             this.txtTenNV.Multiline = true;
             this.txtTenNV.Name = "txtTenNV";
             this.txtTenNV.Size = new System.Drawing.Size(249, 39);
@@ -256,7 +265,7 @@
             // 
             // txtGT
             // 
-            this.txtGT.Location = new System.Drawing.Point(200, 158);
+            this.txtGT.Location = new System.Drawing.Point(198, 158);
             this.txtGT.Multiline = true;
             this.txtGT.Name = "txtGT";
             this.txtGT.Size = new System.Drawing.Size(249, 39);
@@ -264,7 +273,7 @@
             // 
             // txtSDT
             // 
-            this.txtSDT.Location = new System.Drawing.Point(698, 3);
+            this.txtSDT.Location = new System.Drawing.Point(696, 3);
             this.txtSDT.Multiline = true;
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(249, 39);
@@ -272,7 +281,7 @@
             // 
             // txtNS
             // 
-            this.txtNS.Location = new System.Drawing.Point(698, 77);
+            this.txtNS.Location = new System.Drawing.Point(696, 77);
             this.txtNS.Multiline = true;
             this.txtNS.Name = "txtNS";
             this.txtNS.Size = new System.Drawing.Size(249, 39);
@@ -280,7 +289,7 @@
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(698, 158);
+            this.txtDiaChi.Location = new System.Drawing.Point(696, 158);
             this.txtDiaChi.Multiline = true;
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(249, 39);
@@ -288,7 +297,7 @@
             // 
             // txtCMND
             // 
-            this.txtCMND.Location = new System.Drawing.Point(200, 225);
+            this.txtCMND.Location = new System.Drawing.Point(198, 225);
             this.txtCMND.Multiline = true;
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.Size = new System.Drawing.Size(249, 39);
@@ -303,7 +312,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 374F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 386F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.label5, 3, 2);

@@ -299,6 +299,16 @@ namespace DA_PhanMemBaiGiuXe
             return new PointF(x, y);
         }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog save_File = new SaveFileDialog();
+            save_File.Filter = "(*.jpg)|*.jpg";
+            if(save_File.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox7.Image.Save(save_File.FileName);
+            }    
+        }
+
         private void button6_Click(object sender, EventArgs e)
         {
             var boundingBox1 = getAreaRect_Line1(firstLine);

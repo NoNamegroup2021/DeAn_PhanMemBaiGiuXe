@@ -11,7 +11,6 @@ namespace DA_PhanMemBaiGiuXe
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        public static FrMain main = null;
         public static FrLogin login = null;
         public static Welcome welcome_screen = null;
         public static QLy qly = null;
@@ -20,12 +19,18 @@ namespace DA_PhanMemBaiGiuXe
         public static DangKy dk = null;
         public static XeVao frmXevao = null;
         public static DangKy frmDKy = null;
+        public static XeRa frmXeRa = null;
+        public static LapBienBan lbp = null;
+        public static QL_The the= null;
+        public static QuanLyNhanVien qlnv = null;
+        public static XemThe xemthe = null;
+        public static LichSuRaVao lsgx = null;
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DangKy());
+            Application.Run(new QuanLyNhanVien());
         }
     }
 }

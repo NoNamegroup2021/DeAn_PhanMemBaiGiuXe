@@ -13,6 +13,12 @@ namespace DA_PhanMemBaiGiuXe
     public partial class QuanLyNhanVien : Form
     {
         NhanVienBLL NV = new NhanVienBLL();
+        private string tenDN;
+        public string TenDN
+        {
+            get { return tenDN; }
+            set { tenDN = value; }
+        }
         public QuanLyNhanVien()
         {
             InitializeComponent();
@@ -146,19 +152,49 @@ namespace DA_PhanMemBaiGiuXe
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            /* if(e.RowIndex >= 0){
+                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+                 txtMaNV.Text = row.Cells[0].Value.ToString();
+                 txtTenNV.Text = row.Cells[1].Value.ToString();
+                 txtGT.Text = row.Cells[3].Value.ToString();
+                 txtSDT.Text = row.Cells[4].Value.ToString();
+                 txtNS.Text = row.Cells[5].Value.ToString();
+                 txtDiaChi.Text = row.Cells[6].Value.ToString();
+                 txtCMND.Text = row.Cells[7].Value.ToString();
+                 txtMaNV.Enabled = false;
+
+             }*/
+
             try
             {
-                txtMaNV.Text = dataGridView1.SelectedCells[0].OwningRow.Cells["Column1"].Value.ToString();
-                txtTenNV.Text = dataGridView1.SelectedCells[0].OwningRow.Cells["Column2"].Value.ToString();
-                txtGT.Text = dataGridView1.SelectedCells[0].OwningRow.Cells["Column3"].Value.ToString();
-                txtSDT.Text = dataGridView1.SelectedCells[0].OwningRow.Cells["Column4"].Value.ToString();
-                txtNS.Text = dataGridView1.SelectedCells[0].OwningRow.Cells["Column5"].Value.ToString();
-                txtDiaChi.Text = dataGridView1.SelectedCells[0].OwningRow.Cells["Column6"].Value.ToString();
-                txtCMND.Text = dataGridView1.SelectedCells[0].OwningRow.Cells["Column7"].Value.ToString();
+                txtMaNV.Text = dataGridView1.SelectedCells[0].OwningRow.Cells["Column1"].FormattedValue.ToString();
+                txtTenNV.Text = dataGridView1.SelectedCells[0].OwningRow.Cells["Column2"].FormattedValue.ToString();
+                txtGT.Text = dataGridView1.SelectedCells[0].OwningRow.Cells["Column3"].FormattedValue.ToString();
+                txtSDT.Text = dataGridView1.SelectedCells[0].OwningRow.Cells["Column4"].FormattedValue.ToString();
+                txtNS.Text = dataGridView1.SelectedCells[0].OwningRow.Cells["Column5"].FormattedValue.ToString();
+                txtDiaChi.Text = dataGridView1.SelectedCells[0].OwningRow.Cells["Column6"].FormattedValue.ToString();
+                txtCMND.Text = dataGridView1.SelectedCells[0].OwningRow.Cells["Column7"].FormattedValue.ToString();
             }
-            catch
-            { }
+            catch (Exception ex)
+            {
+                MessageBox.Show("");
+            }
+            //if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            //{
+            //    dataGridView1.CurrentCell.Selected = true;
+            //    txtMaNV.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            //    txtTenNV.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            //    txtGT.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            //    txtSDT.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            //    txtNS.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            //    txtDiaChi.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+            //    txtCMND.Text = dataGridView1.Rows[e.RowIndex].Cells[7].FormattedValue.ToString();
+            //}
         }
 
+        private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.Cancel = true;
+        }
     }
 }

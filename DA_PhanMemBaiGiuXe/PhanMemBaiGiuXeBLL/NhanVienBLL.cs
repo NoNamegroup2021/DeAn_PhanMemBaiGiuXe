@@ -14,6 +14,10 @@ namespace PhanMemBaiGiuXeBLL
         {
 
         }
+        public string getTenNhanVienbyMaNV(string manv)
+        {
+            return NV.getTenNhanVienbyMaNV(manv);
+        }
         public IQueryable loadNhanVien()
         {
             return NV.loadNhanVien();

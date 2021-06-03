@@ -2,6 +2,7 @@
 go
 use QL_HeThongBaiGiuXe
 go
+
 drop database QL_HeThongBaiGiuXe
 create table NhanVien
 (
@@ -96,13 +97,15 @@ create table NgoaiLe
 (
 	MaNL int IDENTITY (1,1),
 	MaKH int,
-	TenTaiKhoan varchar(30),
-	TrangThaiNL  bit,
+	HoTenKH nvarchar(51),
+	CMND nvarchar(21),
+	DiaChi nvarchar(51),
+	SDT nvarchar(21),
+	TenNV nvarchar(51),
 	ThoiGian date,
-	NoiDung varchar(51),
-	Constraint PK_NgoaiLe primary key (MaNL,MaKH,TenTaiKhoan),
+	NoiDung nvarchar(51),
+	Constraint PK_NgoaiLe primary key (MaNL,MaKH,TenNV),
 	Constraint FK_NgoaiLe_KH foreign key (MaKH) references KhachHang(MaKH),
-	Constraint FK_NgoaiLe_Tk foreign key (TenTaiKhoan) references TaiKhoan(TenTaiKhoan)
 )
 
 
