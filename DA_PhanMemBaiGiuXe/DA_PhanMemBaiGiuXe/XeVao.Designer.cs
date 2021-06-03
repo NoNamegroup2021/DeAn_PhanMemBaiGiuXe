@@ -143,11 +143,11 @@ namespace DA_PhanMemBaiGiuXe
             // userControl11
             // 
             this.userControl11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControl11.Gio = "10:49:39 PM";
+            this.userControl11.Gio = "6:26:38 PM";
             this.userControl11.Location = new System.Drawing.Point(751, 62);
             this.userControl11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.userControl11.Name = "userControl11";
-            this.userControl11.Ngay = "06/01/2021";
+            this.userControl11.Ngay = "06/03/2021";
             this.userControl11.Size = new System.Drawing.Size(214, 57);
             this.userControl11.TabIndex = 10;
             // 

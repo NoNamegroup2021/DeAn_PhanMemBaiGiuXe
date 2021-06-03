@@ -14,11 +14,11 @@ namespace PhanMemBaiGiuXeBLL
        {
 
        }
-       //public IQueryable LoadTK()
-       //{
-  
-       //}
-       public bool DangKy(string TenTK, string Pw, string manv, int loaitk)
+        public IQueryable LoadTKTimKiem(string pTuKhoa)
+        {
+            return DK.loadTKTimKiem(pTuKhoa);
+        }
+        public bool DangKy(string TenTK, string Pw, string manv, int loaitk)
        {
            return DK.DangKy(TenTK, Pw, manv, loaitk);
        }

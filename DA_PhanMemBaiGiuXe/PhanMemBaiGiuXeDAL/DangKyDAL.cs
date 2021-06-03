@@ -13,6 +13,7 @@ namespace PhanMemBaiGiuXeDAL
        {
 
        }
+
        public bool DangKy(string TenTK, string Pw, string manv, int loaitk)
        {
            try
@@ -71,5 +72,10 @@ namespace PhanMemBaiGiuXeDAL
                return true;
            return false;
        }
+        public IQueryable loadTKTimKiem(string pTuKhoa)
+        {
+            IQueryable ds = from k in data.TaiKhoans where k.TenTaiKhoan.Contains(pTuKhoa) || k.Password.Contains(pTuKhoa) || k.MaNV.Contains(pTuKhoa) select new { k.TenTaiKhoan, k.Password, k.MaNV};
+            return ds;
+        }
     }
 }

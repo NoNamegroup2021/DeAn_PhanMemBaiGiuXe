@@ -257,7 +257,6 @@ D:\Nhan_Folder\DA_CNPM\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\
 C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\DA_PhanMemBaiGiuXe.exe.config
 C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\obj\Debug\DA_PhanMemBaiGiuXe.exe
 C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\obj\Debug\DA_PhanMemBaiGiuXe.pdb
-C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\obj\Debug\DA_PhanMemBaiGiuXe.csprojResolveAssemblyReference.cache
 C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\obj\Debug\DA_PhanMemBaiGiuXe.ChuongTrinhChinh.resources
 C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\obj\Debug\DA_PhanMemBaiGiuXe.DangKy.resources
 C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\obj\Debug\DA_PhanMemBaiGiuXe.MainForm.resources
@@ -396,3 +395,7 @@ D:\Nhan_Folder\DA_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuX
 D:\Nhan_Folder\DA_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\ja\DevExpress.Pdf.v20.1.Core.resources.dll
 D:\Nhan_Folder\DA_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\ru\DevExpress.Pdf.v20.1.Core.resources.dll
 C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\obj\Debug\DA_PhanMemBaiGiuXe.XeRa.resources
+C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\obj\Debug\DA_PhanMemBaiGiuXe.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\obj\Debug\DA_PhanMemBaiGiuXe.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\PhanMemBaiGiuXeDAL.dll.config
+C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\obj\Debug\DA_PhanMemBaiGiuXe.csproj.CopyComplete

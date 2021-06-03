@@ -13,6 +13,7 @@ namespace DA_PhanMemBaiGiuXe
 {
     public partial class DangKy : Form
     {
+        DangKyDAL dk = new DangKyDAL();
         DataClassesHTBGXDataContext data = new DataClassesHTBGXDataContext();
         public DangKy()
         {
@@ -51,11 +52,11 @@ namespace DA_PhanMemBaiGiuXe
             {
                 if (dtgv_TK.CurrentRow != null)
                 {
-                    txt_Username.Text = dtgv_TK.CurrentRow.Cells[0].Value.ToString();
-                    txt_Password.Text = dtgv_TK.CurrentRow.Cells[1].Value.ToString();
-                    txt_ConfirmPW.Text = dtgv_TK.CurrentRow.Cells[1].Value.ToString();
-                    txt_MaNV.Text = dtgv_TK.CurrentRow.Cells["MaNV"].Value.ToString();
-                    int type = int.Parse(dtgv_TK.CurrentRow.Cells["LoaiTK"].Value.ToString());
+                    txt_Username.Text = dtgv_TK.CurrentRow.Cells["TenTaiKhoan"].Value.ToString().Trim();
+                    txt_Password.Text = dtgv_TK.CurrentRow.Cells["MatKhau"].Value.ToString().Trim();
+                    txt_ConfirmPW.Text = dtgv_TK.CurrentRow.Cells["MatKhau"].Value.ToString().Trim();
+                    txt_MaNV.Text = dtgv_TK.CurrentRow.Cells["MaNV"].Value.ToString().Trim();
+                    int type = int.Parse(dtgv_TK.CurrentRow.Cells["LoaiTK"].Value.ToString().Trim());
                     if (type == 1)
                     {
                         Control ctr = pn_LTK.Controls["rdo_NhanVien"];
@@ -198,5 +199,10 @@ namespace DA_PhanMemBaiGiuXe
                     MessageBox.Show("Sửa tài khoản thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+
+        private void txtTimKiem_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            dtgv_TK.DataSource = dk.loadTKTimKiem(txtTimKiem.Text.Trim());
         }
+    }
     }
