@@ -110,5 +110,16 @@ namespace PhanMemBaiGiuXeDAL.Properties {
                 return ((string)(this["QL_HeThongBaiGiuXeConnectionString5"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-H0R3HLD\\SQLEXPRESS;Initial Catalog=QL_HeThongBaiGiuXe;User ID" +
+            "=sa;Password=1")]
+        public string QL_HeThongBaiGiuXeConnectionString6 {
+            get {
+                return ((string)(this["QL_HeThongBaiGiuXeConnectionString6"]));
+            }
+        }
     }
 }
