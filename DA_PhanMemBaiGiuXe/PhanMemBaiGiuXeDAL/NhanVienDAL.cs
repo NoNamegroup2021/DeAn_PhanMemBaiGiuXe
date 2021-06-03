@@ -15,6 +15,18 @@ namespace PhanMemBaiGiuXeDAL
         {
 
         }
+        public string getTenNhanVienbyMaNV(string manv)
+        {
+            string tennv;
+            NhanVien nv= data.NhanViens.Where(t => t.MaNV == manv).SingleOrDefault();
+            if (nv == null)
+                return "";
+            else
+            {
+                tennv = nv.TenNV;
+                return tennv;
+            }
+        }
         public IQueryable loadNhanVien()
         {
             IQueryable ds = from nv in data.NhanViens select new { nv.MaNV, nv.TenNV, nv.GioiTinh, nv.SDT, nv.NgaySinh, nv.DiaChi, nv.SoCMND};

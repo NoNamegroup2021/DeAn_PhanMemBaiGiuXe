@@ -102,10 +102,8 @@ create table NgoaiLe
 	DiaChi nvarchar(51),
 	SDT nvarchar(21),
 	TenNV nvarchar(51),
-	TenTaiKhoan varchar(30),
-	TrangThaiNL  bit,
 	ThoiGian date,
-	NoiDung varchar(51),
+	NoiDung nvarchar(51),
 	Constraint PK_NgoaiLe primary key (MaNL,MaKH,TenNV),
 	Constraint FK_NgoaiLe_KH foreign key (MaKH) references KhachHang(MaKH),
 )

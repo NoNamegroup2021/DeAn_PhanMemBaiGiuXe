@@ -99,5 +99,16 @@ namespace PhanMemBaiGiuXeDAL.Properties {
                 return ((string)(this["QL_HeThongBaiGiuXeConnectionString4"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-DSO8J3OR\\SQLEXPRESS;Initial Catalog=QL_HeThongBaiGiuXe;Integra" +
+            "ted Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False")]
+        public string QL_HeThongBaiGiuXeConnectionString5 {
+            get {
+                return ((string)(this["QL_HeThongBaiGiuXeConnectionString5"]));
+            }
+        }
     }
 }

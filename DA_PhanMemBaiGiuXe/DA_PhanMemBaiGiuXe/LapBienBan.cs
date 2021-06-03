@@ -5,22 +5,23 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Win32;
+
 
 namespace DA_PhanMemBaiGiuXe
 {
     public partial class LapBienBan : Form
     {
         BienBanBLL bienBanBLL = new BienBanBLL();
-        public LapBienBan()
-        {
-            InitializeComponent();
-        }
+        NhanVienBLL nhanVienBLL = new NhanVienBLL();
+        LoginBLL loginBLL = new LoginBLL();
         int manl = -1;
 
         private string tenDN;
@@ -29,8 +30,18 @@ namespace DA_PhanMemBaiGiuXe
             get { return tenDN; }
             set { tenDN = value; }
         }
+        public LapBienBan()
+        {
+            InitializeComponent();
+            tenDN = Program.main_from.tenDN;
+        }
 
-
+        private void loadTenNV()
+        {
+            string manv = loginBLL.getMaNVbyTenTK(tenDN);
+            txtTenNV.Text = nhanVienBLL.getTenNhanVienbyMaNV(manv);
+        }
+        // background gradient
         private void LapBienBan_Paint(object sender, PaintEventArgs e)
         {
             Graphics graphics = e.Graphics;
@@ -47,6 +58,7 @@ namespace DA_PhanMemBaiGiuXe
         private void LapBienBan_Load(object sender, EventArgs e)
         {
             loadDT();
+            loadTenNV();
             txtMaKH.Enabled = txtTenKH.Enabled = txtDC.Enabled = txtCMND.Enabled = txtSDT.Enabled = txtTenNV.Enabled = txtND.Enabled = date.Enabled = btnLuu.Enabled = btnXoa.Enabled = btnSua.Enabled = false;
         }
 
@@ -80,6 +92,7 @@ namespace DA_PhanMemBaiGiuXe
                     btnLuu.Enabled = false;
                     txtMaKH.Text = txtTenKH.Text = txtDC.Text = txtCMND.Text = txtSDT.Text = txtTenNV.Text = txtND.Text = ""; date.Value = DateTime.Now;
                     txtMaKH.Enabled = txtTenKH.Enabled = txtDC.Enabled = txtCMND.Enabled = txtSDT.Enabled = txtTenNV.Enabled = txtND.Enabled = date.Enabled = false;
+                   
 
                 }
                 else
@@ -176,9 +189,6 @@ namespace DA_PhanMemBaiGiuXe
 
         private void btnIn_Click(object sender, EventArgs e)
         {
-            //XtraReport1 xtraReport1 = new XtraReport1();
-            //xtraReport1.DataSource = bienBanBLL.getBienBanbyMaNL(manl);
-            //xtraReport1.ShowPreviewDialog();
             rpBienBan xtraReport2 = new rpBienBan() { Name = manl.ToString() };
             xtraReport2.DataSource = bienBanBLL.getBienBanbyMaNL(manl);
             string docxExportFile = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\Desktop\" + xtraReport2.Name + ".docx";
@@ -186,7 +196,22 @@ namespace DA_PhanMemBaiGiuXe
 
             xtraReport2.ExportToDocx(docxExportFile, docxExportOptions);
             xtraReport2.ShowPreviewDialog();
-            dataGridView1.DataSource = bienBanBLL.getBienBanbyMaNL(manl);
+        }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            string path;
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Text files (*.doc,*.docx)|.doc;*.docx";
+            openFileDialog.Title = "Open file";
+            // path cố định khi mở
+            openFileDialog.InitialDirectory = @"C:\Users\vhta1\Desktop\";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                path = openFileDialog.FileName;
+                if(path!= null)
+                    Process.Start(path);
+            }
         }
     }
 }

@@ -40,7 +40,6 @@ namespace DA_PhanMemBaiGiuXe
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.xeVàoToolStripMenuItem,
@@ -49,58 +48,56 @@ namespace DA_PhanMemBaiGiuXe
             this.xemTinhTrangTheToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(900, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // xeVàoToolStripMenuItem
             // 
             this.xeVàoToolStripMenuItem.Name = "xeVàoToolStripMenuItem";
-            this.xeVàoToolStripMenuItem.Size = new System.Drawing.Size(83, 29);
+            this.xeVàoToolStripMenuItem.Size = new System.Drawing.Size(69, 26);
             this.xeVàoToolStripMenuItem.Text = "Xe Vào";
             this.xeVàoToolStripMenuItem.Click += new System.EventHandler(this.xeVàoToolStripMenuItem_Click);
             // 
             // xeRaToolStripMenuItem
             // 
             this.xeRaToolStripMenuItem.Name = "xeRaToolStripMenuItem";
-            this.xeRaToolStripMenuItem.Size = new System.Drawing.Size(73, 29);
+            this.xeRaToolStripMenuItem.Size = new System.Drawing.Size(61, 26);
             this.xeRaToolStripMenuItem.Text = "Xe Ra";
             this.xeRaToolStripMenuItem.Click += new System.EventHandler(this.xeRaToolStripMenuItem_Click);
             // 
             // xemLịchSửGửiXeToolStripMenuItem
             // 
             this.xemLịchSửGửiXeToolStripMenuItem.Name = "xemLịchSửGửiXeToolStripMenuItem";
-            this.xemLịchSửGửiXeToolStripMenuItem.Size = new System.Drawing.Size(182, 29);
+            this.xemLịchSửGửiXeToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.xemLịchSửGửiXeToolStripMenuItem.Text = "Xem Lịch Sử Gửi Xe";
             this.xemLịchSửGửiXeToolStripMenuItem.Click += new System.EventHandler(this.xemLịchSửGửiXeToolStripMenuItem_Click);
             // 
             // xemTinhTrangTheToolStripMenuItem
             // 
             this.xemTinhTrangTheToolStripMenuItem.Name = "xemTinhTrangTheToolStripMenuItem";
-            this.xemTinhTrangTheToolStripMenuItem.Size = new System.Drawing.Size(183, 29);
+            this.xemTinhTrangTheToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
             this.xemTinhTrangTheToolStripMenuItem.Text = "Xem Tinh Trang The";
             this.xemTinhTrangTheToolStripMenuItem.Click += new System.EventHandler(this.xemTinhTrangTheToolStripMenuItem_Click);
             // 
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 33);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Location = new System.Drawing.Point(0, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(900, 529);
+            this.panel1.Size = new System.Drawing.Size(800, 422);
             this.panel1.TabIndex = 1;
             // 
             // ChuongTrinhChinh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 562);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ChuongTrinhChinh";
             this.Text = "ChuongTrinhChinh";
             this.menuStrip1.ResumeLayout(false);

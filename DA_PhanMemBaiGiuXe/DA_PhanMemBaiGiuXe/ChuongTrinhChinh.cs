@@ -24,14 +24,19 @@ namespace DA_PhanMemBaiGiuXe
             set { tendn = value; }
         }
 
+        public VideoCaptureDevice Cam { get => cam; set => cam = value; }
+
         public ChuongTrinhChinh()
         {
             InitializeComponent();
-            dscam = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-        }
+            cam = Program.main_from.Cam;
 
+        }
+        
+        
         private void xeVàoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            cam.Stop();
             Program.frmXevao  = new XeVao();
             if(Program.frmXevao != null)
             {
@@ -49,6 +54,7 @@ namespace DA_PhanMemBaiGiuXe
 
         private void xeRaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            cam.Stop();
             Program.frmXeRa = new XeRa();
             if (Program.frmXeRa != null)
             {
@@ -66,6 +72,7 @@ namespace DA_PhanMemBaiGiuXe
 
         private void xemLịchSửGửiXeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            cam.Stop();
             Program.lsgx = new LichSuRaVao();
             if (Program.lsgx != null)
             {
@@ -82,6 +89,7 @@ namespace DA_PhanMemBaiGiuXe
 
         private void xemTinhTrangTheToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            cam.Stop();
             Program.xemthe = new XemThe();
             if (Program.xemthe != null)
             {

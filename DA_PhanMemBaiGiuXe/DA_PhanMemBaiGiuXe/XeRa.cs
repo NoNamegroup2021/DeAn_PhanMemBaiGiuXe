@@ -40,14 +40,14 @@ namespace DA_PhanMemBaiGiuXe
             {
                 cam.Stop();
             }
-            cam = new VideoCaptureDevice(dscam[0].MonikerString);
+            cam = Program.ctr.Cam;
             cam.NewFrame += Cam_NewFrame;
             cam.Start();
         }
         private void Cam_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
             Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
-            //bitmap.RotateFlip(RotateFlipType.Rotate180FlipY);
+            bitmap.RotateFlip(RotateFlipType.Rotate180FlipY);
             pictureBox1.Image = bitmap;
             pictureBox2.Image = bitmap;
         }

@@ -62,3 +62,4 @@ C:\Users\Admin\Desktop\QLBaiXeNEw\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\Window
 C:\Users\Admin\Desktop\QLBaiXeNEw\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\WindowsFormsControlLibrary1\obj\Debug\WindowsFormsControlLibrary1.dll
 C:\Users\Admin\Desktop\QLBaiXeNEw\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\WindowsFormsControlLibrary1\obj\Debug\WindowsFormsControlLibrary1.pdb
 C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\WindowsFormsControlLibrary1\obj\Debug\WindowsFormsControlLibrary1.csprojResolveAssemblyReference.cache
+C:\Users\vhta1\Documents\GitHub\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\WindowsFormsControlLibrary1\obj\Debug\WindowsFormsControlLibrary1.csprojAssemblyReference.cache

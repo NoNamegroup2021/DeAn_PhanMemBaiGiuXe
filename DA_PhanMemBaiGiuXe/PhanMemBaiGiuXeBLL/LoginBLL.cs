@@ -15,7 +15,10 @@ namespace PhanMemBaiGiuXeBLL
         {
             
         }
-
+        public string getMaNVbyTenTK(string tentk)
+        {
+            return data.getMaNVbyTenTK(tentk);
+        }
          public bool log(string user,string mk,int type)
         {
             return data.LoginType(user, mk, type);

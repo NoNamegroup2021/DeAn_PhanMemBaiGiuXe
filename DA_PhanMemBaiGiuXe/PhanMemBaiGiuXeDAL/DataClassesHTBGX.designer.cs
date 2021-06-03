@@ -63,7 +63,7 @@ namespace PhanMemBaiGiuXeDAL
     #endregion
 		
 		public DataClassesHTBGXDataContext() : 
-				base(global::PhanMemBaiGiuXeDAL.Properties.Settings.Default.QL_HeThongBaiGiuXeConnectionString, mappingSource)
+				base(global::PhanMemBaiGiuXeDAL.Properties.Settings.Default.QL_HeThongBaiGiuXeConnectionString5, mappingSource)
 		{
 			OnCreated();
 		}
@@ -1084,10 +1084,6 @@ namespace PhanMemBaiGiuXeDAL
 		
 		private string _TenNV;
 		
-		private string _TenTaiKhoan;
-		
-		private System.Nullable<bool> _TrangThaiNL;
-		
 		private System.Nullable<System.DateTime> _ThoiGian;
 		
 		private string _NoiDung;
@@ -1112,10 +1108,6 @@ namespace PhanMemBaiGiuXeDAL
     partial void OnSDTChanged();
     partial void OnTenNVChanging(string value);
     partial void OnTenNVChanged();
-    partial void OnTenTaiKhoanChanging(string value);
-    partial void OnTenTaiKhoanChanged();
-    partial void OnTrangThaiNLChanging(System.Nullable<bool> value);
-    partial void OnTrangThaiNLChanged();
     partial void OnThoiGianChanging(System.Nullable<System.DateTime> value);
     partial void OnThoiGianChanged();
     partial void OnNoiDungChanging(string value);
@@ -1268,46 +1260,6 @@ namespace PhanMemBaiGiuXeDAL
 					this._TenNV = value;
 					this.SendPropertyChanged("TenNV");
 					this.OnTenNVChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenTaiKhoan", DbType="VarChar(30)")]
-		public string TenTaiKhoan
-		{
-			get
-			{
-				return this._TenTaiKhoan;
-			}
-			set
-			{
-				if ((this._TenTaiKhoan != value))
-				{
-					this.OnTenTaiKhoanChanging(value);
-					this.SendPropertyChanging();
-					this._TenTaiKhoan = value;
-					this.SendPropertyChanged("TenTaiKhoan");
-					this.OnTenTaiKhoanChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TrangThaiNL", DbType="Bit")]
-		public System.Nullable<bool> TrangThaiNL
-		{
-			get
-			{
-				return this._TrangThaiNL;
-			}
-			set
-			{
-				if ((this._TrangThaiNL != value))
-				{
-					this.OnTrangThaiNLChanging(value);
-					this.SendPropertyChanging();
-					this._TrangThaiNL = value;
-					this.SendPropertyChanged("TrangThaiNL");
-					this.OnTrangThaiNLChanged();
 				}
 			}
 		}

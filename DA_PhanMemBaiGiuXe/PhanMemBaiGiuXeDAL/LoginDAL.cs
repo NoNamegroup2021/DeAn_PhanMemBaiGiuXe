@@ -14,6 +14,19 @@ namespace PhanMemBaiGiuXeDAL
         {
         }
 
+        public string getMaNVbyTenTK(string tentk)
+        {
+            string manv;
+            TaiKhoan taiKhoan = data.TaiKhoans.Where(t => t.TenTaiKhoan == tentk).SingleOrDefault();
+            if (taiKhoan == null)
+                return "";
+            else
+            {
+                manv = taiKhoan.MaNV;
+                return manv;
+            }
+        }
+
         public IQueryable loadAccount()
         {
             return data.TaiKhoans.Select(t => t);

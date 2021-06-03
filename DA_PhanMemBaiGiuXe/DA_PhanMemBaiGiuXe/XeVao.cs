@@ -30,6 +30,9 @@ namespace DA_PhanMemBaiGiuXe
             get { return tenDN; }
             set { tenDN = value; }
         }
+
+       
+
         public XeVao()
         {
             InitializeComponent();
@@ -96,7 +99,7 @@ namespace DA_PhanMemBaiGiuXe
             {
                 cam.Stop();
             }
-            cam = new VideoCaptureDevice(dscam[0].MonikerString);
+            cam = Program.ctr.Cam;
             cam.NewFrame += Cam_NewFrame;
             cam.Start();
         }
@@ -116,5 +119,7 @@ namespace DA_PhanMemBaiGiuXe
         {
 
         }
+
+        
     }
 }
