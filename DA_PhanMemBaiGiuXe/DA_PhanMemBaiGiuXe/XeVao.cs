@@ -7,13 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AForge.Video;
 using AForge.Video.DirectShow;
 using Emgu.CV;
-using Emgu.CV.Util;
-using Emgu.Util;
-using Emgu.CV.Structure;
 using PhanMemBaiGiuXeBLL;
+using WindowsFormsControlLibrary1;
 
 namespace DA_PhanMemBaiGiuXe
 {
@@ -24,7 +21,8 @@ namespace DA_PhanMemBaiGiuXe
         private VideoCaptureDevice cam;
         private string chucvu;
         private CascadeClassifier carLicense_classifier;
-        private List<Rectangle> rects_area = new List<Rectangle>();
+        private Rectangle[] rects_area;
+
         private string tenDN;
 
         public string TenDN
@@ -35,14 +33,7 @@ namespace DA_PhanMemBaiGiuXe
         public XeVao()
         {
             InitializeComponent();
-            dscam = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-            if (cam != null && cam.IsRunning)
-            {
-                cam.Stop();
-            }
-            cam = new VideoCaptureDevice(dscam[0].MonikerString);
-            cam.NewFrame += Cam_NewFrame;
-            cam.Start();
+            
         }
 
         private void txt_MaThe_KeyPress(object sender, KeyPressEventArgs e)
@@ -91,14 +82,6 @@ namespace DA_PhanMemBaiGiuXe
             }
         }
 
-        private void Cam_NewFrame(object sender, NewFrameEventArgs eventArgs)
-        {
-            Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
-            //bitmap.RotateFlip(RotateFlipType.Rotate180FlipY);
-            pictureBox1.Image = bitmap;
-            pictureBox2.Image = bitmap;
-        }
-
         private void XeVao_Load(object sender, EventArgs e)
         {
 
@@ -106,7 +89,13 @@ namespace DA_PhanMemBaiGiuXe
 
         private void XeVao_Enter(object sender, EventArgs e)
         {
-
+            if (cam != null && cam.IsRunning)
+            {
+                cam.Stop();
+            }
+            cam = new VideoCaptureDevice(dscam[0].MonikerString);
+            cam.NewFrame += Cam_NewFrame;
+            cam.Start();
         }
     }
 }

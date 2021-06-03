@@ -11,7 +11,7 @@ namespace DA_PhanMemBaiGiuXe
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-
+        public static FrMain main = null;
         public static FrLogin login = null;
         public static Welcome welcome_screen = null;
         public static QLy qly = null;
@@ -25,7 +25,7 @@ namespace DA_PhanMemBaiGiuXe
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new XeVao());
+            Application.Run(new LapBienBan());
         }
     }
 }
