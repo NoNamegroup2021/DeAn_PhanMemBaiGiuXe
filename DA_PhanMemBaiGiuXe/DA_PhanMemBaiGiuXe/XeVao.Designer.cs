@@ -149,7 +149,7 @@ namespace DA_PhanMemBaiGiuXe
             // userControl11
             // 
             this.userControl11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControl11.Gio = "1:09:25 AM";
+            this.userControl11.Gio = "2:26:25 PM";
             this.userControl11.Location = new System.Drawing.Point(1127, 96);
             this.userControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.userControl11.Name = "userControl11";
@@ -212,6 +212,7 @@ namespace DA_PhanMemBaiGiuXe
             this.Text = "XeVao";
             this.Load += new System.EventHandler(this.XeVao_Load);
             this.Enter += new System.EventHandler(this.XeVao_Enter);
+            this.Validating += new System.ComponentModel.CancelEventHandler(this.XeVao_Validating);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

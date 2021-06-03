@@ -12,6 +12,12 @@ namespace DA_PhanMemBaiGiuXe
 {
     public partial class LichSuRaVao : Form
     {
+        private string tenDN;
+        public string TenDN
+        {
+            get { return tenDN; }
+            set { tenDN = value; }
+        }
         public LichSuRaVao()
         {
             InitializeComponent();

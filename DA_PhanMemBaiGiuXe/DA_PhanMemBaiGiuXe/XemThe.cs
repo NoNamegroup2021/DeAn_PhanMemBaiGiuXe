@@ -12,6 +12,12 @@ namespace DA_PhanMemBaiGiuXe
 {
     public partial class XemThe : Form
     {
+        private string tenDN;
+        public string TenDN
+        {
+            get { return tenDN; }
+            set { tenDN = value; }
+        }
         public XemThe()
         {
             InitializeComponent();

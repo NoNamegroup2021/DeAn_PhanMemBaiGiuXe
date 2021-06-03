@@ -13,6 +13,12 @@ namespace DA_PhanMemBaiGiuXe
     public partial class QuanLyNhanVien : Form
     {
         NhanVienBLL NV = new NhanVienBLL();
+        private string tenDN;
+        public string TenDN
+        {
+            get { return tenDN; }
+            set { tenDN = value; }
+        }
         public QuanLyNhanVien()
         {
             InitializeComponent();
