@@ -23,6 +23,13 @@ namespace DA_PhanMemBaiGiuXe
         }
         int manl = -1;
 
+        private string tenDN;
+        public string TenDN
+        {
+            get { return tenDN; }
+            set { tenDN = value; }
+        }
+
 
         private void LapBienBan_Paint(object sender, PaintEventArgs e)
         {

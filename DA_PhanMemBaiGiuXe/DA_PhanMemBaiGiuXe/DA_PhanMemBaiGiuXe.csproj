@@ -108,12 +108,6 @@
     <Compile Include="FrLogin.designer.cs">
       <DependentUpon>FrLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrMain.Designer.cs">
-      <DependentUpon>FrMain.cs</DependentUpon>
-    </Compile>
     <Compile Include="LapBienBan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,10 +248,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrLogin.resx">
       <DependentUpon>FrLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrMain.resx">
-      <DependentUpon>FrMain.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

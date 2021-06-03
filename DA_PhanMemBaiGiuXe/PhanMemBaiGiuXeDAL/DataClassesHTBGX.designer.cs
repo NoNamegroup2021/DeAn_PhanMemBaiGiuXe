@@ -63,7 +63,7 @@ namespace PhanMemBaiGiuXeDAL
     #endregion
 		
 		public DataClassesHTBGXDataContext() : 
-				base(global::PhanMemBaiGiuXeDAL.Properties.Settings.Default.QL_HeThongBaiGiuXeConnectionString4, mappingSource)
+				base(global::PhanMemBaiGiuXeDAL.Properties.Settings.Default.QL_HeThongBaiGiuXeConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -1084,6 +1084,10 @@ namespace PhanMemBaiGiuXeDAL
 		
 		private string _TenNV;
 		
+		private string _TenTaiKhoan;
+		
+		private System.Nullable<bool> _TrangThaiNL;
+		
 		private System.Nullable<System.DateTime> _ThoiGian;
 		
 		private string _NoiDung;
@@ -1108,6 +1112,10 @@ namespace PhanMemBaiGiuXeDAL
     partial void OnSDTChanged();
     partial void OnTenNVChanging(string value);
     partial void OnTenNVChanged();
+    partial void OnTenTaiKhoanChanging(string value);
+    partial void OnTenTaiKhoanChanged();
+    partial void OnTrangThaiNLChanging(System.Nullable<bool> value);
+    partial void OnTrangThaiNLChanged();
     partial void OnThoiGianChanging(System.Nullable<System.DateTime> value);
     partial void OnThoiGianChanged();
     partial void OnNoiDungChanging(string value);
@@ -1164,7 +1172,7 @@ namespace PhanMemBaiGiuXeDAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HoTenKH", DbType="NVarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HoTenKH", DbType="NVarChar(51)")]
 		public string HoTenKH
 		{
 			get
@@ -1184,7 +1192,7 @@ namespace PhanMemBaiGiuXeDAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CMND", DbType="NVarChar(12)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CMND", DbType="NVarChar(21)")]
 		public string CMND
 		{
 			get
@@ -1204,7 +1212,7 @@ namespace PhanMemBaiGiuXeDAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DiaChi", DbType="NVarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DiaChi", DbType="NVarChar(51)")]
 		public string DiaChi
 		{
 			get
@@ -1224,7 +1232,7 @@ namespace PhanMemBaiGiuXeDAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SDT", DbType="NVarChar(10)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SDT", DbType="NVarChar(21)")]
 		public string SDT
 		{
 			get
@@ -1244,7 +1252,7 @@ namespace PhanMemBaiGiuXeDAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenNV", DbType="VarChar(30) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenNV", DbType="NVarChar(51) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
 		public string TenNV
 		{
 			get
@@ -1260,6 +1268,46 @@ namespace PhanMemBaiGiuXeDAL
 					this._TenNV = value;
 					this.SendPropertyChanged("TenNV");
 					this.OnTenNVChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenTaiKhoan", DbType="VarChar(30)")]
+		public string TenTaiKhoan
+		{
+			get
+			{
+				return this._TenTaiKhoan;
+			}
+			set
+			{
+				if ((this._TenTaiKhoan != value))
+				{
+					this.OnTenTaiKhoanChanging(value);
+					this.SendPropertyChanging();
+					this._TenTaiKhoan = value;
+					this.SendPropertyChanged("TenTaiKhoan");
+					this.OnTenTaiKhoanChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TrangThaiNL", DbType="Bit")]
+		public System.Nullable<bool> TrangThaiNL
+		{
+			get
+			{
+				return this._TrangThaiNL;
+			}
+			set
+			{
+				if ((this._TrangThaiNL != value))
+				{
+					this.OnTrangThaiNLChanging(value);
+					this.SendPropertyChanging();
+					this._TrangThaiNL = value;
+					this.SendPropertyChanged("TrangThaiNL");
+					this.OnTrangThaiNLChanged();
 				}
 			}
 		}
