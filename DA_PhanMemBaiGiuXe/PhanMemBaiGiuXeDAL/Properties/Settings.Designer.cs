@@ -88,5 +88,16 @@ namespace PhanMemBaiGiuXeDAL.Properties {
                 return ((string)(this["QL_HeThongBaiGiuXeConnectionString3"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-DSO8J3OR\\SQLEXPRESS;Initial Catalog=QL_HeThongBaiGiuXe;Persist" +
+            " Security Info=True;User ID=sa;Password=123")]
+        public string QL_HeThongBaiGiuXeConnectionString4 {
+            get {
+                return ((string)(this["QL_HeThongBaiGiuXeConnectionString4"]));
+            }
+        }
     }
 }

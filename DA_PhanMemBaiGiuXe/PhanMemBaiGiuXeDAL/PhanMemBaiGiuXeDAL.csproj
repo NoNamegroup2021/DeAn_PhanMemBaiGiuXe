@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BienBanDAL.cs" />
     <Compile Include="DangKyDAL.cs" />
     <Compile Include="DataClassesHTBGX.designer.cs">
       <AutoGen>True</AutoGen>

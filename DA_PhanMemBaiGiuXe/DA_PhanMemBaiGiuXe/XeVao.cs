@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AForge.Video.DirectShow;
+using Emgu.CV;
 using PhanMemBaiGiuXeBLL;
 using WindowsFormsControlLibrary1;
 
