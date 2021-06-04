@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangKy));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
@@ -37,6 +40,7 @@
             this.btn_Xoa = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.US_Time = new WindowsFormsControlLibrary1.UserControl1();
             this.label6 = new System.Windows.Forms.Label();
             this.pn_LTK = new System.Windows.Forms.Panel();
             this.rdo_QuanLy = new System.Windows.Forms.RadioButton();
@@ -58,7 +62,7 @@
             this.LoaiTK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.US_Time = new WindowsFormsControlLibrary1.UserControl1();
+            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.pn_LTK.SuspendLayout();
@@ -133,6 +137,7 @@
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 26;
             this.simpleButton2.Text = "Sửa";
+            this.simpleButton2.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
             // btn_Xoa
             // 
@@ -142,6 +147,7 @@
             this.btn_Xoa.Size = new System.Drawing.Size(75, 23);
             this.btn_Xoa.TabIndex = 25;
             this.btn_Xoa.Text = "Xóa";
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
             // simpleButton1
             // 
@@ -151,6 +157,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
             this.simpleButton1.TabIndex = 24;
             this.simpleButton1.Text = "Đăng Ký";
+            this.simpleButton1.Click += new System.EventHandler(this.btn_DangKy_Click);
             // 
             // txtTimKiem
             // 
@@ -159,6 +166,17 @@
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(216, 20);
             this.txtTimKiem.TabIndex = 22;
+            this.txtTimKiem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTimKiem_KeyPress);
+            // 
+            // US_Time
+            // 
+            this.US_Time.Gio = "12:19:33 AM";
+            this.US_Time.Location = new System.Drawing.Point(220, 261);
+            this.US_Time.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.US_Time.Name = "US_Time";
+            this.US_Time.Ngay = "06/04/2021";
+            this.US_Time.Size = new System.Drawing.Size(222, 62);
+            this.US_Time.TabIndex = 21;
             // 
             // label6
             // 
@@ -256,6 +274,7 @@
             // 
             this.txt_ConfirmPW.Location = new System.Drawing.Point(220, 172);
             this.txt_ConfirmPW.Name = "txt_ConfirmPW";
+            this.txt_ConfirmPW.PasswordChar = '*';
             this.txt_ConfirmPW.Size = new System.Drawing.Size(222, 20);
             this.txt_ConfirmPW.TabIndex = 5;
             // 
@@ -263,6 +282,7 @@
             // 
             this.txt_Password.Location = new System.Drawing.Point(220, 113);
             this.txt_Password.Name = "txt_Password";
+            this.txt_Password.PasswordChar = '*';
             this.txt_Password.Size = new System.Drawing.Size(222, 20);
             this.txt_Password.TabIndex = 3;
             // 
@@ -289,16 +309,40 @@
             // 
             this.dtgv_TK.AllowUserToAddRows = false;
             this.dtgv_TK.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgv_TK.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgv_TK.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgv_TK.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TenTaiKhoan,
             this.MatKhau,
             this.MaNV,
             this.LoaiTK});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgv_TK.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgv_TK.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgv_TK.Location = new System.Drawing.Point(3, 16);
             this.dtgv_TK.Name = "dtgv_TK";
             this.dtgv_TK.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgv_TK.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgv_TK.RowHeadersWidth = 51;
             this.dtgv_TK.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgv_TK.Size = new System.Drawing.Size(469, 581);
@@ -338,23 +382,13 @@
             this.LoaiTK.Name = "LoaiTK";
             this.LoaiTK.ReadOnly = true;
             // 
-            // US_Time
-            // 
-            this.US_Time.Gio = "3:02:22 PM";
-            this.US_Time.Location = new System.Drawing.Point(220, 261);
-            this.US_Time.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.US_Time.Name = "US_Time";
-            this.US_Time.Ngay = "05/29/2021";
-            this.US_Time.Size = new System.Drawing.Size(222, 62);
-            this.US_Time.TabIndex = 21;
-            // 
             // DangKy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(979, 623);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "DangKy";
             this.Text = "DangKy";
             this.Load += new System.EventHandler(this.DangKy_Load);
@@ -400,5 +434,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker2;
     }
 }
