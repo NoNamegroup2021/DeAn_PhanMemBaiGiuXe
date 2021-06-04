@@ -563,7 +563,6 @@ C:\Users\vhta1\Documents\GitHub\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanM
 C:\Users\vhta1\Documents\GitHub\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\DevExpress.XtraCharts.v20.1.Wizard.dll
 C:\Users\vhta1\Documents\GitHub\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\DevExpress.XtraPivotGrid.v20.1.dll
 C:\Users\vhta1\Documents\GitHub\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\DevExpress.XtraCharts.v20.1.Extensions.dll
-C:\Users\vhta1\Documents\GitHub\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\ZedGraph.dll
 C:\Users\vhta1\Documents\GitHub\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\DevExpress.Images.v20.1.dll
 C:\Users\vhta1\Documents\GitHub\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\DevExpress.XtraDiagram.v20.1.dll
 C:\Users\vhta1\Documents\GitHub\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\DevExpress.Diagram.v20.1.Core.dll
@@ -585,9 +584,6 @@ C:\Users\vhta1\Documents\GitHub\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanM
 C:\Users\vhta1\Documents\GitHub\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\DevExpress.XtraPrinting.v20.1.xml
 C:\Users\vhta1\Documents\GitHub\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\DevExpress.XtraReports.v20.1.xml
 C:\Users\vhta1\Documents\GitHub\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\DevExpress.XtraReports.v20.1.Extensions.xml
-C:\Users\vhta1\Documents\GitHub\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\Emgu.CV.xml
-C:\Users\vhta1\Documents\GitHub\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\Emgu.CV.UI.xml
-C:\Users\vhta1\Documents\GitHub\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\Emgu.Util.xml
 C:\Users\vhta1\Documents\GitHub\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\PhanMemBaiGiuXeBLL.pdb
 C:\Users\vhta1\Documents\GitHub\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\PhanMemBaiGiuXeDAL.pdb
 C:\Users\vhta1\Documents\GitHub\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\bin\Debug\PhanMemBaiGiuXeDAL.dll.config

@@ -469,6 +469,7 @@ namespace DA_PhanMemBaiGiuXe
             this.ClientSize = new System.Drawing.Size(1180, 708);
             this.Controls.Add(this.tablePanel1);
             this.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "LapBienBan";
             this.Text = "LapBienBan";

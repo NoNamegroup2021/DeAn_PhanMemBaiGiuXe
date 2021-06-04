@@ -110,7 +110,7 @@ namespace DA_PhanMemBaiGiuXe
             {
                 cam.Stop();
             }
-            cam = new VideoCaptureDevice(dscam[0].MonikerString);
+            cam = Program.main_from.Cam;
             cam.NewFrame += Cam_NewFrame;
             cam.Start();
         }

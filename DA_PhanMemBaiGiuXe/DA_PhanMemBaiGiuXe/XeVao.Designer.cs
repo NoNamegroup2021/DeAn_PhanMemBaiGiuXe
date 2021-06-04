@@ -68,7 +68,7 @@ namespace DA_PhanMemBaiGiuXe
             this.tableLayoutPanel1.Controls.Add(this.label3, 3, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 11F));
@@ -92,7 +92,7 @@ namespace DA_PhanMemBaiGiuXe
             this.pictureBox1.ErrorImage = null;
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(15, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.tableLayoutPanel1.SetRowSpan(this.pictureBox1, 5);
             this.pictureBox1.Size = new System.Drawing.Size(888, 434);
@@ -149,10 +149,10 @@ namespace DA_PhanMemBaiGiuXe
             // userControl11
             // 
             this.userControl11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControl11.Gio = "7:21:54 PM";
+            this.userControl11.Gio = "11:21:55 PM";
             this.userControl11.Location = new System.Drawing.Point(1003, 76);
             this.userControl11.Name = "userControl11";
-            this.userControl11.Ngay = "06/03/2021";
+            this.userControl11.Ngay = "06/04/2021";
             this.userControl11.Size = new System.Drawing.Size(285, 69);
             this.userControl11.TabIndex = 10;
             // 
@@ -171,7 +171,7 @@ namespace DA_PhanMemBaiGiuXe
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Location = new System.Drawing.Point(15, 457);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(888, 379);
             this.pictureBox2.TabIndex = 1;
@@ -181,7 +181,7 @@ namespace DA_PhanMemBaiGiuXe
             // 
             this.txt_MaThe.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txt_MaThe.Location = new System.Drawing.Point(1004, 152);
-            this.txt_MaThe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_MaThe.Margin = new System.Windows.Forms.Padding(4);
             this.txt_MaThe.Name = "txt_MaThe";
             this.txt_MaThe.Size = new System.Drawing.Size(283, 22);
             this.txt_MaThe.TabIndex = 8;
