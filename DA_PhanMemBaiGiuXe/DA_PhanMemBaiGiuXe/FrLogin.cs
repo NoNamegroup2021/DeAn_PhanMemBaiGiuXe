@@ -123,54 +123,40 @@ namespace DA_PhanMemBaiGiuXe
 
         private void txt_Login_Enter(object sender, EventArgs e)
         {
+            if (txt_Login.Text == "Username")
             {
-                if (txt_Login.Text == "Username")
-                {
-                    txt_Login.Text = "";
-                    txt_Login.ForeColor = Color.Black;
-                }
+                txt_Login.Text = "";
+                txt_Login.ForeColor = Color.Black;
             }
 
         }
 
         private void txt_Login_Leave(object sender, EventArgs e)
         {
+            if (txt_Login.Text == "")
             {
-                if (txt_Login.Text == "")
-                {
-                    txt_Login.Text = "Username";
-                    txt_Login.ForeColor = Color.DarkOrange;
-                }
+                txt_Login.Text = "Username";
+                txt_Login.ForeColor = Color.DarkOrange;
             }
         }
 
         private void txt_Password_Enter(object sender, EventArgs e)
         {
+            if (txt_Password.Text == "Password")
             {
-                TextBox txtB = sender as TextBox;
-                if (txt_Password.Text == "Password")
-                {
-                    txt_Password.Text = "";
-                    txt_Password.ForeColor = Color.Black;
-                }
+                txt_Password.Text = "";
+                txt_Password.ForeColor = Color.Black;
+                txt_Password.UseSystemPasswordChar = true;
             }
         }
 
         private void txt_Password_Leave(object sender, EventArgs e)
         {
-            TextBox txtB = sender as TextBox;
-            if (txtB.Text.Trim().Length < 0)
+            if (txt_Password.Text == "")
             {
-                errorProvider1.SetError((Control)sender, "Error");
-            }
-            else
-            {
-                errorProvider1.Clear();
-                if (txt_Password.Text == "")
-                {
-                    txt_Password.Text = "Password";
-                    txt_Password.ForeColor = Color.DarkOrange;
-                }
+                txt_Password.Text = "Password";
+                txt_Password.ForeColor = Color.DarkOrange;
+                txt_Password.UseSystemPasswordChar = false;
             }
         }
        

@@ -63,7 +63,7 @@ namespace PhanMemBaiGiuXeDAL
     #endregion
 		
 		public DataClassesHTBGXDataContext() : 
-				base(global::PhanMemBaiGiuXeDAL.Properties.Settings.Default.QL_HeThongBaiGiuXeConnectionString5, mappingSource)
+				base(global::PhanMemBaiGiuXeDAL.Properties.Settings.Default.QL_HeThongBaiGiuXeConnectionString7, mappingSource)
 		{
 			OnCreated();
 		}
@@ -1284,7 +1284,7 @@ namespace PhanMemBaiGiuXeDAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NoiDung", DbType="VarChar(51)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NoiDung", DbType="NVarChar(51)")]
 		public string NoiDung
 		{
 			get

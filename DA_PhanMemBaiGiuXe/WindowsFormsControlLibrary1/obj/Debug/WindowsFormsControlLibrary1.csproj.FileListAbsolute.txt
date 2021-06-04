@@ -61,7 +61,6 @@ C:\Users\Admin\Desktop\QLBaiXeNEw\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\Window
 C:\Users\Admin\Desktop\QLBaiXeNEw\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\WindowsFormsControlLibrary1\obj\Debug\WindowsFormsControlLibrary1.csproj.GenerateResource.Cache
 C:\Users\Admin\Desktop\QLBaiXeNEw\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\WindowsFormsControlLibrary1\obj\Debug\WindowsFormsControlLibrary1.dll
 C:\Users\Admin\Desktop\QLBaiXeNEw\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\WindowsFormsControlLibrary1\obj\Debug\WindowsFormsControlLibrary1.pdb
-C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\WindowsFormsControlLibrary1\obj\Debug\WindowsFormsControlLibrary1.csprojResolveAssemblyReference.cache
 C:\Users\vhta1\Documents\GitHub\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\WindowsFormsControlLibrary1\obj\Debug\WindowsFormsControlLibrary1.csprojAssemblyReference.cache
 C:\Users\luhoa\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\WindowsFormsControlLibrary1\bin\Debug\WindowsFormsControlLibrary1.dll
 C:\Users\luhoa\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\WindowsFormsControlLibrary1\bin\Debug\WindowsFormsControlLibrary1.pdb
@@ -70,3 +69,5 @@ C:\Users\luhoa\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\WindowsFormsContr
 C:\Users\luhoa\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\WindowsFormsControlLibrary1\obj\Debug\WindowsFormsControlLibrary1.csproj.CoreCompileInputs.cache
 C:\Users\luhoa\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\WindowsFormsControlLibrary1\obj\Debug\WindowsFormsControlLibrary1.dll
 C:\Users\luhoa\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\WindowsFormsControlLibrary1\obj\Debug\WindowsFormsControlLibrary1.pdb
+C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\WindowsFormsControlLibrary1\obj\Debug\WindowsFormsControlLibrary1.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\WindowsFormsControlLibrary1\obj\Debug\WindowsFormsControlLibrary1.csproj.AssemblyReference.cache

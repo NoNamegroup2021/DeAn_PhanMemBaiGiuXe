@@ -95,24 +95,24 @@ namespace DA_PhanMemBaiGiuXe
 
         private void XeVao_Load(object sender, EventArgs e)
         {
-            if (cam != null && cam.IsRunning)
-            {
-                cam.Stop();
-            }
-            cam = Program.ctr.Cam;
-            cam.NewFrame += Cam_NewFrame;
-            cam.Start();
+            //if (cam != null && cam.IsRunning)
+            //{
+            //    cam.Stop();
+            //}
+            //cam = Program.ctr.Cam;
+            //cam.NewFrame += Cam_NewFrame;
+            //cam.Start();
         }
 
         private void XeVao_Enter(object sender, EventArgs e)
         {
-            if (cam != null && cam.IsRunning)
-            {
-                cam.Stop();
-            }
-            cam = Program.main_from.Cam;
-            cam.NewFrame += Cam_NewFrame;
-            cam.Start();
+            //if (cam != null && cam.IsRunning)
+            //{
+            //    cam.Stop();
+            //}
+            //cam = Program.main_from.Cam;
+            //cam.NewFrame += Cam_NewFrame;
+            //cam.Start();
         }
 
         private void XeVao_Validating(object sender, CancelEventArgs e)

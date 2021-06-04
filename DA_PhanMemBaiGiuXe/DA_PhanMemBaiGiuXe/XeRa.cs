@@ -40,7 +40,7 @@ namespace DA_PhanMemBaiGiuXe
             {
                 cam.Stop();
             }
-            cam = Program.main_from.Cam;
+            //cam = Program.main_from.Cam;
             cam.NewFrame += Cam_NewFrame;
             cam.Start();
         }

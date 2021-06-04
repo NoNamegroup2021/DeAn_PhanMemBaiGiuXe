@@ -15,8 +15,8 @@ namespace DA_PhanMemBaiGiuXe
     public partial class MainForm : Form
     {
         LuuThongTinDNBLL LTT = new LuuThongTinDNBLL();
-        private FilterInfoCollection dscam;
-        private VideoCaptureDevice cam;
+        //private FilterInfoCollection dscam;
+        //private VideoCaptureDevice cam;
         private string tendn;
         string dateDN;
         public string tenDN
@@ -24,17 +24,17 @@ namespace DA_PhanMemBaiGiuXe
             get { return tendn; }
             set { tendn = value; }
         }
-        public VideoCaptureDevice Cam { get => cam; set => cam = value; }
+        //public VideoCaptureDevice Cam { get => cam; set => cam = value; }
         public MainForm()
         {
             InitializeComponent();
-            dscam = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-            cam = new VideoCaptureDevice(dscam[1].MonikerString);
+            //dscam = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            //cam = new VideoCaptureDevice(dscam[1].MonikerString);
         }
 
         private void QLY_Click(object sender, EventArgs e)
         {
-            cam.Stop();
+            //cam.Stop();
             Program.qly = new QLy();
             Program.qly.tenDN = tendn;
             if(Program.qly != null)
@@ -51,7 +51,7 @@ namespace DA_PhanMemBaiGiuXe
 
         private void mainActivity_Click(object sender, EventArgs e)
         {
-            cam.Stop();
+            //cam.Stop();
             Program.ctr = new ChuongTrinhChinh();
             if(Program.ctr != null)
             {
@@ -67,7 +67,7 @@ namespace DA_PhanMemBaiGiuXe
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            cam.Stop();
+            //cam.Stop();
             if (tendn != null)
             {
                 tendn = tendn.ToUpper();
@@ -83,24 +83,24 @@ namespace DA_PhanMemBaiGiuXe
 
         private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            cam.Stop();
+            //cam.Stop();
         }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cam.Stop();
+            //cam.Stop();
             LTT.SuaTTDN(tenDN, DateTime.Parse(dateDN), DateTime.Parse(DateTime.Now.ToString()));
 
         }
 
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cam.Stop();
+            //cam.Stop();
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            cam.Stop();
+            //cam.Stop();
             Application.Exit();
         }
     }

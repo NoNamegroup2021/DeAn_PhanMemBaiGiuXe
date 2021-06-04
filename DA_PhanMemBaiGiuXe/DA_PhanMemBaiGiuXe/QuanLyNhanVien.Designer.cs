@@ -78,11 +78,11 @@
             this.tableLayoutPanel1.SetColumnSpan(this.dataGridView1, 4);
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(33, 229);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(773, 268);
+            this.dataGridView1.Size = new System.Drawing.Size(772, 268);
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
@@ -170,6 +170,7 @@
             // 
             // btnSua
             // 
+            this.btnSua.Enabled = false;
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSua.Name = "btnSua";
@@ -229,7 +230,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(427, 122);
+            this.label5.Location = new System.Drawing.Point(426, 122);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(41, 13);
@@ -239,7 +240,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(427, 58);
+            this.label6.Location = new System.Drawing.Point(426, 58);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 13);
@@ -249,7 +250,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(427, 0);
+            this.label7.Location = new System.Drawing.Point(426, 0);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(29, 13);
@@ -258,8 +259,8 @@
             // 
             // txtMaNV
             // 
-            this.txtMaNV.Location = new System.Drawing.Point(147, 2);
-            this.txtMaNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaNV.Location = new System.Drawing.Point(146, 2);
+            this.txtMaNV.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaNV.Multiline = true;
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(188, 32);
@@ -267,8 +268,8 @@
             // 
             // txtTenNV
             // 
-            this.txtTenNV.Location = new System.Drawing.Point(147, 60);
-            this.txtTenNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenNV.Location = new System.Drawing.Point(146, 60);
+            this.txtTenNV.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenNV.Multiline = true;
             this.txtTenNV.Name = "txtTenNV";
             this.txtTenNV.Size = new System.Drawing.Size(188, 32);
@@ -276,8 +277,8 @@
             // 
             // txtGT
             // 
-            this.txtGT.Location = new System.Drawing.Point(147, 124);
-            this.txtGT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGT.Location = new System.Drawing.Point(146, 124);
+            this.txtGT.Margin = new System.Windows.Forms.Padding(2);
             this.txtGT.Multiline = true;
             this.txtGT.Name = "txtGT";
             this.txtGT.Size = new System.Drawing.Size(188, 32);
@@ -285,8 +286,8 @@
             // 
             // txtSDT
             // 
-            this.txtSDT.Location = new System.Drawing.Point(520, 2);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSDT.Location = new System.Drawing.Point(519, 2);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(2);
             this.txtSDT.Multiline = true;
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(188, 32);
@@ -294,8 +295,8 @@
             // 
             // txtNS
             // 
-            this.txtNS.Location = new System.Drawing.Point(520, 60);
-            this.txtNS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNS.Location = new System.Drawing.Point(519, 60);
+            this.txtNS.Margin = new System.Windows.Forms.Padding(2);
             this.txtNS.Multiline = true;
             this.txtNS.Name = "txtNS";
             this.txtNS.Size = new System.Drawing.Size(188, 32);
@@ -303,8 +304,8 @@
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(520, 124);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDiaChi.Location = new System.Drawing.Point(519, 124);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(2);
             this.txtDiaChi.Multiline = true;
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(188, 32);
@@ -312,8 +313,8 @@
             // 
             // txtCMND
             // 
-            this.txtCMND.Location = new System.Drawing.Point(147, 178);
-            this.txtCMND.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCMND.Location = new System.Drawing.Point(146, 178);
+            this.txtCMND.Margin = new System.Windows.Forms.Padding(2);
             this.txtCMND.Multiline = true;
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.Size = new System.Drawing.Size(188, 32);
@@ -328,7 +329,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 280F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 93F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 290F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 31F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.label5, 3, 2);
@@ -346,7 +347,7 @@
             this.tableLayoutPanel1.Controls.Add(this.txtTenNV, 2, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 27);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.61905F));
@@ -367,13 +368,14 @@
             // 
             // QuanLyNhanVien
             // 
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(839, 526);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.toolStrip1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "QuanLyNhanVien";
             this.Text = "QuanLyNhanVien";
             this.Load += new System.EventHandler(this.QuanLyNhanVien_Load);
