@@ -44,7 +44,7 @@ namespace PhanMemBaiGiuXeDAL
                 nl.DiaChi = diachi;
                 nl.SDT = sdt;
                 nl.TenNV = tennv;
-                nl.ThoiGian = ngay.Date;
+                nl.ThoiGian = ngay;
                 nl.NoiDung = noidung;
                 data.NgoaiLes.InsertOnSubmit(nl);
                 data.SubmitChanges();

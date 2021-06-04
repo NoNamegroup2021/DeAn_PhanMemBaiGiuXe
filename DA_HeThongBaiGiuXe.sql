@@ -102,12 +102,13 @@ create table NgoaiLe
 	DiaChi nvarchar(51),
 	SDT nvarchar(21),
 	TenNV nvarchar(51),
-	ThoiGian date,
+	ThoiGian dateTime,
 	NoiDung nvarchar(51),
 	Constraint PK_NgoaiLe primary key (MaNL,MaKH,TenNV),
 	Constraint FK_NgoaiLe_KH foreign key (MaKH) references KhachHang(MaKH),
 )
-
+alter table NgoaiLe
+alter column ThoiGian dateTime
 
 set dateformat dmy 
 insert into NhanVien
