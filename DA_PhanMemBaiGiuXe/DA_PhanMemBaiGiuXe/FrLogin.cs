@@ -97,74 +97,80 @@ namespace DA_PhanMemBaiGiuXe
                 this.Close();
             }
         }
-        private void checkEmptyText(object sender, EventArgs e)
-        {
-            TextBox txt = (TextBox)sender;
-            if (txt.Text.Trim().Length <= 0)
-            {
-                this.errorProvider1.SetError(txt, "Vui lòng không để trống mục này");
-                txt.Focus();
-            }
-            else
-            {
-                this.errorProvider1.Clear();
-            }
-        }
+        //private void checkEmptyText(object sender, EventArgs e)
+        //{
+        //    TextBox txt = (TextBox)sender;
+        //    if (txt.Text.Trim().Length <= 0)
+        //    {
+        //        this.errorProvider1.SetError(txt, "Vui lòng không để trống mục này");
+        //        txt.Focus();
+        //    }
+        //    else
+        //    {
+        //        this.errorProvider1.Clear();
+        //    }
+        //}
 
-        private void txt_TK_Leave(object sender, EventArgs e)
-        {
-            checkEmptyText(sender, e);
-        }
+        //private void txt_TK_Leave(object sender, EventArgs e)
+        //{
+        //    checkEmptyText(sender, e);
+        //}
 
-        private void txt_MK_Leave(object sender, EventArgs e)
-        {
-            checkEmptyText(sender, e);
-        }
+        //private void txt_MK_Leave(object sender, EventArgs e)
+        //{
+        //    checkEmptyText(sender, e);
+        //}
 
-        private void txt_Login_Enter(object sender, EventArgs e)
-        {
-            if (txt_Login.Text == "Username")
-            {
-                txt_Login.Text = "";
-                txt_Login.ForeColor = Color.Black;
-            }
+        //private void txt_Login_Enter(object sender, EventArgs e)
+        //{
+        //    {
+        //        if (txt_Login.Text == "Username")
+        //        {
+        //            txt_Login.Text = "";
+        //            txt_Login.ForeColor = Color.Black;
+        //        }
+        //    }
 
-        }
+        //}
 
-        private void txt_Login_Leave(object sender, EventArgs e)
-        {
-            if (txt_Login.Text == "")
-            {
-                txt_Login.Text = "Username";
-                txt_Login.ForeColor = Color.DarkOrange;
-            }
-        }
+        //private void txt_Login_Leave(object sender, EventArgs e)
+        //{
+        //    {
+        //        if (txt_Login.Text == "")
+        //        {
+        //            txt_Login.Text = "Username";
+        //            txt_Login.ForeColor = Color.DarkOrange;
+        //        }
+        //    }
+        //}
 
-        private void txt_Password_Enter(object sender, EventArgs e)
-        {
-            if (txt_Password.Text == "Password")
-            {
-                txt_Password.Text = "";
-                txt_Password.ForeColor = Color.Black;
-                txt_Password.UseSystemPasswordChar = true;
-            }
-        }
+        //private void txt_Password_Enter(object sender, EventArgs e)
+        //{
+        //    {
+        //        if (txt_Password.Text == "Password")
+        //        {
+        //            txt_Password.Text = "";
+        //            txt_Password.ForeColor = Color.Black;
+        //        }
+        //    }
+        //}
 
-        private void txt_Password_Leave(object sender, EventArgs e)
-        {
-            if (txt_Password.Text == "")
-            {
-                txt_Password.Text = "Password";
-                txt_Password.ForeColor = Color.DarkOrange;
-                txt_Password.UseSystemPasswordChar = false;
-            }
-        }
+        //private void txt_Password_Leave(object sender, EventArgs e)
+        //{
+        //    {
+        //        if (txt_Password.Text == "")
+        //        {
+        //            txt_Password.Text = "Password";
+        //            txt_Password.ForeColor = Color.DarkOrange;
+        //        }
+        //    }
+        //}
        
 
-        //private void txt_Login_Click(object sender, EventArgs e)
-        //{
-        //    //txt_Login.Text = "";
-        //}
+        ////private void txt_Login_Click(object sender, EventArgs e)
+        ////{
+        ////    //txt_Login.Text = "";
+        ////}
 
     }
 }
