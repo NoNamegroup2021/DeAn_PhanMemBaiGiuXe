@@ -262,6 +262,7 @@
     <EmbeddedResource Include="testCascade.resx">
       <DependentUpon>testCascade.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -279,6 +280,10 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ImageProcessing\ImageProcessing.csproj">
+      <Project>{85adb748-4d0b-467b-b9aa-9b887092612a}</Project>
+      <Name>ImageProcessing</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WindowsFormsControlLibrary1\WindowsFormsControlLibrary1.csproj">
       <Project>{1A08DED6-039E-49DE-BCDE-962072C03A5C}</Project>
       <Name>WindowsFormsControlLibrary1</Name>

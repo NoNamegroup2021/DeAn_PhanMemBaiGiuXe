@@ -11,8 +11,7 @@ using Emgu.Util;
 using Emgu.CV;
 using Emgu.CV.Util;
 using Emgu.CV.Structure;
-
-
+using ImageProcessing;
 
 
 namespace DA_PhanMemBaiGiuXe
@@ -28,6 +27,8 @@ namespace DA_PhanMemBaiGiuXe
         List<Rectangle> secondLine = new List<Rectangle>();
         int firstX_Line1,firstX_Line2;
 
+
+
         public testCascade()
         {
             InitializeComponent();
@@ -36,6 +37,7 @@ namespace DA_PhanMemBaiGiuXe
         private void testCascade_Load(object sender, EventArgs e)
         {
             timer1.Enabled = true;
+          
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -90,6 +92,7 @@ namespace DA_PhanMemBaiGiuXe
             
             Rectangle [] rects = null;
             detect(ref rects);
+
             if(rects != null && rects.Count() >0)
             {
                 var boundingBox = rects[rects.Count() - 1];
@@ -241,6 +244,11 @@ namespace DA_PhanMemBaiGiuXe
                 firstX_Line1 = firstLine[0].X;
                 secondLine = secondLine.OrderBy(r => r.X).ToList();
                 firstX_Line2 = secondLine[0].X;
+                if (firstX_Line1 > firstX_Line2)
+                    firstX_Line1 = firstX_Line2;
+                else
+                    firstX_Line2 = firstX_Line1;
+
             }
             catch(Exception ex)
             {
@@ -271,7 +279,7 @@ namespace DA_PhanMemBaiGiuXe
 
             Rectangle[] bg_hr = rects.Where(r => r.Height == maxH).ToArray();
             bg_hr = bg_hr.OrderByDescending(t => t.X).ToArray();
-            return new Rectangle(new Point(firstX_Line1, bg_hr[0].Y), new Size(Math.Abs(lrect.X + lrect.Width - firstX_Line1), bg_hr[0].Height+1));
+            return new Rectangle(new Point(firstX_Line1,bg_hr[0].Y), new Size(Math.Abs(lrect.X + lrect.Width - firstX_Line1), bg_hr[0].Height+1));
         }
 
         private Rectangle getAreaRect_Line2(List<Rectangle> rects)
@@ -309,6 +317,7 @@ namespace DA_PhanMemBaiGiuXe
             }    
         }
 
+ 
         private void button6_Click(object sender, EventArgs e)
         {
             var boundingBox1 = getAreaRect_Line1(firstLine);
@@ -333,6 +342,8 @@ namespace DA_PhanMemBaiGiuXe
             Image<Bgr, Byte> img_cropped2 = new Image<Bgr, byte>(crop2);
             pictureBox8.Image = img_cropped2.ToBitmap();
 
+
+   
         }
     }
 }

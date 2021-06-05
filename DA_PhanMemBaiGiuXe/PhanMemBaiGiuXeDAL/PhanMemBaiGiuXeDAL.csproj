@@ -58,6 +58,7 @@
     </Compile>
     <Compile Include="QuanLyXeRaDAL.cs" />
     <Compile Include="QuanLyXeVaoDAL.cs" />
+    <Compile Include="TheDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
