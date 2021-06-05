@@ -53,7 +53,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(318, 33);
             this.label1.TabIndex = 5;
-            this.label1.Text = "THÔNG TIN";
+            this.label1.Text = "LỊCH SỬ ĐĂNG NHẬP";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label5
@@ -64,7 +64,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(298, 50);
             this.label5.TabIndex = 6;
-            this.label5.Text = "PHẦN MỀM QUẢN LÝ CỬA HÀNG ĐIỆN MÁY";
+            this.label5.Text = "PHẦN MỀM QUẢN LÝ BÃI GIỮ XE TỰ ĐỘNG";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox2
@@ -85,7 +85,7 @@
             this.groupBox2.Size = new System.Drawing.Size(301, 159);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Thông tin thành viên";
+            this.groupBox2.Text = "Thông tin nhân viên";
             // 
             // textBox7
             // 
@@ -166,9 +166,9 @@
             this.label3.Location = new System.Drawing.Point(185, 21);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 17);
+            this.label3.Size = new System.Drawing.Size(88, 17);
             this.label3.TabIndex = 12;
-            this.label3.Text = "Mã số sinh viên";
+            this.label3.Text = "Mã nhân viên";
             // 
             // label2
             // 
@@ -185,6 +185,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             this.ClientSize = new System.Drawing.Size(318, 243);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label5);
