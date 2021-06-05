@@ -21,6 +21,7 @@ namespace ImageProcessing
 		private List<Rectangle> rects_areas;
 		private List<Rectangle> firstLine;
 		private List<Rectangle> secondLine;
+		int firstX_Line1, firstX_Line2;
 
 		public SegmentChar()
 		{
@@ -80,7 +81,8 @@ namespace ImageProcessing
 
 		List<Rectangle> FirstLine = new List<Rectangle>();
 		List<Rectangle> SecondLine = new List<Rectangle>();
-		public List<Rectangle> findContours(Image src,Image<Bgr,Byte> input,int w,int h)
+
+		public List<Rectangle> findContours(Image src,Image<Bgr,Byte> input,int w,int h,out List<Rectangle> fl,out List<Rectangle> sl,out Rectangle area1,out Rectangle area2)
         {
             try
             {
@@ -117,20 +119,30 @@ namespace ImageProcessing
 				getLines(rects_areas, ref FirstLine, ref SecondLine);
 				firstLine = firstLine.OrderBy(r => r.X).ToList();
 				secondLine = secondLine.OrderBy(r => r.X).ToList();
+				fl = firstLine;
+				sl = secondLine;
+				firstLine = firstLine.OrderBy(r => r.X).ToList();
+				firstX_Line1 = firstLine[0].X;
+				secondLine = secondLine.OrderBy(r => r.X).ToList();
+				firstX_Line2 = secondLine[0].X;
+				if (firstX_Line1 > firstX_Line2)
+					firstX_Line1 = firstX_Line2;
+				else
+					firstX_Line2 = firstX_Line1;
+				area1 = getAreaRect_Line1(firstLine);
+				area2 = getAreaRect_Line2(secondLine);
 				return rects_areas;
             }
             catch
             {
+				area1 = new Rectangle();
+				area2 = new Rectangle();
+				fl = null;
+				sl = null;
 				return null;
             }
         }
 
-		/// <summary>
-		/// Ham thuc hien lam mo anh voi GuassianBlur
-		/// ham su dung kernel 5x5 
-		/// </summary>
-		/// <param name="img"></param>
-		/// <returns></returns>
 		private Mat Gaussianblur(Image<Gray, Byte> img)
 		{
 			Mat src = img.Mat;
@@ -199,6 +211,30 @@ namespace ImageProcessing
 			}
 			setFirstLine = firstline;
 			setSecondLine = secondline;
+		}
+
+		private Rectangle getAreaRect_Line1(List<Rectangle> rects)
+		{
+			int count = rects.Count;
+			Rectangle frect = rects[0];
+			Rectangle lrect = rects[count - 1];
+			int maxH = rects.Max(r => r.Height);
+
+			Rectangle[] bg_hr = rects.Where(r => r.Height == maxH).ToArray();
+			bg_hr = bg_hr.OrderByDescending(t => t.X).ToArray();
+			return new Rectangle(new Point(firstX_Line1, bg_hr[0].Y), new Size(Math.Abs(lrect.X + lrect.Width - firstX_Line1), bg_hr[0].Height + 1));
+		}
+
+		private Rectangle getAreaRect_Line2(List<Rectangle> rects)
+		{
+			int count = rects.Count;
+			Rectangle frect = rects[0];
+			Rectangle lrect = rects[count - 1];
+			int maxH = rects.Max(r => r.Height);
+
+			Rectangle[] bg_hr = rects.Where(r => r.Height == maxH).ToArray();
+			bg_hr = bg_hr.OrderByDescending(t => t.X).ToArray();
+			return new Rectangle(new Point(firstX_Line2, bg_hr[0].Y), new Size(Math.Abs(lrect.X + lrect.Width - firstX_Line2), bg_hr[0].Height + 1));
 		}
 	}
 }

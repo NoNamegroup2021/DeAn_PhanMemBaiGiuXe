@@ -36,7 +36,8 @@ namespace DA_PhanMemBaiGiuXe
         
         private void xeVàoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cam.Stop();
+            if(cam!= null || cam.IsRunning)
+                cam.Stop();
             Program.frmXevao  = new XeVao();
             if(Program.frmXevao != null)
             {
