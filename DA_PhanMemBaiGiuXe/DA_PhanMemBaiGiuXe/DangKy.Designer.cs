@@ -32,12 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangKy));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Xoa = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.US_Time = new WindowsFormsControlLibrary1.UserControl1();
-            this.label6 = new System.Windows.Forms.Label();
             this.pn_LTK = new System.Windows.Forms.Panel();
             this.rdo_QuanLy = new System.Windows.Forms.RadioButton();
             this.rdo_NhanVien = new System.Windows.Forms.RadioButton();
@@ -59,7 +58,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.pn_LTK.SuspendLayout();
@@ -96,8 +94,6 @@
             this.groupBox1.Controls.Add(this.btn_Xoa);
             this.groupBox1.Controls.Add(this.simpleButton1);
             this.groupBox1.Controls.Add(this.txtTimKiem);
-            this.groupBox1.Controls.Add(this.US_Time);
-            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.pn_LTK);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txt_MaNV);
@@ -118,6 +114,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Đăng ký tài khoản";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(85, 402);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(77, 19);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "Tìm kiếm:";
+            // 
             // simpleButton2
             // 
             this.simpleButton2.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -125,7 +132,7 @@
             this.simpleButton2.Appearance.Options.UseFont = true;
             this.simpleButton2.Appearance.Options.UseForeColor = true;
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(367, 404);
+            this.simpleButton2.Location = new System.Drawing.Point(380, 340);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 26;
@@ -139,7 +146,7 @@
             this.btn_Xoa.Appearance.Options.UseFont = true;
             this.btn_Xoa.Appearance.Options.UseForeColor = true;
             this.btn_Xoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Xoa.ImageOptions.Image")));
-            this.btn_Xoa.Location = new System.Drawing.Point(226, 404);
+            this.btn_Xoa.Location = new System.Drawing.Point(233, 340);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(75, 23);
             this.btn_Xoa.TabIndex = 25;
@@ -153,7 +160,7 @@
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.Appearance.Options.UseForeColor = true;
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(89, 404);
+            this.simpleButton1.Location = new System.Drawing.Point(94, 340);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(92, 23);
             this.simpleButton1.TabIndex = 24;
@@ -162,35 +169,12 @@
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Location = new System.Drawing.Point(233, 461);
+            this.txtTimKiem.Location = new System.Drawing.Point(233, 403);
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(222, 20);
             this.txtTimKiem.TabIndex = 22;
             this.txtTimKiem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTimKiem_KeyPress);
-            // 
-            // US_Time
-            // 
-            this.US_Time.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.US_Time.ForeColor = System.Drawing.Color.Black;
-            this.US_Time.Gio = "3:15:54 AM";
-            this.US_Time.Location = new System.Drawing.Point(233, 258);
-            this.US_Time.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.US_Time.Name = "US_Time";
-            this.US_Time.Ngay = "06/05/2021";
-            this.US_Time.Size = new System.Drawing.Size(222, 76);
-            this.US_Time.TabIndex = 21;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(85, 289);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(129, 19);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Thời gian đăng ký";
             // 
             // pn_LTK
             // 
@@ -198,7 +182,7 @@
             this.pn_LTK.Controls.Add(this.rdo_NhanVien);
             this.pn_LTK.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pn_LTK.ForeColor = System.Drawing.Color.Black;
-            this.pn_LTK.Location = new System.Drawing.Point(226, 339);
+            this.pn_LTK.Location = new System.Drawing.Point(226, 280);
             this.pn_LTK.Name = "pn_LTK";
             this.pn_LTK.Size = new System.Drawing.Size(249, 34);
             this.pn_LTK.TabIndex = 18;
@@ -230,7 +214,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(85, 346);
+            this.label5.Location = new System.Drawing.Point(85, 287);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(113, 19);
             this.label5.TabIndex = 15;
@@ -377,17 +361,6 @@
             this.LoaiTK.Name = "LoaiTK";
             this.LoaiTK.ReadOnly = true;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(90, 460);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 19);
-            this.label7.TabIndex = 27;
-            this.label7.Text = "Tìm kiếm:";
-            // 
             // DangKy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -427,8 +400,6 @@
         private System.Windows.Forms.TextBox txt_Username;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dtgv_TK;
-        private WindowsFormsControlLibrary1.UserControl1 US_Time;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTaiKhoan;
         private System.Windows.Forms.DataGridViewTextBoxColumn MatKhau;
