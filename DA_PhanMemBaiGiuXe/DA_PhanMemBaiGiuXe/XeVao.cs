@@ -224,5 +224,11 @@ namespace DA_PhanMemBaiGiuXe
             Image<Bgr, Byte> img_resized = original.Resize(width, height, Emgu.CV.CvEnum.Inter.Linear);
             return img_resized;
         }
+
+        private void XeVao_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Hide();
+            Program.main_from.Show();
+        }
     }
 }

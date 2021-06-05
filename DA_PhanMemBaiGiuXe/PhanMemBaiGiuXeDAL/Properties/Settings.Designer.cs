@@ -143,5 +143,16 @@ namespace PhanMemBaiGiuXeDAL.Properties {
                 return ((string)(this["QL_HeThongBaiGiuXeConnectionString8"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=KHANHDESKTOP\\SQLEXPRESS;Initial Catalog=QL_HeThongBaiGiuXe;Integrated" +
+            " Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False")]
+        public string QL_HeThongBaiGiuXeConnectionString9 {
+            get {
+                return ((string)(this["QL_HeThongBaiGiuXeConnectionString9"]));
+            }
+        }
     }
 }

@@ -131,5 +131,11 @@ namespace DA_PhanMemBaiGiuXe
                 foreach (Rectangle rect in rects_area)
                     rects.Add(rect);
         }
+
+        private void XeRa_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Hide();
+            Program.main_from.Show();
+        }
     }
 }

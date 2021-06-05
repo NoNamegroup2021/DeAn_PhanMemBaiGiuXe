@@ -175,7 +175,7 @@
             // userControl12
             // 
             this.userControl12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.userControl12.Gio = "8:26:01 AM";
+            this.userControl12.Gio = "10:50:56 AM";
             this.userControl12.Location = new System.Drawing.Point(1198, 159);
             this.userControl12.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.userControl12.Name = "userControl12";
@@ -219,10 +219,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1449, 931);
             this.Controls.Add(this.tableLayoutPanel2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "XeRa";
             this.Text = "XeRa";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.XeRa_FormClosed);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();

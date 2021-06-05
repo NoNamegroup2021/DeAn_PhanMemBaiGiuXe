@@ -150,7 +150,7 @@ namespace DA_PhanMemBaiGiuXe
             // userControl11
             // 
             this.userControl11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControl11.Gio = "8:26:04 AM";
+            this.userControl11.Gio = "10:52:43 AM";
             this.userControl11.Location = new System.Drawing.Point(1127, 97);
             this.userControl11.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.userControl11.Name = "userControl11";
@@ -215,10 +215,10 @@ namespace DA_PhanMemBaiGiuXe
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1462, 1050);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "XeVao";
             this.Text = "XeVao";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.XeVao_FormClosed);
             this.Load += new System.EventHandler(this.XeVao_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.XeVao_KeyPress);
             this.tableLayoutPanel1.ResumeLayout(false);
