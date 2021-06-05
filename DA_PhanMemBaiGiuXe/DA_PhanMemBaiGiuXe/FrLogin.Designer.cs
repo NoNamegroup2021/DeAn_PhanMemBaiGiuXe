@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrLogin));
-            this.txt_Login = new System.Windows.Forms.TextBox();
-            this.txt_Password = new System.Windows.Forms.TextBox();
             this.rdo_QL = new System.Windows.Forms.RadioButton();
             this.rdo_NV = new System.Windows.Forms.RadioButton();
             this.btn_Thoat = new System.Windows.Forms.Button();
@@ -38,34 +37,13 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txt_Login = new System.Windows.Forms.TextBox();
+            this.txt_Password = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txt_Login
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.txt_Login, 3);
-            this.txt_Login.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.txt_Login.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_Login.ForeColor = System.Drawing.Color.Black;
-            this.txt_Login.Location = new System.Drawing.Point(352, 85);
-            this.txt_Login.Multiline = true;
-            this.txt_Login.Name = "txt_Login";
-            this.txt_Login.Size = new System.Drawing.Size(375, 33);
-            this.txt_Login.TabIndex = 0;
-            // 
-            // txt_Password
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.txt_Password, 3);
-            this.txt_Password.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_Password.ForeColor = System.Drawing.Color.Black;
-            this.txt_Password.Location = new System.Drawing.Point(352, 124);
-            this.txt_Password.Multiline = true;
-            this.txt_Password.Name = "txt_Password";
-            this.txt_Password.PasswordChar = '*';
-            this.txt_Password.Size = new System.Drawing.Size(375, 32);
-            this.txt_Password.TabIndex = 1;
-            this.txt_Password.UseSystemPasswordChar = true;
             // 
             // rdo_QL
             // 
@@ -122,15 +100,15 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.tableLayoutPanel1.Controls.Add(this.rdo_NV, 4, 4);
             this.tableLayoutPanel1.Controls.Add(this.rdo_QL, 3, 4);
             this.tableLayoutPanel1.Controls.Add(this.btn_Thoat, 4, 5);
             this.tableLayoutPanel1.Controls.Add(this.btn_Login, 3, 5);
-            this.tableLayoutPanel1.Controls.Add(this.txt_Login, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txt_Password, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txt_Login, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txt_Password, 2, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -173,6 +151,37 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // txt_Login
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.txt_Login, 3);
+            this.txt_Login.ForeColor = System.Drawing.Color.DarkOrange;
+            this.txt_Login.Location = new System.Drawing.Point(352, 85);
+            this.txt_Login.Multiline = true;
+            this.txt_Login.Name = "txt_Login";
+            this.txt_Login.Size = new System.Drawing.Size(375, 33);
+            this.txt_Login.TabIndex = 8;
+            this.txt_Login.Text = "Username";
+            this.txt_Login.Enter += new System.EventHandler(this.txt_Login_Enter);
+            this.txt_Login.Leave += new System.EventHandler(this.txt_Login_Leave);
+            // 
+            // txt_Password
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.txt_Password, 3);
+            this.txt_Password.ForeColor = System.Drawing.Color.DarkOrange;
+            this.txt_Password.Location = new System.Drawing.Point(352, 124);
+            this.txt_Password.Multiline = true;
+            this.txt_Password.Name = "txt_Password";
+            this.txt_Password.PasswordChar = '*';
+            this.txt_Password.Size = new System.Drawing.Size(375, 32);
+            this.txt_Password.TabIndex = 9;
+            this.txt_Password.Text = "Password";
+            this.txt_Password.Enter += new System.EventHandler(this.txt_Password_Enter);
+            this.txt_Password.Leave += new System.EventHandler(this.txt_Password_Leave);
+            // 
             // FrLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,13 +196,12 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txt_Login;
-        private System.Windows.Forms.TextBox txt_Password;
         private System.Windows.Forms.RadioButton rdo_QL;
         private System.Windows.Forms.RadioButton rdo_NV;
         private System.Windows.Forms.Button btn_Thoat;
@@ -201,5 +209,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.TextBox txt_Login;
+        private System.Windows.Forms.TextBox txt_Password;
     }
 }

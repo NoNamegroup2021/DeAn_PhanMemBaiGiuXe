@@ -102,3 +102,13 @@ C:\Users\Admin\Desktop\Heo's Documents\DA_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBa
 C:\Users\Admin\Desktop\Heo's Documents\DA_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\obj\Debug\PhanMemBaiGiuXeBLL.csproj.CopyComplete
 C:\Users\Admin\Desktop\Heo's Documents\DA_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\obj\Debug\PhanMemBaiGiuXeBLL.dll
 C:\Users\Admin\Desktop\Heo's Documents\DA_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\obj\Debug\PhanMemBaiGiuXeBLL.pdb
+C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\test\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\bin\Debug\PhanMemBaiGiuXeBLL.dll
+C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\test\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\bin\Debug\PhanMemBaiGiuXeBLL.pdb
+C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\test\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\bin\Debug\PhanMemBaiGiuXeDAL.dll
+C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\test\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\bin\Debug\PhanMemBaiGiuXeDAL.pdb
+C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\test\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\bin\Debug\PhanMemBaiGiuXeDAL.dll.config
+C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\test\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\obj\Debug\PhanMemBaiGiuXeBLL.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\test\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\obj\Debug\PhanMemBaiGiuXeBLL.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\test\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\obj\Debug\PhanMemBaiGiuXeBLL.csproj.CopyComplete
+C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\test\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\obj\Debug\PhanMemBaiGiuXeBLL.dll
+C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\test\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeBLL\obj\Debug\PhanMemBaiGiuXeBLL.pdb

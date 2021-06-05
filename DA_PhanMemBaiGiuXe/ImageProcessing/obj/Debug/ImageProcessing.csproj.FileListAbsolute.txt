@@ -37,3 +37,10 @@ C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\ImageProcessing\o
 C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\ImageProcessing\obj\Debug\ImageProcessing.csproj.CopyComplete
 C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\ImageProcessing\obj\Debug\ImageProcessing.exe
 C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\ImageProcessing\obj\Debug\ImageProcessing.pdb
+C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\test\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\ImageProcessing\bin\Debug\ImageProcessing.exe.config
+C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\test\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\ImageProcessing\bin\Debug\ImageProcessing.exe
+C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\test\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\ImageProcessing\bin\Debug\ImageProcessing.pdb
+C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\test\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\ImageProcessing\obj\Debug\ImageProcessing.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\test\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\ImageProcessing\obj\Debug\ImageProcessing.csproj.CopyComplete
+C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\test\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\ImageProcessing\obj\Debug\ImageProcessing.exe
+C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\test\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\ImageProcessing\obj\Debug\ImageProcessing.pdb

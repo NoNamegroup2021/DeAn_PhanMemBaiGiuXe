@@ -56,3 +56,9 @@ C:\Users\Admin\Desktop\Heo's Documents\DA_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBa
 C:\Users\Admin\Desktop\Heo's Documents\DA_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\obj\Debug\PhanMemBaiGiuXeDAL.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Desktop\Heo's Documents\DA_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\obj\Debug\PhanMemBaiGiuXeDAL.dll
 C:\Users\Admin\Desktop\Heo's Documents\DA_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\obj\Debug\PhanMemBaiGiuXeDAL.pdb
+C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\test\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\bin\Debug\PhanMemBaiGiuXeDAL.dll.config
+C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\test\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\bin\Debug\PhanMemBaiGiuXeDAL.dll
+C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\test\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\bin\Debug\PhanMemBaiGiuXeDAL.pdb
+C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\test\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\obj\Debug\PhanMemBaiGiuXeDAL.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\test\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\obj\Debug\PhanMemBaiGiuXeDAL.dll
+C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\test\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\PhanMemBaiGiuXeDAL\obj\Debug\PhanMemBaiGiuXeDAL.pdb
