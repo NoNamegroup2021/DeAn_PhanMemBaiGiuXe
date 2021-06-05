@@ -28,10 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrLogin));
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.txt_Login = new System.Windows.Forms.TextBox();
             this.txt_Password = new System.Windows.Forms.TextBox();
             this.rdo_QL = new System.Windows.Forms.RadioButton();
@@ -41,19 +38,9 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // errorProvider2
-            // 
-            this.errorProvider2.ContainerControl = this;
             // 
             // txt_Login
             // 
@@ -61,7 +48,7 @@
             this.txt_Login.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txt_Login.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txt_Login.ForeColor = System.Drawing.Color.Black;
-            this.txt_Login.Location = new System.Drawing.Point(353, 85);
+            this.txt_Login.Location = new System.Drawing.Point(352, 85);
             this.txt_Login.Multiline = true;
             this.txt_Login.Name = "txt_Login";
             this.txt_Login.Size = new System.Drawing.Size(375, 33);
@@ -72,7 +59,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.txt_Password, 3);
             this.txt_Password.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txt_Password.ForeColor = System.Drawing.Color.Black;
-            this.txt_Password.Location = new System.Drawing.Point(353, 124);
+            this.txt_Password.Location = new System.Drawing.Point(352, 124);
             this.txt_Password.Multiline = true;
             this.txt_Password.Name = "txt_Password";
             this.txt_Password.PasswordChar = '*';
@@ -85,7 +72,7 @@
             this.rdo_QL.AutoSize = true;
             this.rdo_QL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rdo_QL.ForeColor = System.Drawing.Color.Blue;
-            this.rdo_QL.Location = new System.Drawing.Point(494, 162);
+            this.rdo_QL.Location = new System.Drawing.Point(493, 162);
             this.rdo_QL.Name = "rdo_QL";
             this.rdo_QL.Size = new System.Drawing.Size(114, 50);
             this.rdo_QL.TabIndex = 2;
@@ -98,7 +85,7 @@
             this.rdo_NV.AutoSize = true;
             this.rdo_NV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rdo_NV.ForeColor = System.Drawing.Color.Blue;
-            this.rdo_NV.Location = new System.Drawing.Point(614, 162);
+            this.rdo_NV.Location = new System.Drawing.Point(613, 162);
             this.rdo_NV.Name = "rdo_NV";
             this.rdo_NV.Size = new System.Drawing.Size(114, 50);
             this.rdo_NV.TabIndex = 3;
@@ -108,7 +95,7 @@
             // 
             // btn_Thoat
             // 
-            this.btn_Thoat.Location = new System.Drawing.Point(614, 218);
+            this.btn_Thoat.Location = new System.Drawing.Point(613, 218);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(114, 35);
             this.btn_Thoat.TabIndex = 4;
@@ -118,7 +105,7 @@
             // 
             // btn_Login
             // 
-            this.btn_Login.Location = new System.Drawing.Point(494, 218);
+            this.btn_Login.Location = new System.Drawing.Point(493, 218);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(114, 35);
             this.btn_Login.TabIndex = 5;
@@ -135,7 +122,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 22F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel1.Controls.Add(this.rdo_NV, 4, 4);
             this.tableLayoutPanel1.Controls.Add(this.rdo_QL, 3, 4);
             this.tableLayoutPanel1.Controls.Add(this.btn_Thoat, 4, 5);
@@ -166,7 +153,7 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(353, 8);
+            this.label1.Location = new System.Drawing.Point(352, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(375, 74);
             this.label1.TabIndex = 6;
@@ -182,7 +169,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(23, 11);
             this.pictureBox1.Name = "pictureBox1";
             this.tableLayoutPanel1.SetRowSpan(this.pictureBox1, 5);
-            this.pictureBox1.Size = new System.Drawing.Size(324, 243);
+            this.pictureBox1.Size = new System.Drawing.Size(323, 243);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
@@ -197,8 +184,6 @@
             this.Name = "FrLogin";
             this.Text = "Đăng Nhập";
             this.Load += new System.EventHandler(this.FrLogin_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -207,9 +192,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.ErrorProvider errorProvider2;
         private System.Windows.Forms.TextBox txt_Login;
         private System.Windows.Forms.TextBox txt_Password;
         private System.Windows.Forms.RadioButton rdo_QL;
