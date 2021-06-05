@@ -30,7 +30,7 @@ namespace DA_PhanMemBaiGiuXe
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ChuongTrinhChinh());
+            Application.Run(new FrLogin());
         }
     }
 }
