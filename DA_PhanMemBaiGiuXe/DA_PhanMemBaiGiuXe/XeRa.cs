@@ -136,6 +136,13 @@ namespace DA_PhanMemBaiGiuXe
         {
             this.Hide();
             Program.main_from.Show();
+            if (cam.IsRunning || cam != null)
+                cam.Stop();
+        }
+
+        private void XeRa_Leave(object sender, EventArgs e)
+        {
+
         }
     }
 }

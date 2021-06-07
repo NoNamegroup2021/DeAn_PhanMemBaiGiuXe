@@ -1,14 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QL_HeThongBaiGiuXe" Class="DataClassesHTBGXDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-5HAB20B;Initial Catalog=QL_HeThongBaiGiuXe;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="PhanMemBaiGiuXeDAL.Properties.Settings" SettingsPropertyName="QL_HeThongBaiGiuXeConnectionString7" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.DangNhap" Member="DangNhaps">
-    <Type Name="DangNhap">
-      <Column Name="TenTaiKhoan" Type="System.String" DbType="VarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="ThoiGianDangNhap" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="ThoiGianDangXuat" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="IDDN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
-      <Association Name="TaiKhoan_DangNhap" Member="TaiKhoan" ThisKey="TenTaiKhoan" OtherKey="TenTaiKhoan" Type="TaiKhoan" IsForeignKey="true" />
-    </Type>
-  </Table>
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-8O63SGA\SQLEXPRESS;Initial Catalog=QL_HeThongBaiGiuXe;Integrated Security=True;Connect Timeout=30;TrustServerCertificate=False" SettingsObjectName="PhanMemBaiGiuXeDAL.Properties.Settings" SettingsPropertyName="QL_HeThongBaiGiuXeConnectionString8" Provider="System.Data.SqlClient" />
   <Table Name="dbo.GiaoTac" Member="GiaoTacs">
     <Type Name="GiaoTac">
       <Column Name="MaGiaoTac" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -23,6 +14,15 @@
       <Association Name="TheXe_GiaoTac" Member="TheXe" ThisKey="MaThe" OtherKey="MaThe" Type="TheXe" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.DangNhap" Member="DangNhaps">
+    <Type Name="DangNhap">
+      <Column Name="TenTaiKhoan" Type="System.String" DbType="VarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ThoiGianDangNhap" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ThoiGianDangXuat" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IDDN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="TaiKhoan_DangNhap" Member="TaiKhoan" ThisKey="TenTaiKhoan" OtherKey="TenTaiKhoan" Type="TaiKhoan" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.KhachHang" Member="KhachHangs">
     <Type Name="KhachHang">
       <Column Name="MaKH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -31,18 +31,18 @@
       <Association Name="KhachHang_NgoaiLe" Member="NgoaiLes" ThisKey="MaKH" OtherKey="MaKH" Type="NgoaiLe" />
     </Type>
   </Table>
-  <Table Name="dbo.LoaiGiaoTac" Member="LoaiGiaoTacs">
-    <Type Name="LoaiGiaoTac">
-      <Column Name="MaGiaoTac" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TenGiaoTac" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Association Name="LoaiGiaoTac_GiaoTac" Member="GiaoTacs" ThisKey="MaGiaoTac" OtherKey="MaLoaiGiaoTac" Type="GiaoTac" />
-    </Type>
-  </Table>
   <Table Name="dbo.LoaiTK" Member="LoaiTKs">
     <Type Name="LoaiTK">
       <Column Name="MaLoai" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="TenLoai" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
       <Association Name="LoaiTK_TaiKhoan" Member="TaiKhoans" ThisKey="MaLoai" OtherKey="LoaiTaiKhoan" Type="TaiKhoan" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoaiGiaoTac" Member="LoaiGiaoTacs">
+    <Type Name="LoaiGiaoTac">
+      <Column Name="MaGiaoTac" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenGiaoTac" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Association Name="LoaiGiaoTac_GiaoTac" Member="GiaoTacs" ThisKey="MaGiaoTac" OtherKey="MaLoaiGiaoTac" Type="GiaoTac" />
     </Type>
   </Table>
   <Table Name="dbo.NgoaiLe" Member="NgoaiLes">
@@ -54,8 +54,10 @@
       <Column Name="DiaChi" Type="System.String" DbType="NVarChar(51)" CanBeNull="true" />
       <Column Name="SDT" Type="System.String" DbType="NVarChar(21)" CanBeNull="true" />
       <Column Name="TenNV" Type="System.String" DbType="NVarChar(51) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="ThoiGian" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(51)" CanBeNull="true" />
+      <Column Name="TenTaiKhoan" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="TrangThaiNL" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ThoiGian" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="VarChar(51)" CanBeNull="true" />
       <Association Name="KhachHang_NgoaiLe" Member="KhachHang" ThisKey="MaKH" OtherKey="MaKH" Type="KhachHang" IsForeignKey="true" />
     </Type>
   </Table>
@@ -88,8 +90,8 @@
       <Column Name="MaNV" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
       <Column Name="NgayTaoTaiKhoan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="LoaiTaiKhoan" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="TaiKhoan_DangNhap" Member="DangNhap" ThisKey="TenTaiKhoan" OtherKey="TenTaiKhoan" Type="DangNhap" Cardinality="One" />
       <Association Name="TaiKhoan_GiaoTac" Member="GiaoTacs" ThisKey="TenTaiKhoan" OtherKey="TenTaiKhoan" Type="GiaoTac" />
+      <Association Name="TaiKhoan_DangNhap" Member="DangNhap" ThisKey="TenTaiKhoan" OtherKey="TenTaiKhoan" Type="DangNhap" Cardinality="One" />
       <Association Name="TaiKhoan_QuanLyTheXe" Member="QuanLyTheXes" ThisKey="TenTaiKhoan" OtherKey="TenTaiKhoan" Type="QuanLyTheXe" />
       <Association Name="LoaiTK_TaiKhoan" Member="LoaiTK" ThisKey="LoaiTaiKhoan" OtherKey="MaLoai" Type="LoaiTK" IsForeignKey="true" />
       <Association Name="NhanVien_TaiKhoan" Member="NhanVien" ThisKey="MaNV" OtherKey="MaNV" Type="NhanVien" IsForeignKey="true" />
