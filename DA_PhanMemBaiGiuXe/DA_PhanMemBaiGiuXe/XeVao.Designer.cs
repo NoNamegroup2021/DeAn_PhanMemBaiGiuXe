@@ -29,7 +29,6 @@ namespace DA_PhanMemBaiGiuXe
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,7 +40,7 @@ namespace DA_PhanMemBaiGiuXe
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txt_MaThe = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -144,11 +143,11 @@ namespace DA_PhanMemBaiGiuXe
             // userControl11
             // 
             this.userControl11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControl11.Gio = "2:22:56 PM";
+            this.userControl11.Gio = "12:01:49 AM";
             this.userControl11.Location = new System.Drawing.Point(751, 63);
             this.userControl11.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.userControl11.Name = "userControl11";
-            this.userControl11.Ngay = "06/05/2021";
+            this.userControl11.Ngay = "06/11/2021";
             this.userControl11.Size = new System.Drawing.Size(214, 55);
             this.userControl11.TabIndex = 10;
             // 

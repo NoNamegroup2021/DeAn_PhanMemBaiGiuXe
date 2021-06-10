@@ -292,6 +292,15 @@
   <ItemGroup>
     <None Include="Resources\save.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="background-CNPM\hinh-2.jpg" />
+    <Content Include="background-CNPM\hinh-3.jpg" />
+    <Content Include="background-CNPM\hinh-4.jpg" />
+    <Content Include="background-CNPM\hinh-5.jpg" />
+    <Content Include="background-CNPM\hinh-6.jpg" />
+    <Content Include="background-CNPM\hinh-7.jpg" />
+    <Content Include="background-CNPM\hinh1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
