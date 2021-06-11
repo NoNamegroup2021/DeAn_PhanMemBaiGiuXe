@@ -25,8 +25,6 @@ namespace DA_PhanMemBaiGiuXe
         QuanLyXeVaoBLL QLXEV = new QuanLyXeVaoBLL();
         private FilterInfoCollection dscam;
         private VideoCaptureDevice cam;
-        CascadeClassifier carLicense_class;
-        string haarcascade_file = Application.StartupPath + "\\car_lp_cascade.xml";
         private List<Rectangle> rects = new List<Rectangle>();
         private string tenDN;
         private Rectangle[] rects_area;
@@ -48,34 +46,7 @@ namespace DA_PhanMemBaiGiuXe
             cam.Start();
         }
 
-        private Rectangle[] detect()
-        {
-            try
-            {
-                Bitmap bm = pictureBox1.Image as Bitmap;
-                if (bm != null)
-                {
-                    carLicense_class = new CascadeClassifier(haarcascade_file);
-                    Bitmap bm2 = pictureBox1.Image as Bitmap;
-                    Image<Bgr, Byte> img = new Image<Bgr, byte>(bm2);
-                    Image<Gray, Byte> gray = img.Convert<Gray, Byte>();
-                    Bitmap transfr = pictureBox1.Image as Bitmap;
-                    Image<Bgr, Byte> img_transfr_frame = new Image<Bgr, byte>(transfr);
-                    Image<Gray, Byte> imgTransf_grayScale = img_transfr_frame.Convert<Gray, Byte>();
 
-                    Rectangle[] rects = carLicense_class.DetectMultiScale(imgTransf_grayScale, 1.2, 3, Size.Empty);
-                    return rects;
-                }
-                return null;
-            }
-            catch (Exception ex)
-            {
-                return null;
-            }
-            
-        }
-
- 
 
 
         private void Cam_NewFrame(object sender, NewFrameEventArgs eventArgs)
@@ -89,7 +60,7 @@ namespace DA_PhanMemBaiGiuXe
         {
             try
             {
-                
+
                 if (e.KeyChar == 13)
                 {
                     if (rects != null && rects.Count() > 0)
@@ -110,11 +81,11 @@ namespace DA_PhanMemBaiGiuXe
                         img_cropped = resizeImage(img_cropped, pictureBox2.Width, pictureBox2.Height);
                         pictureBox2.Image = img_cropped.ToBitmap();
                     }
-                    if (String.IsNullOrEmpty(txt_MaThe.Text) || String.IsNullOrEmpty(txt_BienSo.Text) )
+                    if (String.IsNullOrEmpty(txt_MaThe.Text) || String.IsNullOrEmpty(txt_BienSo.Text))
                     {
 
                     }
-                    else if (!QLXEV.ktKhoaChinh(txt_MaThe.Text,txt_BienSo.Text))
+                    else if (!QLXEV.ktKhoaChinh(txt_MaThe.Text, txt_BienSo.Text))
                     {
                         MessageBox.Show("Mã này đã tồn tại! Xin vui lòng thử lại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
@@ -137,9 +108,9 @@ namespace DA_PhanMemBaiGiuXe
                             MessageBox.Show("Tinh trang true");
                         }
                     }
-                txt_MaThe.Text = "";
-                txt_BienSo.Text = "";
-                txt_MaThe.Focus();
+                    txt_MaThe.Text = "";
+                    txt_BienSo.Text = "";
+                    txt_MaThe.Focus();
                 }
             }
             catch (Exception ex)
@@ -159,18 +130,11 @@ namespace DA_PhanMemBaiGiuXe
             //cam.Start();
         }
 
-  
-
-
-
         private void timer1_Tick(object sender, EventArgs e)
         {
-            rects_area = detect();
-            if(rects_area != null)
-                foreach (Rectangle rect in rects_area)
-                    rects.Add(rect);
+            rects_area = ImageProcessing.DetectPlate.detect(pictureBox1.Image);
         }
-         
+
         private void XeVao_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)13 && pictureBox1.Image != null)
@@ -213,12 +177,7 @@ namespace DA_PhanMemBaiGiuXe
             }
         }
 
-        private Mat medianSmooth(Image<Gray, Byte> img)
-        {
-            Mat src = img.Mat;
-            CvInvoke.MedianBlur(src, src, 3);
-            return src;
-        }
+
         private Image<Bgr, Byte> resizeImage(Image<Bgr, Byte> original, int width, int height)
         {
             Image<Bgr, Byte> img_resized = original.Resize(width, height, Emgu.CV.CvEnum.Inter.Linear);
@@ -228,7 +187,8 @@ namespace DA_PhanMemBaiGiuXe
         private void XeVao_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Hide();
-            Program.main_from.Show();
+            if (cam.IsRunning || cam != null)
+                cam.Stop();
         }
     }
 }

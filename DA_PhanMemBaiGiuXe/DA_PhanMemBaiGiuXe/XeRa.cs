@@ -10,8 +10,6 @@ using System.Windows.Forms;
 using AForge.Video;
 using AForge.Video.DirectShow;
 using Emgu.CV;
-using Emgu.CV.Util;
-using Emgu.Util;
 using Emgu.CV.Structure;
 using PhanMemBaiGiuXeBLL;
 
@@ -68,32 +66,7 @@ namespace DA_PhanMemBaiGiuXe
 
         }
 
-        private Rectangle[] detect()
-        {
-            try
-            {
-                Bitmap bm = pictureBox1.Image as Bitmap;
-                if (bm != null)
-                {
-                    carLicense_class = new CascadeClassifier(haarcascade_file);
-                    Bitmap bm2 = pictureBox1.Image as Bitmap;
-                    Image<Bgr, Byte> img = new Image<Bgr, byte>(bm2);
-                    Image<Gray, Byte> gray = img.Convert<Gray, Byte>();
-                    Bitmap transfr = pictureBox1.Image as Bitmap;
-                    Image<Bgr, Byte> img_transfr_frame = new Image<Bgr, byte>(transfr);
-                    Image<Gray, Byte> imgTransf_grayScale = img_transfr_frame.Convert<Gray, Byte>();
 
-                    Rectangle[] rects = carLicense_class.DetectMultiScale(imgTransf_grayScale, 1.2, 3, Size.Empty);
-                    return rects;
-                }
-                return null;
-            }
-            catch (Exception ex)
-            {
-                return null;
-            }
-
-        }
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
@@ -126,16 +99,13 @@ namespace DA_PhanMemBaiGiuXe
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            rects_area = detect();
-            if (rects_area != null)
-                foreach (Rectangle rect in rects_area)
-                    rects.Add(rect);
+            rects_area = ImageProcessing.DetectPlate.detect(pictureBox1.Image);
+
         }
 
         private void XeRa_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Hide();
-            Program.main_from.Show();
             if (cam.IsRunning || cam != null)
                 cam.Stop();
         }
@@ -145,9 +115,5 @@ namespace DA_PhanMemBaiGiuXe
 
         }
 
-        private void userControl12_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
