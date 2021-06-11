@@ -14,7 +14,7 @@ namespace DA_PhanMemBaiGiuXe
 {
     public partial class ChuongTrinhChinh : Form
     {
-        //private FilterInfoCollection dscam;
+        private FilterInfoCollection dscam;
         private VideoCaptureDevice cam;
         private string tendn;
 
@@ -24,16 +24,16 @@ namespace DA_PhanMemBaiGiuXe
             set { tendn = value; }
         }
 
-        public VideoCaptureDevice Cam { get => cam; set => cam = value; }
+        public VideoCaptureDevice Cam { get =>  cam; set => cam = value; }
 
         public ChuongTrinhChinh()
         {
             InitializeComponent();
-            //cam = Program.main_from.Cam;
-
+            cam = Program.main_from.Cam;
+            
         }
-        
-        
+
+
         private void xeVàoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 

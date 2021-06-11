@@ -54,7 +54,7 @@ namespace DA_PhanMemBaiGiuXe
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1582, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1582, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -64,7 +64,7 @@ namespace DA_PhanMemBaiGiuXe
             this.đăngXuấtToolStripMenuItem,
             this.thoátToolStripMenuItem});
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
-            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(88, 26);
+            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
             this.hệThốngToolStripMenuItem.Text = "Hệ Thống";
             // 
             // đăngXuấtToolStripMenuItem
@@ -84,7 +84,7 @@ namespace DA_PhanMemBaiGiuXe
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // tableLayoutPanel1
@@ -95,11 +95,11 @@ namespace DA_PhanMemBaiGiuXe
             this.tableLayoutPanel1.Controls.Add(this.mainPanel, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 30);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 28);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1582, 1025);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1582, 1027);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // mainPanel
@@ -107,7 +107,7 @@ namespace DA_PhanMemBaiGiuXe
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(319, 3);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1260, 1019);
+            this.mainPanel.Size = new System.Drawing.Size(1260, 1021);
             this.mainPanel.TabIndex = 3;
             // 
             // groupBox1
@@ -117,7 +117,7 @@ namespace DA_PhanMemBaiGiuXe
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(310, 1019);
+            this.groupBox1.Size = new System.Drawing.Size(310, 1021);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
@@ -133,7 +133,7 @@ namespace DA_PhanMemBaiGiuXe
             this.menuStrip2.Location = new System.Drawing.Point(3, 18);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Padding = new System.Windows.Forms.Padding(8, 50, 0, 2);
-            this.menuStrip2.Size = new System.Drawing.Size(304, 998);
+            this.menuStrip2.Size = new System.Drawing.Size(304, 1000);
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
             this.menuStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip2_ItemClicked);
