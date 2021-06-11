@@ -83,7 +83,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1449, 931);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1449, 882);
             this.tableLayoutPanel2.TabIndex = 1;
             this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
             // 
@@ -175,11 +175,11 @@
             // userControl12
             // 
             this.userControl12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.userControl12.Gio = "10:50:56 AM";
+            this.userControl12.Gio = "3:58:57 PM";
             this.userControl12.Location = new System.Drawing.Point(1198, 159);
             this.userControl12.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.userControl12.Name = "userControl12";
-            this.userControl12.Ngay = "06/05/2021";
+            this.userControl12.Ngay = "06/11/2021";
             this.userControl12.Size = new System.Drawing.Size(110, 142);
             this.userControl12.TabIndex = 7;
             // 
@@ -190,7 +190,7 @@
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.tableLayoutPanel2.SetRowSpan(this.pictureBox1, 3);
-            this.pictureBox1.Size = new System.Drawing.Size(951, 436);
+            this.pictureBox1.Size = new System.Drawing.Size(951, 435);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
@@ -217,12 +217,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1449, 931);
+            this.ClientSize = new System.Drawing.Size(1449, 882);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "XeRa";
             this.Text = "XeRa";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.XeRa_FormClosed);
+            this.Leave += new System.EventHandler(this.XeRa_Leave);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();

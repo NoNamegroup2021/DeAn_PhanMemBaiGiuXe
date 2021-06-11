@@ -27,45 +27,23 @@ namespace ImageProcessing
 		{
 		}
 
-		public Bitmap Img1
-        {
-            get {	return img; }
-			set {   img = value; }
-        }			
-
-		public List<Rectangle> Rects_areas
-        {
-            get { return rects_areas; }
-			set { rects_areas = value; }
-        }			
-
-        public List<Rectangle> getFirstLine 
-		{ 
-			get { return firstLine; }
-
-		}
-
-		public List<Rectangle> getSecondLine
-        {
-            get { return secondLine; }
-        }
 
 		protected List<Rectangle> setFirstLine
-        {
-            set { firstLine = value; }
-        }			
+		{
+			set { firstLine = value; }
+		}
 
 		protected List<Rectangle> setSecondLine
-        {
+		{
 			set { secondLine = value; }
-        }
+		}
 
-        public void setData(Bitmap img)
+		public void setData(Bitmap img)
 		{
 			this.img = img;
 		}
 
-		private Bitmap findEdge(Image<Bgr, Byte> src,int w,int h)
+		private Bitmap findEdge(Image<Bgr, Byte> src, int w, int h)
 		{
 
 			src = resizeImage(src, w, h);
@@ -82,10 +60,11 @@ namespace ImageProcessing
 		List<Rectangle> FirstLine = new List<Rectangle>();
 		List<Rectangle> SecondLine = new List<Rectangle>();
 
-		public List<Rectangle> findContours(Image src,Image<Bgr,Byte> input,int w,int h,out List<Rectangle> fl,out List<Rectangle> sl,out Rectangle area1,out Rectangle area2)
-        {
-            try
-            {
+		private void getLinesContours(Image src, int w, int h, out List<Rectangle> fl, out List<Rectangle> sl)
+		{
+			try
+			{
+				Image<Bgr, Byte> input = new Image<Bgr, byte>(src as Bitmap);
 				Bitmap input_bm = findEdge(input, w, h);
 				Image<Gray, Byte> input_img = new Image<Gray, byte>(input_bm);
 				Emgu.CV.Util.VectorOfVectorOfPoint contours = new Emgu.CV.Util.VectorOfVectorOfPoint();
@@ -129,19 +108,15 @@ namespace ImageProcessing
 					firstX_Line1 = firstX_Line2;
 				else
 					firstX_Line2 = firstX_Line1;
-				area1 = getAreaRect_Line1(firstLine);
-				area2 = getAreaRect_Line2(secondLine);
-				return rects_areas;
-            }
-            catch
-            {
-				area1 = new Rectangle();
-				area2 = new Rectangle();
+				return;
+			}
+			catch
+			{
 				fl = null;
 				sl = null;
-				return null;
-            }
-        }
+				return;
+			}
+		}
 
 		private Mat Gaussianblur(Image<Gray, Byte> img)
 		{
@@ -150,8 +125,8 @@ namespace ImageProcessing
 			return src;
 		}
 
-		private Mat MedianBlur (Image <Gray,Byte> img)
-        {
+		private Mat MedianBlur(Image<Gray, Byte> img)
+		{
 			Mat src = img.Mat;
 			CvInvoke.MedianBlur(src, src, 3);
 			return src;
@@ -163,40 +138,6 @@ namespace ImageProcessing
 			return img_resized;
 		}
 
-		public ImageList CharList(Rectangle[] rects,Image src)
-        {
-			try
-            {
-				ImageList output = new ImageList();
-
-				int count = rects.Length;
-				if(count >0)
-                {
-					for( int i = 0 ; i <count ; i++ )
-                    {
-						var boundingBox = rects[i];
-						if(boundingBox.Width != 0 && boundingBox.Height != 0)
-                        {
-							Bitmap src_bm = src as Bitmap;
-							Bitmap char_bm = new Bitmap(boundingBox.Width, boundingBox.Height);
-							using (Graphics g = Graphics.FromImage(char_bm))
-                            {
-								g.DrawImage(src_bm, new Rectangle(0, 0, boundingBox.Width, boundingBox.Height), boundingBox, GraphicsUnit.Pixel);
-                            }
-							Image<Bgr, Byte> output_img = resizeImage(new Image<Bgr,Byte>(char_bm), 28, 28);
-							Bitmap output_bm = output_img.ToBitmap();
-							output.Images.Add(output_bm);
-                        }
-                    }
-                }
-
-				return output;
-            }
-			catch
-            {
-				return null;
-            }
-        }
 
 		private void getLines(List<Rectangle> rects, ref List<Rectangle> firstline, ref List<Rectangle> secondline)
 		{
@@ -213,28 +154,75 @@ namespace ImageProcessing
 			setSecondLine = secondline;
 		}
 
-		private Rectangle getAreaRect_Line1(List<Rectangle> rects)
-		{
-			int count = rects.Count;
-			Rectangle frect = rects[0];
-			Rectangle lrect = rects[count - 1];
-			int maxH = rects.Max(r => r.Height);
 
-			Rectangle[] bg_hr = rects.Where(r => r.Height == maxH).ToArray();
-			bg_hr = bg_hr.OrderByDescending(t => t.X).ToArray();
-			return new Rectangle(new Point(firstX_Line1, bg_hr[0].Y), new Size(Math.Abs(lrect.X + lrect.Width - firstX_Line1), bg_hr[0].Height + 1));
+
+		public string getLicensePLate(Image src, int w, int h)
+		{
+			string plate = "";
+			try
+			{
+
+				var filename = Directory.GetCurrentDirectory() + @"\result";
+				firstLine = new List<Rectangle>();
+				secondLine = new List<Rectangle>();
+				getLinesContours(src, w, h, out firstLine, out secondLine);
+				if (firstLine == null || secondLine == null)
+					return "";
+				List<Image<Bgr, Byte>> line1 = new List<Image<Bgr, Byte>>();
+				List<Image<Bgr, Byte>> line2 = new List<Image<Bgr, Byte>>();
+				for (int i = 0, j = 0; i < firstLine.Count && j < secondLine.Count; i++, j++)
+				{
+					var boundingBox1 = firstLine[i];
+					var boundingBox2 = secondLine[j];
+
+					Bitmap src_map = src as Bitmap;
+					Bitmap crop1 = new Bitmap(boundingBox1.Width, boundingBox1.Height);
+					Bitmap crop2 = new Bitmap(boundingBox2.Width, boundingBox2.Height);
+
+					using (Graphics g = Graphics.FromImage(crop1))
+					{
+						g.DrawImage(src_map, new Rectangle(0, 0, crop1.Width, crop1.Height), boundingBox1, GraphicsUnit.Pixel);
+					}
+					Image<Bgr, Byte> img_cropped1 = new Image<Bgr, byte>(crop1);
+
+
+					using (Graphics g = Graphics.FromImage(crop2))
+					{
+						g.DrawImage(src_map, new Rectangle(0, 0, crop2.Width, crop2.Height), boundingBox2, GraphicsUnit.Pixel);
+					}
+					Image<Bgr, Byte> img_cropped2 = new Image<Bgr, byte>(crop2);
+
+					line1.Add(img_cropped1);
+					line2.Add(img_cropped2);
+				}
+
+				using (var mem = new MemoryStream())
+				{
+					for (int i = 0; i < line1.Count; i++)
+					{
+						Bitmap src_bm = line1[i].ToBitmap();
+						var img = Image.FromStream(mem);
+
+						string file_img = filename + @"\line1_" + i + ".jpg";
+						img.Save(file_img);
+
+					}
+					plate += "-";
+					//for (int i = 0; i < line2.Count; i++)
+					//{
+					//	line2[i].Save(filename);
+
+					//	plate += getResult(filename);
+					//}
+				}
+				return plate;
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+				return plate;
+			}
 		}
 
-		private Rectangle getAreaRect_Line2(List<Rectangle> rects)
-		{
-			int count = rects.Count;
-			Rectangle frect = rects[0];
-			Rectangle lrect = rects[count - 1];
-			int maxH = rects.Max(r => r.Height);
-
-			Rectangle[] bg_hr = rects.Where(r => r.Height == maxH).ToArray();
-			bg_hr = bg_hr.OrderByDescending(t => t.X).ToArray();
-			return new Rectangle(new Point(firstX_Line2, bg_hr[0].Y), new Size(Math.Abs(lrect.X + lrect.Width - firstX_Line2), bg_hr[0].Height + 1));
-		}
 	}
 }

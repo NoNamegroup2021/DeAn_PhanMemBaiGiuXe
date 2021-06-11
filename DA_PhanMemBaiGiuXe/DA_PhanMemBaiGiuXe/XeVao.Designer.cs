@@ -82,7 +82,7 @@ namespace DA_PhanMemBaiGiuXe
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1462, 1050);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1462, 882);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // pictureBox1
@@ -142,7 +142,7 @@ namespace DA_PhanMemBaiGiuXe
             this.lb_TenNV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_TenNV.Name = "lb_TenNV";
             this.tableLayoutPanel1.SetRowSpan(this.lb_TenNV, 2);
-            this.lb_TenNV.Size = new System.Drawing.Size(411, 709);
+            this.lb_TenNV.Size = new System.Drawing.Size(411, 541);
             this.lb_TenNV.TabIndex = 7;
             this.lb_TenNV.Text = "Tên nhân viên";
             this.lb_TenNV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -150,11 +150,11 @@ namespace DA_PhanMemBaiGiuXe
             // userControl11
             // 
             this.userControl11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControl11.Gio = "10:52:43 AM";
+            this.userControl11.Gio = "4:16:08 PM";
             this.userControl11.Location = new System.Drawing.Point(1127, 97);
             this.userControl11.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.userControl11.Name = "userControl11";
-            this.userControl11.Ngay = "06/05/2021";
+            this.userControl11.Ngay = "06/11/2021";
             this.userControl11.Size = new System.Drawing.Size(321, 84);
             this.userControl11.TabIndex = 10;
             // 
@@ -175,7 +175,7 @@ namespace DA_PhanMemBaiGiuXe
             this.pictureBox2.Location = new System.Drawing.Point(16, 572);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1000, 473);
+            this.pictureBox2.Size = new System.Drawing.Size(1000, 305);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
@@ -213,7 +213,7 @@ namespace DA_PhanMemBaiGiuXe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1462, 1050);
+            this.ClientSize = new System.Drawing.Size(1462, 882);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "XeVao";

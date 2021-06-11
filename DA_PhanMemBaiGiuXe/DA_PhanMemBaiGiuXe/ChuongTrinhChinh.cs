@@ -40,12 +40,11 @@ namespace DA_PhanMemBaiGiuXe
             Program.frmXevao  = new XeVao();
             if(Program.frmXevao != null)
             {
-                Program.frmXevao.TopLevel = false;
-                Program.frmXevao.Dock = DockStyle.Fill;
+                this.Hide();
                 Program.frmXevao.TenDN = tendn;
                 Program.frmXevao.Validate();
                 Program.frmXevao.Show();
-                this.Hide();
+   
 
             }    
 
@@ -53,10 +52,9 @@ namespace DA_PhanMemBaiGiuXe
 
         private void xeRaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Program.frmXeRa = new XeRa();
             if (Program.frmXeRa != null)
             {
-                Program.frmXeRa.TopLevel = false;
-                Program.frmXeRa.Dock = DockStyle.Fill;
                 Program.frmXeRa.TenDN = tendn;
                 Program.frmXeRa.Validate();
                 Program.frmXeRa.Show();
@@ -68,7 +66,7 @@ namespace DA_PhanMemBaiGiuXe
 
         private void xemLịchSửGửiXeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cam.Stop();
+
             Program.lsgx = new LichSuRaVao();
             if (Program.lsgx != null)
             {
@@ -85,7 +83,6 @@ namespace DA_PhanMemBaiGiuXe
 
         private void xemTinhTrangTheToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cam.Stop();
             Program.xemthe = new XemThe();
             if (Program.xemthe != null)
             {
