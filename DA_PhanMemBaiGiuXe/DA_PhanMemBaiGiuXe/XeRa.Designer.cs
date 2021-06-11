@@ -175,11 +175,11 @@
             // userControl12
             // 
             this.userControl12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.userControl12.Gio = "4:01:03 PM";
+            this.userControl12.Gio = "3:58:57 PM";
             this.userControl12.Location = new System.Drawing.Point(1198, 159);
             this.userControl12.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.userControl12.Name = "userControl12";
-            this.userControl12.Ngay = "06/07/2021";
+            this.userControl12.Ngay = "06/11/2021";
             this.userControl12.Size = new System.Drawing.Size(110, 142);
             this.userControl12.TabIndex = 7;
             // 
