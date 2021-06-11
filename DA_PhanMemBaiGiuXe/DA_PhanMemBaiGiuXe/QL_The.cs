@@ -32,6 +32,5 @@ namespace DA_PhanMemBaiGiuXe
             var The = from the in data.TheXes select new { MaThe = the.MaThe, TinhTrang = the.TinhTrang };
             this.dataGridView1.DataSource = The;
         }
-
     }
 }

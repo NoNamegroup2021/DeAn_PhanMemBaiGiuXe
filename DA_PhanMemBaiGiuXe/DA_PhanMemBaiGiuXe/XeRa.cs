@@ -144,5 +144,10 @@ namespace DA_PhanMemBaiGiuXe
         {
 
         }
+
+        private void userControl12_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
