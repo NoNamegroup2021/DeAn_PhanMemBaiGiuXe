@@ -99,7 +99,10 @@ namespace DA_PhanMemBaiGiuXe
                             if (QLXEV.LuuGiaoTac(txt_MaThe.Text, txt_BienSo.Text, DateTime.Parse(userControl11.Ngay + " " + userControl11.Gio), tenDN, 1))
                             {
                                 QLXEV.SetTT(txt_MaThe.Text);
-                                MessageBox.Show("Thêm thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                //MessageBox.Show("Thêm thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                label3.BackColor = Color.LightGreen;
+                                label3.Text = "Thanh Cong";
                             }
 
                         }

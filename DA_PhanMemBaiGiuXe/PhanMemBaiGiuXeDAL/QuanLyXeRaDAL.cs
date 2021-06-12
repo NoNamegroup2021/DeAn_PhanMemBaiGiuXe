@@ -55,6 +55,19 @@ namespace PhanMemBaiGiuXeDAL
                 return false;
             }
         }
+
+        public void SetTT(string ma)
+        {
+            TheXe bt = HTBGX.TheXes.Where(t => t.MaThe == ma).SingleOrDefault();
+            bt.TinhTrang = false;
+            HTBGX.SubmitChanges();
+        }
+
+        public TheXe ktTinhTrang(string ma)
+        {
+            TheXe bt = HTBGX.TheXes.Where(t => t.MaThe == ma).SingleOrDefault();
+            return bt;
+        }
     }
 
 }

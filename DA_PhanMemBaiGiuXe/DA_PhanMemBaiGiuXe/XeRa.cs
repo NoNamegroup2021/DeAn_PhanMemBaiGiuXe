@@ -17,7 +17,7 @@ namespace DA_PhanMemBaiGiuXe
 {
     public partial class XeRa : Form
     {
-        QuanLyXeVaoBLL QLXEV = new QuanLyXeVaoBLL();
+        QuanLyXeRaBLL QLXR = new QuanLyXeRaBLL();
         private FilterInfoCollection dscam;
         private VideoCaptureDevice cam;
         CascadeClassifier carLicense_class;
@@ -110,10 +110,67 @@ namespace DA_PhanMemBaiGiuXe
                 cam.Stop();
         }
 
-        private void XeRa_Leave(object sender, EventArgs e)
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
+            try
+            {
 
+                if (e.KeyChar == 13)
+                {
+                    if (rects != null && rects.Count() > 0)
+                    {
+                        var boundingBox = rects[rects.Count() - 1];
+
+                        Bitmap src = pictureBox1.Image as Bitmap;
+                        Bitmap crop = new Bitmap(boundingBox.Width, boundingBox.Height);
+
+
+                        using (Graphics g = Graphics.FromImage(crop))
+                        {
+                            g.DrawImage(src, new Rectangle(0, 0, crop.Width, crop.Height), boundingBox, GraphicsUnit.Pixel);
+                        }
+
+
+                        Image<Bgr, Byte> img_cropped = new Image<Bgr, byte>(crop);
+                        img_cropped = resizeImage(img_cropped, pictureBox2.Width, pictureBox2.Height);
+                        pictureBox2.Image = img_cropped.ToBitmap();
+                    }
+                    if (String.IsNullOrEmpty(txt_MaThe.Text) || String.IsNullOrEmpty(txt_BienSo.Text))
+                    {
+
+                    }
+                    else
+                    {
+                        //BangThe the = data.BangThes.Where(t => t.MaThe == textBox1.Text).SingleOrDefault();
+                        bool kq = QLXR.ktTinhTrang(txt_MaThe.Text).TinhTrang;
+
+                        if (kq == true)
+                        {
+                            if (QLXR.SuaLoaiGiaoTac(txt_MaThe.Text, DateTime.Parse(userControl12.Ngay + " " + userControl12.Gio), tenDN))
+                            {
+                                QLXR.SetTT(txt_MaThe.Text);
+                                //MessageBox.Show("Thêm thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                label1.BackColor = Color.LightGreen;
+                                label1.Text = "Thanh Cong";
+                            }
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Tinh trang false");
+                        }
+                    }
+                    txt_MaThe.Text = "";
+                    txt_BienSo.Text = "";
+                    txt_MaThe.Focus();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
-
     }
 }

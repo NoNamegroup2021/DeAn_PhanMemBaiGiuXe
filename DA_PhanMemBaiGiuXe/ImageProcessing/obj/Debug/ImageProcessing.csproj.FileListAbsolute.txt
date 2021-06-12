@@ -67,3 +67,11 @@ D:\Nhan_Folder\DA_CNPM\DA2\DA_PhanMemBaiGiuXe\ImageProcessing\obj\Debug\ImagePro
 D:\Nhan_Folder\DA_CNPM\DA2\DA_PhanMemBaiGiuXe\ImageProcessing\obj\Debug\ImageProcessing.csproj.CopyComplete
 D:\Nhan_Folder\DA_CNPM\DA2\DA_PhanMemBaiGiuXe\ImageProcessing\obj\Debug\ImageProcessing.exe
 D:\Nhan_Folder\DA_CNPM\DA2\DA_PhanMemBaiGiuXe\ImageProcessing\obj\Debug\ImageProcessing.pdb
+C:\Users\luhoa\Desktop\DoAn_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\ImageProcessing\bin\Debug\ImageProcessing.exe.config
+C:\Users\luhoa\Desktop\DoAn_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\ImageProcessing\bin\Debug\ImageProcessing.exe
+C:\Users\luhoa\Desktop\DoAn_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\ImageProcessing\bin\Debug\ImageProcessing.pdb
+C:\Users\luhoa\Desktop\DoAn_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\ImageProcessing\obj\Debug\ImageProcessing.csprojAssemblyReference.cache
+C:\Users\luhoa\Desktop\DoAn_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\ImageProcessing\obj\Debug\ImageProcessing.csproj.CoreCompileInputs.cache
+C:\Users\luhoa\Desktop\DoAn_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\ImageProcessing\obj\Debug\ImageProcessing.csproj.CopyComplete
+C:\Users\luhoa\Desktop\DoAn_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\ImageProcessing\obj\Debug\ImageProcessing.exe
+C:\Users\luhoa\Desktop\DoAn_CNPM\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\ImageProcessing\obj\Debug\ImageProcessing.pdb

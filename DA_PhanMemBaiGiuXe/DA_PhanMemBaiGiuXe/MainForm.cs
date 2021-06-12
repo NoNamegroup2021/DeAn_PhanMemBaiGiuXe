@@ -95,7 +95,10 @@ namespace DA_PhanMemBaiGiuXe
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
  
-            LTT.SuaTTDN(tenDN, DateTime.Parse(dateDN), DateTime.Parse(DateTime.Now.ToString()));
+            if(LTT.SuaTTDN(tenDN, DateTime.Parse(dateDN), DateTime.Parse(DateTime.Now.ToString()))==true)
+            {
+                MessageBox.Show("Luu thanh cong");
+            }
 
         }
 

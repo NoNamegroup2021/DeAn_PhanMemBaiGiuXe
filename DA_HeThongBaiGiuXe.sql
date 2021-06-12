@@ -136,4 +136,12 @@ insert into LoaiGiaoTac
 values 
 (1,N'Gửi Xe'),
 (2,N'Lấy Xe')
+
+insert into TheXe
+values 
+('T1',0),
+('T2',0),
+('T3',0),
+('T4',0),
+('T5',0)
 select * from TaiKhoan

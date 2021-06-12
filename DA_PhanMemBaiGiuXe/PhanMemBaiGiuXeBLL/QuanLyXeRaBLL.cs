@@ -24,5 +24,15 @@ namespace PhanMemBaiGiuXeBLL
         {
             return QLXR.SuaLoaiGiaoTac(mathe, thoigian, tentk);
         }
+
+        public void SetTT(string ma)
+        {
+            QLXR.SetTT(ma);
+        }
+
+        public TheXe ktTinhTrang(string ma)
+        {
+            return QLXR.ktTinhTrang(ma);
+        }
     }
 }

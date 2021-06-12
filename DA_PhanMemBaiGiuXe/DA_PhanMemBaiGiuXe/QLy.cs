@@ -98,7 +98,16 @@ namespace DA_PhanMemBaiGiuXe
 
         private void xemLịchSửĐăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Program.lsdn = new LichSuDangNhap();
+            if (Program.lsdn != null)
+            {
+                this.panel1.Controls.Clear();
+                Program.lsdn.TopLevel = false;
+                Program.lsdn.Dock = DockStyle.Fill;
+                this.panel1.Controls.Add(Program.lsdn);
+                Program.lsdn.Validate();
+                Program.lsdn.Show();
+            }
         }
     }
 }

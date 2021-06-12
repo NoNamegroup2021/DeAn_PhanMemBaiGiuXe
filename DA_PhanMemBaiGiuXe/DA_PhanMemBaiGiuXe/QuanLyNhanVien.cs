@@ -29,6 +29,8 @@ namespace DA_PhanMemBaiGiuXe
         }
         private void QuanLyNhanVien_Load(object sender, EventArgs e)
         {
+            int day = DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month);
+            txtNS.MaxDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, day);
             reload();
         }
 
@@ -36,13 +38,6 @@ namespace DA_PhanMemBaiGiuXe
         {
             try
             {
-                //string manv = dataGridView1.SelectedCells[0].OwningRow.Cells["Column1"].Value.ToString();
-                //string tennv = dataGridView1.SelectedCells[0].OwningRow.Cells["Column2"].Value.ToString();
-                //string gt = dataGridView1.SelectedCells[0].OwningRow.Cells["Column3"].Value.ToString();
-                //string sdt = dataGridView1.SelectedCells[0].OwningRow.Cells["Column4"].Value.ToString();
-                //string ns = dataGridView1.SelectedCells[0].OwningRow.Cells["Column5"].Value.ToString();
-                //string diachi = dataGridView1.SelectedCells[0].OwningRow.Cells["Column6"].Value.ToString();
-                //string socmnd = dataGridView1.SelectedCells[0].OwningRow.Cells["Column7"].Value.ToString();
                 string manv = txtMaNV.Text;
                 string tennv = txtTenNV.Text;
                 string gt = txtGT.Text;
@@ -111,7 +106,11 @@ namespace DA_PhanMemBaiGiuXe
 
         private void btnDong_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult r = MessageBox.Show("Xác nhận thoát chương trình ", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+            if (r == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -152,19 +151,6 @@ namespace DA_PhanMemBaiGiuXe
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            /* if(e.RowIndex >= 0){
-                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
-                 txtMaNV.Text = row.Cells[0].Value.ToString();
-                 txtTenNV.Text = row.Cells[1].Value.ToString();
-                 txtGT.Text = row.Cells[3].Value.ToString();
-                 txtSDT.Text = row.Cells[4].Value.ToString();
-                 txtNS.Text = row.Cells[5].Value.ToString();
-                 txtDiaChi.Text = row.Cells[6].Value.ToString();
-                 txtCMND.Text = row.Cells[7].Value.ToString();
-                 txtMaNV.Enabled = false;
-
-             }*/
-
             try
             {
                 txtMaNV.Text = dataGridView1.SelectedCells[0].OwningRow.Cells["Column1"].FormattedValue.ToString();
@@ -175,26 +161,52 @@ namespace DA_PhanMemBaiGiuXe
                 txtDiaChi.Text = dataGridView1.SelectedCells[0].OwningRow.Cells["Column6"].FormattedValue.ToString();
                 txtCMND.Text = dataGridView1.SelectedCells[0].OwningRow.Cells["Column7"].FormattedValue.ToString();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("");
-            }
-            //if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
-            //{
-            //    dataGridView1.CurrentCell.Selected = true;
-            //    txtMaNV.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            //    txtTenNV.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            //    txtGT.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            //    txtSDT.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            //    txtNS.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-            //    txtDiaChi.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-            //    txtCMND.Text = dataGridView1.Rows[e.RowIndex].Cells[7].FormattedValue.ToString();
-            //}
+            catch { }
+           
         }
 
         private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.Cancel = true;
+        }
+
+
+        private void txtCMND_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == (char)8))
+                e.Handled = true;
+            /*if (!char.IsNumber(e.KeyChar))
+             {
+                 MessageBox.Show("Chỉ nhập kí tự số");
+                 e.Handled = true;
+             }*/
+        }
+
+        private void txtTenNV_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar >= '0' && e.KeyChar <= '9' )
+                e.Handled = true;
+            /*if (!((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar == ' ') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar == (char)8))
+                e.Handled = true;*/
+        }
+
+        private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == (char)8))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtNS_ValueChanged(object sender, EventArgs e)
+        {
+            int now = int.Parse(DateTime.Now.ToString("yyyyMMdd"));
+            int dob = int.Parse(txtNS.Value.ToString("yyyyMMdd"));
+            int age = (now - dob) / 10000;
+            if (age < 18)
+            {
+                MessageBox.Show("Tuổi phải lớn hơn 18");
+            }
         }
     }
 }

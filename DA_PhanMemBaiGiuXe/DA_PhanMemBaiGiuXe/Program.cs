@@ -25,12 +25,13 @@ namespace DA_PhanMemBaiGiuXe
         public static QuanLyNhanVien qlnv = null;
         public static XemThe xemthe = null;
         public static LichSuRaVao lsgx = null;
+        public static LichSuDangNhap lsdn = null;
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Welcome());
+            Application.Run(new FrLogin());
         }
     }
 }
