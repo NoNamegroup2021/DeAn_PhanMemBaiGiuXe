@@ -33,7 +33,6 @@ namespace DA_PhanMemBaiGiuXe
             this.quảnLýTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xemLịchSửĐăngNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lậpBiênBảnXửLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thẻToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -48,7 +47,6 @@ namespace DA_PhanMemBaiGiuXe
             this.quảnLýTàiKhoảnToolStripMenuItem,
             this.quảnLýNhânViênToolStripMenuItem,
             this.xemLịchSửĐăngNhậpToolStripMenuItem,
-            this.thốngKêToolStripMenuItem,
             this.lậpBiênBảnXửLýToolStripMenuItem,
             this.thẻToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -79,13 +77,6 @@ namespace DA_PhanMemBaiGiuXe
             this.xemLịchSửĐăngNhậpToolStripMenuItem.Size = new System.Drawing.Size(221, 29);
             this.xemLịchSửĐăngNhậpToolStripMenuItem.Text = "Xem Lịch Sử Đăng Nhập";
             this.xemLịchSửĐăngNhậpToolStripMenuItem.Click += new System.EventHandler(this.xemLịchSửĐăngNhậpToolStripMenuItem_Click);
-            // 
-            // thốngKêToolStripMenuItem
-            // 
-            this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(103, 29);
-            this.thốngKêToolStripMenuItem.Text = "Thống Kê";
-            this.thốngKêToolStripMenuItem.Click += new System.EventHandler(this.thốngKêToolStripMenuItem_Click);
             // 
             // lậpBiênBảnXửLýToolStripMenuItem
             // 
@@ -134,7 +125,6 @@ namespace DA_PhanMemBaiGiuXe
         private System.Windows.Forms.ToolStripMenuItem quảnLýNhânViênToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quảnLýTàiKhoảnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xemLịchSửĐăngNhậpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thốngKêToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lậpBiênBảnXửLýToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStripMenuItem thẻToolStripMenuItem;

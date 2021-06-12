@@ -34,5 +34,9 @@ namespace PhanMemBaiGiuXeBLL
         {
             return QLXR.ktTinhTrang(ma);
         }
+        public string bienSo(string ma)
+        {
+            return QLXR.getBienSo(ma);
+        }
     }
 }

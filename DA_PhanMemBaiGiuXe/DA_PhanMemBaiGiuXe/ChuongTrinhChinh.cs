@@ -64,22 +64,6 @@ namespace DA_PhanMemBaiGiuXe
 
         }
 
-        private void xemLịchSửGửiXeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            Program.lsgx = new LichSuRaVao();
-            if (Program.lsgx != null)
-            {
-                this.panel1.Controls.Clear();
-                Program.lsgx.TopLevel = false;
-                Program.lsgx.Dock = DockStyle.Fill;
-                Program.lsgx.TenDN = tendn;
-                this.panel1.Controls.Add(Program.lsgx);
-                Program.lsgx.Validate();
-                Program.lsgx.Show();
-
-            }
-        }
 
         private void xemTinhTrangTheToolStripMenuItem_Click(object sender, EventArgs e)
         {

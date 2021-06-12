@@ -98,6 +98,10 @@ namespace DA_PhanMemBaiGiuXe
             if(LTT.SuaTTDN(tenDN, DateTime.Parse(dateDN), DateTime.Parse(DateTime.Now.ToString()))==true)
             {
                 MessageBox.Show("Luu thanh cong");
+                if (Program.login == null)
+                    Program.login = new FrLogin();
+                this.Hide();
+                Program.login.Show();
             }
 
         }

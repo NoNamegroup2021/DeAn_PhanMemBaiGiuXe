@@ -27,7 +27,10 @@ namespace PhanMemBaiGiuXeBLL
 
         public TheXe ktTinhTrang(string ma)
         {
-            return QLXV.ktTinhTrang(ma);
+            if (QLXV.ktTinhTrang(ma) != null)
+                return QLXV.ktTinhTrang(ma);
+            else
+                return null;
         }
 
         public bool ktKhoaChinh(string ma, string bienso)
@@ -39,6 +42,10 @@ namespace PhanMemBaiGiuXeBLL
         public bool LuuGiaoTac(string maThe, string bienso, DateTime thoigian, string tenNV, int loaigt)
         {
             return QLXV.LuuGiaoTac(maThe, bienso, thoigian, tenNV, loaigt);
+        }
+        public int getCountKH()
+        {
+            return QLXV.count();
         }
     }
 }

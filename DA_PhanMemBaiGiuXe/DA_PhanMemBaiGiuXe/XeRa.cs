@@ -12,6 +12,8 @@ using AForge.Video.DirectShow;
 using Emgu.CV;
 using Emgu.CV.Structure;
 using PhanMemBaiGiuXeBLL;
+using System.Drawing.Imaging;
+using System.IO;
 
 namespace DA_PhanMemBaiGiuXe
 {
@@ -85,12 +87,6 @@ namespace DA_PhanMemBaiGiuXe
                 }
             }
         }
-        private Mat medianSmooth(Image<Gray, Byte> img)
-        {
-            Mat src = img.Mat;
-            CvInvoke.MedianBlur(src, src, 3);
-            return src;
-        }
         private Image<Bgr, Byte> resizeImage(Image<Bgr, Byte> original, int width, int height)
         {
             Image<Bgr, Byte> img_resized = original.Resize(width, height, Emgu.CV.CvEnum.Inter.Linear);
@@ -118,58 +114,75 @@ namespace DA_PhanMemBaiGiuXe
 
                 if (e.KeyChar == 13)
                 {
-                    if (rects != null && rects.Count() > 0)
-                    {
-                        var boundingBox = rects[rects.Count() - 1];
+                    timer1.Enabled = false;
 
-                        Bitmap src = pictureBox1.Image as Bitmap;
-                        Bitmap crop = new Bitmap(boundingBox.Width, boundingBox.Height);
-
-
-                        using (Graphics g = Graphics.FromImage(crop))
-                        {
-                            g.DrawImage(src, new Rectangle(0, 0, crop.Width, crop.Height), boundingBox, GraphicsUnit.Pixel);
-                        }
-
-
-                        Image<Bgr, Byte> img_cropped = new Image<Bgr, byte>(crop);
-                        img_cropped = resizeImage(img_cropped, pictureBox2.Width, pictureBox2.Height);
-                        pictureBox2.Image = img_cropped.ToBitmap();
-                    }
-                    if (String.IsNullOrEmpty(txt_MaThe.Text) || String.IsNullOrEmpty(txt_BienSo.Text))
-                    {
-
-                    }
-                    else
-                    {
                         //BangThe the = data.BangThes.Where(t => t.MaThe == textBox1.Text).SingleOrDefault();
                         bool kq = QLXR.ktTinhTrang(txt_MaThe.Text).TinhTrang;
 
                         if (kq == true)
                         {
-                            if (QLXR.SuaLoaiGiaoTac(txt_MaThe.Text, DateTime.Parse(userControl12.Ngay + " " + userControl12.Gio), tenDN))
+                            string bienso = QLXR.bienSo(txt_MaThe.Text.Trim().ToString());
+                            txt_BienSo.Text = bienso;
+                            pictureBox3.Image = Image.FromFile(bienso);
+                            if (pictureBox3.Image != null && pictureBox2.Image != null)
                             {
-                                QLXR.SetTT(txt_MaThe.Text);
-                                //MessageBox.Show("Thêm thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                DialogResult r = MessageBox.Show("Biển số chính xác hay không", "Xác nhận biển số xe", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                if (r == DialogResult.Yes)
+                                {
+                                    if (QLXR.SuaLoaiGiaoTac(txt_MaThe.Text, DateTime.Parse(userControl12.Ngay + " " + userControl12.Gio), tenDN))
+                                    {
+                                        QLXR.SetTT(txt_MaThe.Text);
+                                        //MessageBox.Show("Thêm thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                       
+                                    }
+                                }
+                                else
+                                {
 
-                                label1.BackColor = Color.LightGreen;
-                                label1.Text = "Thanh Cong";
+                                    return;
+                                }
+
                             }
-
+                            else
+                            {
+                                MessageBox.Show("Tinh trang false");
+                            }
                         }
-                        else
-                        {
-                            MessageBox.Show("Tinh trang false");
-                        }
-                    }
-                    txt_MaThe.Text = "";
-                    txt_BienSo.Text = "";
-                    txt_MaThe.Focus();
+                        pictureBox2.Image = null;
+                        pictureBox3.Image = null;
+                        timer1.Enabled = true;
+                        txt_MaThe.Text = "";
+                        txt_BienSo.Text = "";
+                        txt_BienSo.Focus();
+                        label1.BackColor = Color.Red;
+                    
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void txt_MaThe_Enter(object sender, EventArgs e)
+        {
+            int count = rects_area.Count();
+            if (count > 0)
+            {
+                var boundingBox = rects_area[count - 1];
+
+                Bitmap src = pictureBox1.Image as Bitmap;
+                Bitmap crop = new Bitmap(boundingBox.Width, boundingBox.Height);
+                using (Graphics g = Graphics.FromImage(crop))
+                {
+                    g.DrawImage(src, new Rectangle(0, 0, crop.Width, crop.Height), boundingBox, GraphicsUnit.Pixel);
+                }
+                Image<Bgr, Byte> img_crop = new Image<Bgr, byte>(crop);
+                img_crop = resizeImage(img_crop, pictureBox2.Width, pictureBox2.Height);
+                Bitmap bm = img_crop.ToBitmap();
+                pictureBox2.Image = bm;
+                pictureBox2.Invalidate();
+
             }
         }
     }

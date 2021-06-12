@@ -16,7 +16,8 @@ using Emgu.Util;
 using Emgu.CV.Util;
 using Emgu.CV.Structure;
 using ImageProcessing;
-
+using System.Drawing.Imaging;
+using System.IO;
 
 namespace DA_PhanMemBaiGiuXe
 {
@@ -28,6 +29,7 @@ namespace DA_PhanMemBaiGiuXe
         private List<Rectangle> rects = new List<Rectangle>();
         private string tenDN;
         private Rectangle[] rects_area;
+        int numKH;
         public string TenDN
         {
             get { return tenDN; }
@@ -44,6 +46,7 @@ namespace DA_PhanMemBaiGiuXe
             cam = new VideoCaptureDevice(dscam[0].MonikerString);
             cam.NewFrame += Cam_NewFrame;
             cam.Start();
+            txt_BienSo.Focus();
         }
 
 
@@ -60,27 +63,9 @@ namespace DA_PhanMemBaiGiuXe
         {
             try
             {
-
-                if (e.KeyChar == 13)
+                timer1.Enabled = false;
+                if (e.KeyChar == 13  && txt_BienSo.Text.Trim().Length >0)
                 {
-                    if (rects != null && rects.Count() > 0)
-                    {
-                        var boundingBox = rects[rects.Count() - 1];
-
-                        Bitmap src = pictureBox1.Image as Bitmap;
-                        Bitmap crop = new Bitmap(boundingBox.Width, boundingBox.Height);
-
-
-                        using (Graphics g = Graphics.FromImage(crop))
-                        {
-                            g.DrawImage(src, new Rectangle(0, 0, crop.Width, crop.Height), boundingBox, GraphicsUnit.Pixel);
-                        }
-
-
-                        Image<Bgr, Byte> img_cropped = new Image<Bgr, byte>(crop);
-                        img_cropped = resizeImage(img_cropped, pictureBox2.Width, pictureBox2.Height);
-                        pictureBox2.Image = img_cropped.ToBitmap();
-                    }
                     if (String.IsNullOrEmpty(txt_MaThe.Text) || String.IsNullOrEmpty(txt_BienSo.Text))
                     {
 
@@ -92,17 +77,23 @@ namespace DA_PhanMemBaiGiuXe
                     else
                     {
                         //BangThe the = data.BangThes.Where(t => t.MaThe == textBox1.Text).SingleOrDefault();
-                        bool kq = QLXEV.ktTinhTrang(txt_MaThe.Text).TinhTrang;
-
+                        bool kq;
+                        if (QLXEV.ktTinhTrang(txt_MaThe.Text) != null)
+                            kq = QLXEV.ktTinhTrang(txt_MaThe.Text).TinhTrang;
+                        else
+                            kq = true;
                         if (kq == false)
                         {
-                            if (QLXEV.LuuGiaoTac(txt_MaThe.Text, txt_BienSo.Text, DateTime.Parse(userControl11.Ngay + " " + userControl11.Gio), tenDN, 1))
+                            string bienso = txt_BienSo.Text.Trim().ToString();
+                            bienso.Replace("\r", "");
+                            bienso.Replace("\n", "");
+                            if (QLXEV.LuuGiaoTac(txt_MaThe.Text, bienso, DateTime.Parse(userControl11.Ngay + " " + userControl11.Gio), tenDN, 1))
                             {
                                 QLXEV.SetTT(txt_MaThe.Text);
                                 //MessageBox.Show("Thêm thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                 label3.BackColor = Color.LightGreen;
-                                label3.Text = "Thanh Cong";
+                                MessageBox.Show("Them thanh cong");
                             }
 
                         }
@@ -111,14 +102,19 @@ namespace DA_PhanMemBaiGiuXe
                             MessageBox.Show("Tinh trang true");
                         }
                     }
+                    pictureBox2.Image = null;
+                    timer1.Enabled = true;
                     txt_MaThe.Text = "";
                     txt_BienSo.Text = "";
-                    txt_MaThe.Focus();
+                    txt_BienSo.Focus();
+                    label3.BackColor = Color.Red;
+                    numKH++;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+                return;
             }
         }
 
@@ -131,35 +127,15 @@ namespace DA_PhanMemBaiGiuXe
             //cam = Program.ctr.Cam;
             //cam.NewFrame += Cam_NewFrame;
             //cam.Start();
+            numKH =  QLXEV.getCountKH();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             rects_area = ImageProcessing.DetectPlate.detect(pictureBox1.Image);
+            
         }
 
-        private void XeVao_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)13 && pictureBox1.Image != null)
-            {
-                int count = rects_area.Count();
-                if (count > 0)
-                {
-                    var boundingBox = rects_area[count - 1];
-
-                    Bitmap src = pictureBox1.Image as Bitmap;
-                    Bitmap crop = new Bitmap(boundingBox.Width, boundingBox.Height);
-                    using (Graphics g = Graphics.FromImage(crop))
-                    {
-                        g.DrawImage(src, new Rectangle(0, 0, crop.Width, crop.Height), boundingBox, GraphicsUnit.Pixel);
-                    }
-
-
-                    pictureBox2.Image = crop;
-                    pictureBox2.Invalidate();
-                }
-            }
-        }
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
@@ -192,6 +168,43 @@ namespace DA_PhanMemBaiGiuXe
             this.Hide();
             if (cam.IsRunning || cam != null)
                 cam.Stop();
+        }
+        private void txt_BienSo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13 && pictureBox1.Image != null)
+            {
+                int count = rects_area.Count();
+                if (count > 0)
+                {
+                    var boundingBox = rects_area[count - 1];
+
+                    Bitmap src = pictureBox1.Image as Bitmap;
+                    Bitmap crop = new Bitmap(boundingBox.Width, boundingBox.Height);
+                    using (Graphics g = Graphics.FromImage(crop))
+                    {
+                        g.DrawImage(src, new Rectangle(0, 0, crop.Width, crop.Height), boundingBox, GraphicsUnit.Pixel);
+                    }
+                    Image<Bgr, Byte> img_crop = new Image<Bgr, byte>(crop);
+                    img_crop = resizeImage(img_crop, pictureBox2.Width, pictureBox2.Height);
+                    Bitmap bm = img_crop.ToBitmap();
+                    pictureBox2.Image = bm;
+                    pictureBox2.Invalidate();
+
+                    var filename = Directory.GetCurrentDirectory() + @"\result";
+                    using (var mem = new MemoryStream())
+                    {
+                        Image src_img = pictureBox2.Image;
+                        Bitmap src_bm = src_img as Bitmap;
+                        src_bm.Save(mem, ImageFormat.Jpeg);
+                        var img = Image.FromStream(mem);
+                        numKH++;
+                        string bien = @"\KH" + numKH + ".jpg";
+                        string file_img = filename + @"\KH" + numKH  + ".jpg";
+                        img.Save(file_img);
+                        txt_BienSo.Text = file_img;
+                    }
+                }
+            }
         }
     }
 }

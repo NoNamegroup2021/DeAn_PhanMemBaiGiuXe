@@ -45,7 +45,14 @@ namespace PhanMemBaiGiuXeDAL
         }
         public int count()
         {
-            return HTBGX.ChiTietLanXes.Count();
+            try
+            {
+                return HTBGX.ChiTietLanXes.Count();
+            }
+            catch
+            {
+                return 0;
+            }
         }
 
         public bool LuuGiaoTac(string maThe, string bienso, DateTime thoigian, string tenNV, int loaigt)

@@ -24,14 +24,13 @@ namespace DA_PhanMemBaiGiuXe
         public static QL_The the= null;
         public static QuanLyNhanVien qlnv = null;
         public static XemThe xemthe = null;
-        public static LichSuRaVao lsgx = null;
         public static LichSuDangNhap lsdn = null;
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrLogin());
+            Application.Run(new XeRa());
         }
     }
 }

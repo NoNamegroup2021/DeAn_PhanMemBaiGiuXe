@@ -2,7 +2,6 @@
 go
 use QL_HeThongBaiGiuXe
 go
-
 drop database QL_HeThongBaiGiuXe
 create table NhanVien
 (
@@ -67,7 +66,7 @@ create table ChiTietTheXe
 create table KhachHang
 (
 	MaKH int IDENTITY(1,1),
-	BienSo nvarchar(21),
+	BienSo nvarchar(300),
 	Constraint PK_KH primary key (MaKH)
 )
 
@@ -118,10 +117,12 @@ values
 ('QL01',N'Nguyễn Văn Thảo',N'Nam','0123456789116','01/01/2000',N'Bình Tân',null),
 ('QL02',N'Tô Đình Nhân',N'Nam','0123456789117','19/06/1997',N'Quận 4',null),
 ('QL03',N'Vũ Hoàng Thiên Ân',N'Nam','0123456789118','21/05/2000',N'Bình Tân',null)
+
 insert into LoaiTK
 values
 (1,N'Nhân viên'),
 (2,N'Quản lý')
+
 set dateformat dmy 
 insert into TaiKhoan
 values
@@ -131,10 +132,12 @@ values
 ('tuyen','123','NV03','01/01/2020',1),
 ('an','456','QL03','01/01/2020',2),
 ('quy','789','NV01','01/01/2020',1)
+
 insert into LanXe
 values 
 (1,N'Gửi Xe'),
 (2,N'Lấy Xe')
+
 go
 insert into TheXe
 values 
@@ -143,4 +146,8 @@ values
 ('T3',0),
 ('T4',0),
 ('T5',0)
-select * from TaiKhoan
+
+use QL_HeThongBaiGiuXe
+select * from ChiTietLanXe
+select * from TheXe
+select * from KhachHang

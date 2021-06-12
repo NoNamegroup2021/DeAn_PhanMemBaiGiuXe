@@ -68,6 +68,20 @@ namespace PhanMemBaiGiuXeDAL
             TheXe bt = HTBGX.TheXes.Where(t => t.MaThe == ma).SingleOrDefault();
             return bt;
         }
+        public string getBienSo(string ma)
+        {
+            try
+            {
+                ChiTietLanXe ct_lx = HTBGX.ChiTietLanXes.Where(t => t.MaThe == ma).SingleOrDefault();
+                KhachHang kh = ct_lx.KhachHang;
+                return kh.BienSo;
+
+            }
+            catch
+            {
+                return "";
+            }
+        }
     }
 
 }

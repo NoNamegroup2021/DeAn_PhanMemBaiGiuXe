@@ -94,7 +94,7 @@ namespace DA_PhanMemBaiGiuXe
             DialogResult r = MessageBox.Show("Xác nhận thoát chương trình ", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
             if (r == DialogResult.Yes)
             {
-                this.Close();
+                this.Dispose();
             }
         }
         private void checkEmptyText(object sender, EventArgs e)
