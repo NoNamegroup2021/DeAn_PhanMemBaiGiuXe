@@ -21,7 +21,7 @@ namespace PhanMemBaiGiuXeDAL
                 TheXe the = HTBGX.TheXes.Where(t => t.MaThe == mathe).SingleOrDefault();
                 if (the.TinhTrang == true)
                 {
-                    GiaoTac tx = HTBGX.GiaoTacs.Where(t => t.MaThe == mathe && t.KhachHang.BienSo == bienso).SingleOrDefault();
+                    ChiTietLanXe tx = HTBGX.ChiTietLanXes.Where(t => t.MaThe == mathe && t.KhachHang.BienSo == bienso).SingleOrDefault();
                     if (tx == null)
                         return false;
                     else
@@ -41,10 +41,10 @@ namespace PhanMemBaiGiuXeDAL
         {
             try
             {
-                GiaoTac gt = HTBGX.GiaoTacs.Where(t => t.MaThe == mathe).SingleOrDefault();
+                ChiTietLanXe gt = HTBGX.ChiTietLanXes.Where(t => t.MaThe == mathe).SingleOrDefault();
                 gt.TenTaiKhoan = tentk;
                 gt.MaKH = gt.MaKH;
-                gt.MaLoaiGiaoTac = 2;
+                gt.MaLoaiLanXe = 2;
                 gt.ThoiGIan = thoigian;
                 HTBGX.SubmitChanges();
                 return true;

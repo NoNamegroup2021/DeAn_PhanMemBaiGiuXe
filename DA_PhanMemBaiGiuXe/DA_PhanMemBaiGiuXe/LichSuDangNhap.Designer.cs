@@ -128,6 +128,7 @@ namespace DA_PhanMemBaiGiuXe
             this.Load += new System.EventHandler(this.LichSuDangNhap_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

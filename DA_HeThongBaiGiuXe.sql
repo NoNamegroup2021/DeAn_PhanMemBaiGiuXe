@@ -38,14 +38,14 @@ create table TaiKhoan
 
 create table DangNhap
 (
-	TenTaiKhoan varchar(30) not null primary key,
+	TenTaiKhoan varchar(30) not null,
 	ThoiGianDangNhap datetime,
 	ThoiGianDangXuat datetime,
 	Constraint FK_DangNhap foreign key (TenTaiKhoan) references TaiKhoan(TenTaiKhoan)
 )
 alter table DangNhap
-ADD IDDN int IDENTITY (1,1)
-
+ADD IDDN int IDENTITY (1,1) primary key
+go
 create table TheXe
 (
 	MaThe varchar(30) not null,
@@ -53,7 +53,7 @@ create table TheXe
 	Constraint PK_TheXe primary key (MaThe)
 )
 
-create table QuanLyTheXe
+create table ChiTietTheXe
 (
 	IDQLy int IDENTITY (1,1),
 	TenTaiKhoan varchar(30) not null,
@@ -71,26 +71,26 @@ create table KhachHang
 	Constraint PK_KH primary key (MaKH)
 )
 
-create table LoaiGiaoTac
+create table LanXe
 (
-	MaGiaoTac int primary key,
-	TenGiaoTac nvarchar(30)
+	MaLanXe int primary key,
+	TenLanXe nvarchar(30)
 
 )
 
-create table GiaoTac
+create table ChiTietLanXe
 (
-	MaGiaoTac int IDENTITY (1,1),
+	MaLanXe int IDENTITY (1,1),
 	MaThe varchar(30),
 	TenTaiKhoan varchar(30),
 	MaKH int,
-	MaLoaiGiaoTac int,
+	MaLoaiLanXe int,
 	ThoiGIan date,
-	Constraint PK_GiaoTac primary key (MaGiaoTac),
-	Constraint FK_GiaoTac_The foreign key (MaThe) references TheXe(MaThe),
-	Constraint FK_GiaoTac_TK foreign key (TenTaiKhoan) references TaiKhoan(TenTaiKhoan),
-	Constraint FK_GiaoTac_KH foreign key (MaKH) references KhachHang(MaKH),
-	Constraint FK_GiaoTac_Loai foreign key (MaLoaiGiaoTac) references LoaiGiaoTac(MaGiaoTac)
+	Constraint PK_LanXe primary key (MaLanXe),
+	Constraint FK_LanXe_The foreign key (MaThe) references TheXe(MaThe),
+	Constraint FK_LanXe_TK foreign key (TenTaiKhoan) references TaiKhoan(TenTaiKhoan),
+	Constraint FK_LanXe_KH foreign key (MaKH) references KhachHang(MaKH),
+	Constraint FK_LanXe_Loai foreign key (MaLoaiLanXe) references LanXe(MaLanXe)
 )
 
 create table NgoaiLe
@@ -107,8 +107,7 @@ create table NgoaiLe
 	Constraint PK_NgoaiLe primary key (MaNL,MaKH,TenNV),
 	Constraint FK_NgoaiLe_KH foreign key (MaKH) references KhachHang(MaKH),
 )
-alter table NgoaiLe
-alter column ThoiGian dateTime
+
 
 set dateformat dmy 
 insert into NhanVien
@@ -132,11 +131,11 @@ values
 ('tuyen','123','NV03','01/01/2020',1),
 ('an','456','QL03','01/01/2020',2),
 ('quy','789','NV01','01/01/2020',1)
-insert into LoaiGiaoTac
+insert into LanXe
 values 
 (1,N'Gửi Xe'),
 (2,N'Lấy Xe')
-
+go
 insert into TheXe
 values 
 ('T1',0),

@@ -16,7 +16,7 @@ namespace PhanMemBaiGiuXeDAL
 
         public IQueryable load()
         {
-            IQueryable kq = HTBGX.GiaoTacs.Select(t => t);
+            IQueryable kq = HTBGX.ChiTietLanXes.Select(t => t);
             return kq;
         }
 
@@ -36,7 +36,7 @@ namespace PhanMemBaiGiuXeDAL
         public bool ktKhoaChinh(string ma, string bienso)
         {
 
-            GiaoTac qx = HTBGX.GiaoTacs.Where(t => t.MaThe == ma && t.KhachHang.BienSo == bienso).SingleOrDefault();
+            ChiTietLanXe qx = HTBGX.ChiTietLanXes.Where(t => t.MaThe == ma && t.KhachHang.BienSo == bienso).SingleOrDefault();
             if (qx != null)
             {
                 return false;
@@ -45,7 +45,7 @@ namespace PhanMemBaiGiuXeDAL
         }
         public int count()
         {
-            return HTBGX.GiaoTacs.Count();
+            return HTBGX.ChiTietLanXes.Count();
         }
 
         public bool LuuGiaoTac(string maThe, string bienso, DateTime thoigian, string tenNV, int loaigt)
@@ -60,13 +60,13 @@ namespace PhanMemBaiGiuXeDAL
                     kh.BienSo = bienso;
                     HTBGX.KhachHangs.InsertOnSubmit(kh);
                     HTBGX.SubmitChanges();
-                    GiaoTac gt = new GiaoTac();
+                    ChiTietLanXe gt = new ChiTietLanXe();
                     gt.MaThe = maThe;
                     gt.TenTaiKhoan = tenNV;
-                    gt.MaLoaiGiaoTac = loaigt;
+                    gt.MaLoaiLanXe = loaigt;
                     gt.ThoiGIan = thoigian;
                     gt.MaKH = kh.MaKH;
-                    HTBGX.GiaoTacs.InsertOnSubmit(gt);
+                    HTBGX.ChiTietLanXes.InsertOnSubmit(gt);
                     HTBGX.SubmitChanges();
                 }
                 return true;

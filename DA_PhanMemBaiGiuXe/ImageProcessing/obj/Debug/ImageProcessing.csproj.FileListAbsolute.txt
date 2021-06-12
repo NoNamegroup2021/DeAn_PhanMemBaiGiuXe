@@ -28,10 +28,6 @@ C:\Users\vhta1\Documents\GitHub\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\ImagePro
 C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\ImageProcessing\bin\Debug\ImageProcessing.exe.config
 C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\ImageProcessing\bin\Debug\ImageProcessing.exe
 C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\ImageProcessing\bin\Debug\ImageProcessing.pdb
-C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\ImageProcessing\bin\Debug\ZedGraph.dll
-C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\ImageProcessing\bin\Debug\Emgu.CV.xml
-C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\ImageProcessing\bin\Debug\Emgu.CV.UI.xml
-C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\ImageProcessing\bin\Debug\Emgu.Util.xml
 C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\ImageProcessing\obj\Debug\ImageProcessing.csproj.AssemblyReference.cache
 C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\ImageProcessing\obj\Debug\ImageProcessing.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Desktop\DeAn_PhanMemBaiGiuXe\DA_PhanMemBaiGiuXe\ImageProcessing\obj\Debug\ImageProcessing.csproj.CopyComplete
