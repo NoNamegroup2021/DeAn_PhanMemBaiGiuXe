@@ -115,6 +115,12 @@
     <Compile Include="LapBienBan.Designer.cs">
       <DependentUpon>LapBienBan.cs</DependentUpon>
     </Compile>
+    <Compile Include="LichSuDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LichSuDangNhap.Designer.cs">
+      <DependentUpon>LichSuDangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="LichSuRaVao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LapBienBan.resx">
       <DependentUpon>LapBienBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LichSuDangNhap.resx">
+      <DependentUpon>LichSuDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LichSuRaVao.resx">
       <DependentUpon>LichSuRaVao.cs</DependentUpon>

@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="BienBanBLL.cs" />
     <Compile Include="DangKyBLL.cs" />
+    <Compile Include="LichSuDangNhapBLL.cs" />
     <Compile Include="LoginBLL.cs" />
     <Compile Include="LuuThongTinDNBLL.cs" />
     <Compile Include="NhanVienBLL.cs" />

@@ -29,7 +29,7 @@ namespace DA_PhanMemBaiGiuXe
         public ChuongTrinhChinh()
         {
             InitializeComponent();
-            cam = Program.main_from.Cam;
+            //cam = Program.main_from.Cam;
             
         }
 

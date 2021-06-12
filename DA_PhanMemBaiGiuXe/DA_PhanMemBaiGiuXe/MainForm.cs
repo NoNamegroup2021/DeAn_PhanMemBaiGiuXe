@@ -109,5 +109,10 @@ namespace DA_PhanMemBaiGiuXe
      
             Application.Exit();
         }
+
+        private void mainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

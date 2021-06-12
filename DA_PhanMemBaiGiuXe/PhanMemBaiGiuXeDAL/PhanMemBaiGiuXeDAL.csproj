@@ -47,6 +47,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClassesHTBGX.dbml</DependentUpon>
     </Compile>
+    <Compile Include="LichSuDangNhapDAL.cs" />
     <Compile Include="LoginDAL.cs" />
     <Compile Include="LuuThongTinDNDAL.cs" />
     <Compile Include="NhanVienDAL.cs" />
